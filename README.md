@@ -71,3 +71,26 @@ for i in range(1 , 10):<br/>
     
 name("sachinpaar",20)
 
+
+# what is list
+list is a order collections of item 
+
+append method element हा प्रत्येक वेळेस last  ला add करील
+a = ["sachin",'pawar'] <br/>
+a.append("10")<br/>
+print(a)<br/>
+
+
+<span style="color:red;">insert method</span>
+
+या मध्ये आपण element position ला add करू शकतो
+
+
+a = ["sachin",'pawar'] <br/>
+a.insert(1,"10") <br/>
+print(a) <br/>
+
+OUTPUT : ['sachin', '10', 'pawar']
+
+
+
