@@ -1,7 +1,7 @@
 # Python-Interview-tutorial
 
 
-#1 ) String slicing
+# String slicing
  
  string slicing means select range of element from string 
  example suppose i have string sachin i want to print s to i so how i will print
