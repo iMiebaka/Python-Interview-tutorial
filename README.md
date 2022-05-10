@@ -8,7 +8,7 @@
  
  it will skip last element
  
-name = "sachin"
+name = "sachin"<br/>
 print(name[0:5])
 
 
@@ -17,7 +17,7 @@ print(name[0:5])
 
 स्टेप arugument  म्हणजे first  पॅरामीटर print  झालयावर किती स्टेप घ्यायच्यात
 
-name = "sachin"
+name = "sachin"<br/>
 print(name[0:5:2])
 
 Output : sci
@@ -29,7 +29,7 @@ strip method  चा वापर truncates  किंवा remove  करण�
 
 लेफ्ट side  चा space  remove करण्यासाठी आपण name.lstrip() method  use करतो . आणि right  side  चा space remove करण्यासाठी आपण name.rstrip() वापरतो
 
-name = "    sachin     "
+name = "    sachin     "<br/>
 print(name.lstrip())
 
 
@@ -39,14 +39,14 @@ string is a immutable  कारण आपण main  string चांगले �
 example 
 असा केला तर error  येईन 
 
-a = "sachin"
+a = "sachin"<br/>
 a[0]="S"
 
 
 पण जर आपण replace  केला तर तो नवी string बनवतो पण आधीची तशीच ठेवतो
 
-a = "sachin"
-print(a.replace("s","a"))
+a = "sachin"<br/>
+print(a.replace("s","a"))<br/>
 print(a)
 
 OUTPUT : aachin
@@ -57,8 +57,8 @@ OUTPUT : aachin
 
 pass  स्टेटमेंट चा वापर आपण तेव्हा करतो when we don't want to aything
 
-for i in range(1 , 10):
-    if i == 5:
+for i in range(1 , 10):<br/>
+    if i == 5:<br/>
         pass
         
  # 
