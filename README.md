@@ -61,5 +61,13 @@ for i in range(1 , 10):<br/>
     if i == 5:<br/>
         pass
         
- # 
+ # Default Parameter
+ 
+ default  parameter  म्हणजे जे कि आपण function  मध्ये value  pass  करतो . आणि जर function ला call केलं आणि value pass केल्या तर तो default value ला over  right  करतो 
+ 
+ def name(name = "sachin" , age  = 24): <br/>
+    print(name , age)<br/>
+    
+    
+name("sachinpaar",20)
 
