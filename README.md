@@ -158,7 +158,93 @@ OUTPUT : [32, 74]
 
 
 
-# Video NO 109
+# What is tuple 
+tuple is emmutable means we cant change in data . we cant append  , remove . tuple आपण तेव्हा असे करतो जेव्हा आपल्याला माहित असता कि आपला डेटा चांगले नाही होणार
+emaple . day's tuple त्यासाठी असे करतो कि तो faster आहे list पेक्षा
+
+method we can use in tuple 1 ) count 2 ) index 3 ) length 4 ) slicing
+
+
+# What is list comprehension
+comprehension means आपण list  ला एक line मध्ये create करू शकतो
+Example.
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]<br/>
+
+newlist = [x for x in fruits if "a" in x]<br/>
+
+print(newlist)<br/>
+
+creating a list based on existing lists . it is faster than for loop
+
+Example 2 :
+   
+   fruits = ["apple", "banana", "cherry", "kiwi", "mango"]<br/>
+
+   newlist = [x for x in fruits if x != "apple"]<br/>
+
+   print(newlist)<br/>
+   
+   OUTPUT : ['banana', 'cherry', 'kiwi', 'mango']
+   
+# dictionary comprehension 
+
+dictionary comprenhension is a method for transforming one dictionary into another dictionary
+
+keys = ['a','b','c','d','e']<br/>
+values = [1,2,3,4,5]  <br/>
+myDict = { k:v for (k,v) in zip(keys, values)}  <br/>
+print (myDict)<br/>
+
+
+Output : {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+
+# what is *args
+
+means म्हणजे आपण multiple value pass करू शकतो function ला
+
+def ok(*args):<br/>
+    print(type(args))<br/>
+ok("sachin",'pawar','application')<br/>
+
+OUTPUT: ('sachin', 'pawar', 'application')
+
+Output he tuple madhe yein
+
+
+Example 2 :
+ 
+ def total_num(*args):<br/>
+    count = 0<br/>
+    for res in args:<br/>
+        count = count + res<br/>
+    print(count)<br/>
+total_num(1,2,3,4,5)<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
