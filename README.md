@@ -8,8 +8,8 @@
  
  it will skip last element
  
-name = "sachin"<br/>
-print(name[0:5])
+          name = "sachin"<br/>
+          print(name[0:5])
 
 
 
@@ -17,10 +17,10 @@ print(name[0:5])
 
 स्टेप arugument  म्हणजे first  पॅरामीटर print  झालयावर किती स्टेप घ्यायच्यात
 
-name = "sachin"<br/>
-print(name[0:5:2])
+           name = "sachin"<br/>
+           print(name[0:5:2])
 
-Output : sci
+           Output : sci
 
 
 # what is strip method
@@ -29,8 +29,8 @@ strip method  चा वापर truncates  किंवा remove  करण�
 
 लेफ्ट side  चा space  remove करण्यासाठी आपण name.lstrip() method  use करतो . आणि right  side  चा space remove करण्यासाठी आपण name.rstrip() वापरतो
 
-name = "    sachin     "<br/>
-print(name.lstrip())
+            name = "    sachin     "<br/>
+            print(name.lstrip())
 
 
 # string is a immutable
@@ -39,46 +39,46 @@ string is a immutable  कारण आपण main  string चांगले �
 example 
 असा केला तर error  येईन 
 
-a = "sachin"<br/>
-a[0]="S"
+          a = "sachin"<br/>
+          a[0]="S"
 
 
 पण जर आपण replace  केला तर तो नवी string बनवतो पण आधीची तशीच ठेवतो
 
-a = "sachin"<br/>
-print(a.replace("s","a"))<br/>
-print(a)
+           a = "sachin"<br/>
+           print(a.replace("s","a"))<br/>
+           print(a)
 
-OUTPUT : aachin
-         sachin
-         
+           OUTPUT : aachin
+                    sachin
+
          
 # what is pass statement
 
 pass  स्टेटमेंट चा वापर आपण तेव्हा करतो when we don't want to aything
 
-for i in range(1 , 10):<br/>
-    if i == 5:<br/>
-        pass
-        
+           for i in range(1 , 10):<br/>
+               if i == 5:<br/>
+                   pass
+
  # Default Parameter
  
  default  parameter  म्हणजे जे कि आपण function  मध्ये value  pass  करतो . आणि जर function ला call केलं आणि value pass केल्या तर तो default value ला over  right  करतो 
- 
- def name(name = "sachin" , age  = 24): <br/>
-    print(name , age)<br/>
-    
-    
-name("sachinpaar",20)
+
+            def name(name = "sachin" , age  = 24): <br/>
+               print(name , age)<br/>
+
+
+           name("sachinpaar",20)
 
 
 # what is list
 list is a order collections of item 
 
 append method element हा प्रत्येक वेळेस last  ला add करील
-a = ["sachin",'pawar'] <br/>
-a.append("10")<br/>
-print(a)<br/>
+           a = ["sachin",'pawar'] <br/>
+           a.append("10")<br/>
+           print(a)<br/>
 
 
 # insert method in list
@@ -86,48 +86,48 @@ print(a)<br/>
 या मध्ये आपण element position ला add करू शकतो
 
 
-a = ["sachin",'pawar'] <br/>
-a.insert(1,"10") <br/>
-print(a) <br/>
+           a = ["sachin",'pawar'] <br/>
+           a.insert(1,"10") <br/>
+           print(a) <br/>
 
-OUTPUT : ['sachin', '10', 'pawar']
+           OUTPUT : ['sachin', '10', 'pawar']
 
 # pop method 
 
 pop method list मधून लास्ट element ला delete करिन जर कुठलाच argument पास नाही केला तर
 
-a = ["sachin",'pawar','sagar'] <br/>
-a.pop()<br/>
-print(a)<br/>
+           a = ["sachin",'pawar','sagar'] <br/>
+           a.pop()<br/>
+           print(a)<br/>
 
-OUTPUT : ['sachin', 'pawar']
+           OUTPUT : ['sachin', 'pawar']
 
 
 आणि जर index नंबर पास केला तर त्या position चा element delete करिन
 
-a = ["sachin",'pawar','sagar'] <br/> 
-a.pop(1) <br/>
-print(a) <br/>
+           a = ["sachin",'pawar','sagar'] <br/> 
+           a.pop(1) <br/>
+           print(a) <br/>
 
-OUTPUT : ['sachin', 'sagar']
+           OUTPUT : ['sachin', 'sagar']
 
 # Split method
 
 split method string ला list मध्ये convert करतो
 
-a = "sachin pawar" <br/>
-print(a.split(" "))
+           a = "sachin pawar" <br/>
+           print(a.split(" "))
 
 
 # Join method
 
 join वापर होतो list join करायला 
 
-a = ["sachin","pawar"] <br/> 
-print(" , ".join(a)) <br/>
+          a = ["sachin","pawar"] <br/> 
+          print(" , ".join(a)) <br/>
 
 
-OUPTUT : sachin , pawar
+          OUPTUT : sachin , pawar
 
 
 
@@ -150,11 +150,11 @@ list madhe store any data
 
 creating lists based on existing iterables <br/>
 
-list1 = [1,43,53,65,32,74,23] <br/>
-l = [i for i in list1 if i % 2 == 0] <br/>
-print(l)
+        list1 = [1,43,53,65,32,74,23] <br/>
+        l = [i for i in list1 if i % 2 == 0] <br/>
+        print(l)
 
-OUTPUT : [32, 74]
+        OUTPUT : [32, 74]
 
 
 
@@ -169,11 +169,11 @@ method we can use in tuple 1 ) count 2 ) index 3 ) length 4 ) slicing
 comprehension means आपण list  ला एक line मध्ये create करू शकतो
 Example.
 
-fruits = ["apple", "banana", "cherry", "kiwi", "mango"]<br/>
+          fruits = ["apple", "banana", "cherry", "kiwi", "mango"]<br/>
 
-newlist = [x for x in fruits if "a" in x]<br/>
+          newlist = [x for x in fruits if "a" in x]<br/>
 
-print(newlist)<br/>
+          print(newlist)<br/>
 
 creating a list based on existing lists . it is faster than for loop
 
@@ -191,46 +191,46 @@ Example 2 :
 
 dictionary comprenhension is a method for transforming one dictionary into another dictionary
 
-keys = ['a','b','c','d','e']<br/>
-values = [1,2,3,4,5]  <br/>
-myDict = { k:v for (k,v) in zip(keys, values)}  <br/>
-print (myDict)<br/>
+    keys = ['a','b','c','d','e']<br/>
+    values = [1,2,3,4,5]  <br/>
+    myDict = { k:v for (k,v) in zip(keys, values)}  <br/>
+    print (myDict)<br/>
 
 
-Output : {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+    Output : {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
 
 # what is *args
 
 means म्हणजे आपण multiple value pass करू शकतो function ला
 
-def ok(*args):<br/>
-    print(type(args))<br/>
-ok("sachin",'pawar','application')<br/>
+      def ok(*args):<br/>
+          print(type(args))<br/>
+      ok("sachin",'pawar','application')<br/>
 
-OUTPUT: ('sachin', 'pawar', 'application')
+      OUTPUT: ('sachin', 'pawar', 'application')
 
 Output he tuple madhe yein
 
 
 Example 2 :
  
- def total_num(*args):<br/>
-    count = 0<br/>
-    for res in args:<br/>
-        count = count + res<br/>
-    print(count)<br/>
-total_num(1,2,3,4,5)<br/>
+      def total_num(*args):<br/>
+         count = 0<br/>
+         for res in args:<br/>
+             count = count + res<br/>
+         print(count)<br/>
+     total_num(1,2,3,4,5)<br/>
 
 
 # what is ** Kwargs
 
 means we can pass multiple keyword arguments
 
-def ok(**Kwargs):
-    print(Kwargs)
-ok(name = "sachin",age = 20)
+      def ok(**Kwargs):
+          print(Kwargs)
+      ok(name = "sachin",age = 20)
 
-OUTPUT : {'name': 'sachin', 'age': 20}
+      OUTPUT : {'name': 'sachin', 'age': 20}
 
 output dictionary madhe mile
 
