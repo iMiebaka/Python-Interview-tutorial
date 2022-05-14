@@ -286,7 +286,70 @@ Example :
 
 
 
+# what is map function 
 
+
+हे आपल्याला allow करता process करायला आणि iterable करायला without using loop 
+
+useful when you need to apply a transformation function to each item in an iterable and transform them into a new iterable.
+
+Emaple :
+
+       def addition(n):
+           return n + n
+
+       # We double all numbers using map()
+       numbers = (1, 2, 3, 4)
+       result = map(addition, numbers)
+       print(list(result))
+       
+       Output : [2, 4, 6, 8]
+       
+       
+# what is filter function
+
+The filter() method filters the given sequence with the help of a function that tests each element in the sequence to be true or not.
+
+Example : 
+
+       def is_even(a):
+           return a % 2 == 0
+
+       numbers = [1,2,3,4,5,6,7]
+       is_even = tuple(filter(is_even , numbers))
+       print(is_even)
+       
+       OUTPUT : (2, 4, 6)
+       
+it will return only even numbers
+
+
+# what is zip() Function
+
+zip() function returns a zip object . हा zip करतो २ item ला 
+
+
+Example : 
+
+       f = ["sachin","pawar","application"]
+       c = ["ok",'system','ss']
+       print(list(zip(f,c)))
+       
+       Output : [('sachin', 'ok'), ('pawar', 'system'), ('application', 'ss')]
+       
+       
+pan samja list of item lenght same nasel tar ha 2 element return karin last wala skip karin
+
+Emaple :
+
+       f = ["sachin","pawar","application"]
+       c = ["ok",'system']
+       print(list(zip(f,c)))
+       
+       Output : [('sachin', 'ok'), ('pawar', 'system')]
+       
+ 
+       
 
 
 
