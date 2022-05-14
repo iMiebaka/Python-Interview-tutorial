@@ -267,16 +267,16 @@ converts a data collection object into an enumerate object . Enumerate returns a
 
 याने number आणि position find करायला easy जात
 
+Example :
+         l1 = ["eat", "sleep", "repeat"]
+         for ele in enumerate(l1):
+             print (ele)
 
-l1 = ["eat", "sleep", "repeat"]
-for ele in enumerate(l1):
-    print (ele)
-    
-OUTPUT : 
+         OUTPUT : 
 
-(0, 'eat')<br/>
-(1, 'sleep')<br/>
-(2, 'repeat')<br/>
+         (0, 'eat')<br/>
+         (1, 'sleep')<br/>
+         (2, 'repeat')<br/>
 
 
 
