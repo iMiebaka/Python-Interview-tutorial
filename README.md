@@ -222,8 +222,27 @@ Example 2 :
 total_num(1,2,3,4,5)<br/>
 
 
+# what is ** Kwargs
+
+means we can pass multiple keyword arguments
+
+def ok(**Kwargs):
+    print(Kwargs)
+ok(name = "sachin",age = 20)
+
+OUTPUT : {'name': 'sachin', 'age': 20}
+
+output dictionary madhe mile
+
+Emaple : 
+       def ok(**Kwargs):
+    for k ,v in Kwargs.items():
+        print(k,v)
+    ok(name = "sachin",age = 20)
 
 
+OUTPU : name sachin
+        age 20
 
 
 
