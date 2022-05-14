@@ -342,11 +342,11 @@ pan samja list of item lenght same nasel tar ha 2 element return karin last wala
 
 Emaple :
 
-       f = ["sachin","pawar","application"]
-       c = ["ok",'system']
-       print(list(zip(f,c)))
-       
-       Output : [('sachin', 'ok'), ('pawar', 'system')]
+        f = ["sachin","pawar","application"]
+        c = ["ok",'system']
+        print(list(zip(f,c)))
+
+        Output : [('sachin', 'ok'), ('pawar', 'system')]
        
  
        
