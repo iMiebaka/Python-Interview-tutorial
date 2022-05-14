@@ -245,6 +245,40 @@ OUTPU : name sachin
         age 20
 
 
+# what is Lambda
+
+A lambda function is a small anonymous function. A lambda function can take any number of arguments, but can only have one expression
+
+Syntax : lambda arguments : expression
+
+
+Example : 
+
+        x = lambda a : a + 10 <br/>
+        print(x(5))<br/>
+        
+        OUTPUT : 15
+        
+A lambda is essentially an anonymous function: a function object with no name
+
+# what is enumerate 
+
+converts a data collection object into an enumerate object . Enumerate returns an object that contains a counter as a key for each value within an object, making items within the collection easier to access
+
+याने number आणि position find करायला easy जात
+
+
+l1 = ["eat", "sleep", "repeat"]
+for ele in enumerate(l1):
+    print (ele)
+    
+OUTPUT : 
+
+(0, 'eat')<br/>
+(1, 'sleep')<br/>
+(2, 'repeat')<br/>
+
+
 
 
 
