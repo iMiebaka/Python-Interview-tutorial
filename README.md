@@ -608,6 +608,27 @@ Example :
  __________________________________________________________________
  
 
+# How a requeest is processed in django
+
+1 ) first goese request handel by manage.py file
+2 ) then these route to the settings.py file
+3 ) then routing url.py file 
+4 ) then routing views.py file
+6 ) then models.py file
+7 ) then templates
+
+
+# what is difference between a project and an app in django
+apan jevde pan application use karto tyala djagno project nava dila jat . in that project there are some functionlity astat tyala app mhantat
+Accounts , Add to card
+
+1 ) A project is the entire django application and an App is a module inside the project that deals with one specific use case.
+for Example : Payment system (app ) in the ecommerce app(project)
+
+2 ) An app is basically a web application that is created to perform a spcific task
+3 ) a project , on the other hand , is a collection of these apps.
+4 ) Therefore , a single project can consist of 'n' number of apps and a single app can be in multiple project
+
 
 
 
