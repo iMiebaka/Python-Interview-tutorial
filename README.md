@@ -355,13 +355,37 @@ Emaple :
 
 
 
+# what is class
+
+class is blueprint of object
+
+
+# what is method
+
+class च्या आत जे function define करतो त्याला क्लास म्हणतात 
+
+A class method is a method which is bound to the class and not the object of the class. They have the access to the state of the class as it takes a class parameter that points to the class and not the object instance
+
+# what is self 
+
+The self parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class.
 
 
 
+Emaple :
 
+        class DemoClass:
 
+            a = 10
+            def sumvalue(self):
+                print(20+30)
 
+        demoobject = DemoClass()
 
+        demoobject.sumvalue()
+        
+        
+        
 
 
 
