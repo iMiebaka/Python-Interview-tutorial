@@ -566,6 +566,22 @@ Example :
  
  # what happens wehn a typical django website gets a request ? Explain
  
+ 1 ) server match of the requested url in its url config 
+ 2 ) then it returns the corresponding view function it will then request the data from the model of that application 
+ 3 ) if any data required and pass it to the corresponding template which is then rendered in the browser other wise 404 return
+ 
+ # what is django ORM
+ ORM is the abstraction between models and the database where the data is stored . it make possible to retrive , save , delete and perform other operations over the database without ever writing any SQL code
+ 
+ it cover many loopholes and takes all the field attributes and gives us more control over ower code in python rather than ay database language
+ 
+ # Explain the use of session framework in django
+ Django store and retrieve data on pre-site-visitor basis . it stores data on the server side and abstract the receiving and sending of cookies .  session can be implemented through a piece of middleware
+ 
+ ___________________________________________________________________________
+ # Django Intermediate 
+ __________________________________________________________________________
+ 
  
  
  
