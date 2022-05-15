@@ -583,6 +583,18 @@ Example :
  __________________________________________________________________________
  
  
+ # what is wsgi 
+ WSGI is the main python standard for communicationg between web servers and applications , but it only supports synchronous code
+ 
+ 
+ # Middlewares - what they are and how they work
+ 
+ Middlewares are hooks to modify django request or response object . it's a light , low-level plugin system for globally altering djagno input ro output
+ 
+ You can use middleware if you want to midfy the request i.e HttpRequest object which is sent to the view . or you might want to modify the HttpResponse object returned from the view
+ Example
+ security middleware , session middleware , authentication middleware
+ 
  
  
  
