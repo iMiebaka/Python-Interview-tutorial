@@ -596,7 +596,16 @@ Example :
  security middleware , session middleware , authentication middleware
  
  
+ # what is Jinja Templating
  
+ Django supports many popular templateing engines and by default it come with one very powerful templating engine . Jinja templating is a very popular templating engine for python , the latest version it the market is is jinja 2 . There are some fetures of jinja templating which makes it a better option then the default template system in django
+ 
+ 
+ 
+ __________________________________________________________________
+# Django Interview Question 
+ 
+ __________________________________________________________________
  
 
 
