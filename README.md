@@ -510,7 +510,73 @@ Example :
           obj.displayC()
           
           
-          
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# DJANGO INTERVIEW QUESTION
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+ # what architecture does djagno follow
+ Django follow MVT patterns . stand for model view template
+ 
+ # can we connect multiple database with djagno
+ 
+ Yes we can multiple databse with django
+ 
+ 
+ Emaple :
+
+         DATABASES = {
+            'default': {
+                'NAME': 'app_data',
+                'ENGINE': 'django.db.backends.postgresql',
+                'USER': 'postgres_user',
+                'PASSWORD': 's3krit'
+            },
+            'users': {
+                'NAME': 'user_data',
+                'ENGINE': 'django.db.backends.mysql',
+                'USER': 'mysql_user',
+                'PASSWORD': 'priv4te'
+            }
+        }
+
+
+
+        python manage.py migrate --database=users
+        python manage.py migrate --database=customers
+        
+        
+ # what does makemigrations command do ?
+ 
+ हे migrations create करत models साठी जे कि models.py  file मध्ये define असतं 
+ ANS : it creates migrations for the models that you define in models.py file
+ 
+ # so you said django follows MTV patterns . you mean django doesn't follow MVC right
+ 
+ MVT is a similar to MVC . framework  controller चा most of the itself handle करतो त्यामुळे most  of the things ह्या models  , views  , and templates होतात 
+ 
+ MVT closely resembles MVC . because , the framework handles the controller part itself so most things happen only in models  view and templates.
+ 
+ 
+ # How is djagno code resusability feature different from other framworks
+ djagno offer code reusability then other frameworks out there .  django project project is collection of diffrent application like ,  login , sign up
+ these application we can just copy from one directory to another with some tweaks to settings.py file . we won't nedd to wirte new signup application from scratch
+ 
+ # what happens wehn a typical django website gets a request ? Explain
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+ 
 
 
 
