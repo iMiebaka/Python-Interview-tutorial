@@ -438,9 +438,79 @@ Example :
        30
 
 
+# what is inheritance
+
+Inheritance allows us to define a class that inherits all the methods and properties from another class
+
+inherits  आपल्याला allow करता कि all method आणि properties from another class .In this hierarchical order, the class which inherits another class is called subclass or child class, and the other class is the parent class.
 
 
+# Single Inheritance
 
+single inheritance म्हणजे एका class मधून दुसऱ्या class मध्ये inherit करणे
+
+     class A:
+         def displayA(self):
+             print("Welcome Sachin A")
+
+     class B(A):
+         def displayB(self):
+             print("Welcome Sachin B")
+
+     obj = B()
+     obj.displayA()
+     obj.displayB()
+     
+     
+# Multilevel Inheritance 
+multilevel inheritance mhanje aka class madhun dusrya class madhe ani dusrya madhun 3 rya class madhe inherits karne
+
+Example
+
+       class A:
+           def displayA(self):
+               print("Welcome Sachin A")
+
+       class B(A):
+           def displayB(self):
+               print("Welcome Sachin B")
+
+
+       class C(B):
+           def displayC(self):
+               print("Welcome Sachin C")
+
+       obj = C()
+       obj.displayA()
+       obj.displayB()
+       obj.displayC()
+
+# multiple inheritance 
+
+multiple inheritance mhanje A , B class madhun C madhe inherit karne
+
+Example :
+
+          class A:
+              def displayA(self):
+                  print("Welcome Sachin A")
+
+          class B:
+              def displayB(self):
+                  print("Welcome Sachin B")
+
+
+          class C(A , B):
+              def displayC(self):
+                  print("Welcome Sachin C")
+
+          obj = C()
+          obj.displayA()
+          obj.displayB()
+          obj.displayC()
+          
+          
+          
 
 
 
