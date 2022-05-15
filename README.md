@@ -366,6 +366,22 @@ class च्या आत जे function define करतो त्याला
 
 A class method is a method which is bound to the class and not the object of the class. They have the access to the state of the class as it takes a class parameter that points to the class and not the object instance
 
+Example :
+
+          class DemoClass:
+
+              a = 10
+              def showvalue(self):
+                  self.c = self.a*self.a
+                  print(self.c)
+
+              def showvalue1(self,a,b):
+                  print(a + b)
+
+          obj = DemoClass()
+          obj.showvalue()
+          obj.showvalue1(10,20)
+
 # what is self 
 
 The self parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class.
@@ -386,12 +402,40 @@ Emaple :
         
         
         
+        
+        
+# what is constructor 
+
+जसा आपण class चा object बनवतो त्या वेळी constructor automatic call होतो . constructor ला आपल्याला call नाही करावा लागत method ला call करावा लागतो , constructor automatic कॉल होतो
+allow you to create and properly initialize objects of a given class, making those objects ready to use
 
 
 
+Example :
 
+       class DemoClass:
 
+           a = 10
 
+           def __init__(self):
+               print("welcome sachin")
+
+           def showvalue(self):
+               self.c = self.a*self.a
+               print(self.c)
+
+           def showvalue1(self,a,b):
+               print(a + b)
+
+       obj = DemoClass()
+       obj.showvalue()
+       obj.showvalue1(10,20)
+       
+       
+       OUTPUT : 
+       welcome sachin
+       100
+       30
 
 
 
