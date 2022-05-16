@@ -665,3 +665,33 @@ A migration in Python uses the features of an ORM to provide tools to change our
 
 
 
+# why list are slower than tuple
+
+list are slower because it's nedded  two memory block to accesss . Element in list can be remove or move
+
+# why tuple are faster 
+
+Tuples are stored in a single block of memory. Tuples are immutable so, It doesn't require extra space to store new objects.
+
+
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
