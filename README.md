@@ -8,7 +8,7 @@
  
  it will skip last element
  
-          name = "sachin"<br/>
+          name = "sachin"
           print(name[0:5])
 
 
@@ -17,7 +17,7 @@
 
 स्टेप arugument  म्हणजे first  पॅरामीटर print  झालयावर किती स्टेप घ्यायच्यात
 
-           name = "sachin"<br/>
+           name = "sachin"
            print(name[0:5:2])
 
            Output : sci
@@ -29,7 +29,7 @@ strip method  चा वापर truncates  किंवा remove  करण�
 
 लेफ्ट side  चा space  remove करण्यासाठी आपण name.lstrip() method  use करतो . आणि right  side  चा space remove करण्यासाठी आपण name.rstrip() वापरतो
 
-            name = "    sachin     "<br/>
+            name = "    sachin     "
             print(name.lstrip())
 
 
@@ -57,7 +57,7 @@ example
 
 pass  स्टेटमेंट चा वापर आपण तेव्हा करतो when we don't want to aything
 
-           for i in range(1 , 10):<br/>
+           for i in range(1 , 10):
                if i == 5:<br/>
                    pass
 
@@ -65,7 +65,7 @@ pass  स्टेटमेंट चा वापर आपण तेव्ह�
  
  default  parameter  म्हणजे जे कि आपण function  मध्ये value  pass  करतो . आणि जर function ला call केलं आणि value pass केल्या तर तो default value ला over  right  करतो 
 
-            def name(name = "sachin" , age  = 24): <br/>
+            def name(name = "sachin" , age  = 24): 
                print(name , age)<br/>
 
 
@@ -86,7 +86,7 @@ append method element हा प्रत्येक वेळेस last  ल�
 या मध्ये आपण element position ला add करू शकतो
 
 
-           a = ["sachin",'pawar'] <br/>
+           a = ["sachin",'pawar'] 
            a.insert(1,"10") <br/>
            print(a) <br/>
 
@@ -96,7 +96,7 @@ append method element हा प्रत्येक वेळेस last  ल�
 
 pop method list मधून लास्ट element ला delete करिन जर कुठलाच argument पास नाही केला तर
 
-           a = ["sachin",'pawar','sagar'] <br/>
+           a = ["sachin",'pawar','sagar'] 
            a.pop()<br/>
            print(a)<br/>
 
@@ -105,7 +105,7 @@ pop method list मधून लास्ट element ला delete करिन 
 
 आणि जर index नंबर पास केला तर त्या position चा element delete करिन
 
-           a = ["sachin",'pawar','sagar'] <br/> 
+           a = ["sachin",'pawar','sagar']  
            a.pop(1) <br/>
            print(a) <br/>
 
@@ -123,8 +123,8 @@ split method string ला list मध्ये convert करतो
 
 join वापर होतो list join करायला 
 
-          a = ["sachin","pawar"] <br/> 
-          print(" , ".join(a)) <br/>
+          a = ["sachin","pawar"]
+          print(" , ".join(a)) 
 
 
           OUPTUT : sachin , pawar
@@ -169,21 +169,21 @@ method we can use in tuple 1 ) count 2 ) index 3 ) length 4 ) slicing
 comprehension means आपण list  ला एक line मध्ये create करू शकतो
 Example.
 
-          fruits = ["apple", "banana", "cherry", "kiwi", "mango"]<br/>
+          fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 
-          newlist = [x for x in fruits if "a" in x]<br/>
+          newlist = [x for x in fruits if "a" in x]
 
-          print(newlist)<br/>
+          print(newlist)
 
 creating a list based on existing lists . it is faster than for loop
 
 Example 2 :
    
-   fruits = ["apple", "banana", "cherry", "kiwi", "mango"]<br/>
+   fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
 
-   newlist = [x for x in fruits if x != "apple"]<br/>
+   newlist = [x for x in fruits if x != "apple"]
 
-   print(newlist)<br/>
+   print(newlist)
    
    OUTPUT : ['banana', 'cherry', 'kiwi', 'mango']
    
@@ -191,10 +191,10 @@ Example 2 :
 
 dictionary comprenhension is a method for transforming one dictionary into another dictionary
 
-    keys = ['a','b','c','d','e']<br/>
-    values = [1,2,3,4,5]  <br/>
-    myDict = { k:v for (k,v) in zip(keys, values)}  <br/>
-    print (myDict)<br/>
+    keys = ['a','b','c','d','e']
+    values = [1,2,3,4,5]  
+    myDict = { k:v for (k,v) in zip(keys, values)}  
+    print (myDict)
 
 
     Output : {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
@@ -203,9 +203,9 @@ dictionary comprenhension is a method for transforming one dictionary into anoth
 
 means म्हणजे आपण multiple value pass करू शकतो function ला
 
-      def ok(*args):<br/>
-          print(type(args))<br/>
-      ok("sachin",'pawar','application')<br/>
+      def ok(*args):
+          print(type(args))
+      ok("sachin",'pawar','application')
 
       OUTPUT: ('sachin', 'pawar', 'application')
 
@@ -214,12 +214,12 @@ Output he tuple madhe yein
 
 Example 2 :
  
-      def total_num(*args):<br/>
-         count = 0<br/>
-         for res in args:<br/>
-             count = count + res<br/>
-         print(count)<br/>
-     total_num(1,2,3,4,5)<br/>
+      def total_num(*args):
+         count = 0
+         for res in args:
+             count = count + res
+         print(count)
+     total_num(1,2,3,4,5)
 
 
 # what is ** Kwargs
@@ -254,8 +254,8 @@ Syntax : lambda arguments : expression
 
 Example : 
 
-        x = lambda a : a + 10 <br/>
-        print(x(5))<br/>
+        x = lambda a : a + 10 
+        print(x(5))
         
         OUTPUT : 15
         
@@ -270,15 +270,15 @@ converts a data collection object into an enumerate object . Enumerate returns a
 Example :
 
 
-          l1 = ["eat", "sleep", "repeat"]<br/>
-          for ele in enumerate(l1):<br/>
-              print (ele)<br/>
+          l1 = ["eat", "sleep", "repeat"]
+          for ele in enumerate(l1):
+              print (ele)
 
           OUTPUT : 
 
-          (0, 'eat')<br/>
-          (1, 'sleep')<br/>
-          (2, 'repeat')<br/>
+          (0, 'eat')
+          (1, 'sleep')
+          (2, 'repeat')
 
 
 
