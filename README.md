@@ -665,7 +665,7 @@ A migration in Python uses the features of an ORM to provide tools to change our
 
 
 
-# why list are slower than tuple
+# why list are slower than tuple 
 
 list are slower because it's nedded  two memory block to accesss . Element in list can be remove or move
 
@@ -674,9 +674,102 @@ list are slower because it's nedded  two memory block to accesss . Element in li
 Tuples are stored in a single block of memory. Tuples are immutable so, It doesn't require extra space to store new objects.
 
 
-# 
+___________________________________________________________________________________________________________________________________________________
+
+# API CORE CONCEPT
+
+___________________________________________________________________________________________________________________________________________________
+
+# What is API
+
+API stands for Application Programming Interface. APIs let your product or service communicate with other products and services without having to know how they’re implemented . This can simplify app development, saving time and money. The API is not the database or even the server; it’s the code that governs the access point(s) for the server.
 
 
+# What is a web API ?
+
+A web API is a collection of endpoints that expose certain parts of an underlying database . developer can control each end point 
+
+# API Method Type
+
+1 ) GET   : Retrieve information about the REST API resource
+2 ) POST  : Create a REST API resource
+3 ) PUT   : Update a REST API resource
+4 ) Delete: Delete Rest API resource
+
+# What is CORS ?
+
+Cross-Origin Resource Sharing (CORS) is a protocol that enables scripts running on a browser client to interact with resources from a different origin. This is useful because, thanks to the same-origin policy followed by XMLHttpRequest and fetch, JavaScript can only make calls to URLs that live on the same origin as the location where the script is running.
+
+# How to fix CORS error in Django ?
+
+CORS requires the server to include specific HTTP headers that allow for the client to determine if and when cross-domain requests should be allowed.
+The easiest way to handle this–-and the one recommended by Django REST Framework–-is to use middleware that will automatically include the appropriate HTTP headers based on our settings.
+
+We use django-cors-headers:
+
+1 ) add corsheaders to the INSTALLED_APPS
+2 ) add CorsMiddleware above CommonMiddleWare in MIDDLEWARE
+3 ) create a CORS_ORIGIN_WHITELIST
+
+
+
+____________________________________________________________________________________________________________________________________________________
+
+# Djagno RestFramework
+
+____________________________________________________________________________________________________________________________________________________
+
+# What is Django RestFramework
+
+Django REST Framework is a web framework built over Django that helps to create web APIs which are a collection of URL endpoints containing available HTTP verbs that return JSON. It’s very easy to build model-backed APIs that have authentication policies and are browsable.
+
+# What are benefits of using Django Rest Framework 
+
+1 ) Its Web-browsable API is a huge usability win for your developers.
+2 ) Authentication policies include packages for OAuth1 and OAuth2.
+3 ) Serialization supports both ORM and non-ORM data sources.
+4 ) It’s customizable all the way down. Just use regular function-based views if you don’t need the more powerful features.
+5 ) It has extensive documentation and great community support.
+6 ) It’s used and trusted by internationally recognized companies including Mozilla, Red Hat, Heroku, and Eventbrite.
+
+# What are serializers ?
+Serializers allow complex data such as querysets and model instances to be converted to native Python datatypes that can then be easily rendered into JSON, XML or other content types . Serializers also provide deserialization, allowing parsed data to be converted back into complex types, after first validating the incoming data.
+
+# What are Permissions in DRF ?
+
+Permission checks are always run at the very start of the view, before any other code is allowed to proceed. Permission checks will typically use the authentication information in the request.user and request.auth properties to determine if the incoming request should be permitted.
+
+Permissions are used to grant or deny access for different classes of users to different parts of the API.
+
+The simplest style of permission would be to allow access to any authenticated user, and deny access to any unauthenticated user. This corresponds to the IsAuthenticated class in REST framework
+
+# What are Project-Level Permissions ?
+
+1 ) AllowAny - any user, authenticated or not, has full access
+2 ) IsAuthenticated - only authenticated, registered users have access
+3 ) IsAdminUser - only admins/superusers have access
+4 ) IsAuthenticatedOrReadOnly - unauthorized users can view any page, but only authenticated users have write, edit, or delete privileges
+
+          # blog_project/settings.py
+
+          REST_FRAMEWORK = {
+           'DEFAULT_PERMISSION_CLASSES': [
+               'rest_framework.permissions.IsAuthenticated', # new
+           ]
+          }
+          
+ # 
+ 
+ 
+ # What is Basic Authentication?
+
+ 
+ The most common form of HTTP authentication is known as “Basic” Authentication. When a client makes an HTTP request, it is forced to send an approved authentication credential before access is granted.
+
+1 ) Client makes an HTTP request
+2 ) Server responds with an HTTP response containing a 401 (Unauthorized) status code and WWW-Authenticate HTTP header with details on how to authorize
+3 ) Client sends credentials back via the Authorization HTTP header
+4 ) Server checks credentials and responds with either 200 OK or 403 Forbidden status code. Once approved, the client sends all future requests with the Authorization HTTP header credentials.
 
 
 
