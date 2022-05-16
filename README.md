@@ -658,7 +658,10 @@ protect from melicias attack
 
 
 
-#
+# What is migrate do ?
+
+
+A migration in Python uses the features of an ORM to provide tools to change our database. A migration system compares the current state of our application's models to the existing state of the database. When a difference is found, that difference can be described with a set of operations.
 
 
 
