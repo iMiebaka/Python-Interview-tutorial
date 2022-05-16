@@ -773,6 +773,26 @@ The simplest style of permission would be to allow access to any authenticated u
 
 
 
+# What is session authentication ? 
+
+At a high level, the client authenticates with its credentials (username/password) and then receives a session ID from the server which is stored as a cookie). This session ID is then passed in the header of every future HTTP request. When the session ID is passed, the server uses it to look up a session object containing all available information for a given user, including credentials. This approach is stateful because a record must be kept and maintained on both the server (the session object) and the client (the session ID)
+
+1 ) A user enters their log in credentials (typically username/password)
+2 ) The server verifies the credentials are correct and generates a session object that is then stored in the database
+3 ) The server sends the client a session ID — not the session object itself—which is stored as a cookie on the browser
+4 ) On all future requests the session ID is included as an HTTP header and, if verified by the database, the request proceeds
+5 ) Once a user logs out of an application, the session ID is destroyed by both the client and server
+6 ) If the user later logs in again, a new session ID is generated and stored as a cookie on the client
+
+
+
+# What is Token Authentication
+
+Tokens are pieces of data that carry just enough information to facilitate the process of determining a user's identity or authorizing a user to perform an action. All in all, tokens are artifacts that allow application systems to perform the authorization and authentication process.
+
+Token-based authentication is stateless: once a client sends the initial user credentials to the server, a unique token is generated and then stored by the client as either a cookie or in local storage. This token is then passed in the header of each incoming HTTP request and the server uses it to verify that a user is authenticated. The server itself does not keep a record of the user, just whether a token is valid or not
+
+
 
 
 
