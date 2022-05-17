@@ -851,7 +851,61 @@ Both append() and extend() methods are the methods of list. These methods are us
 2 ) extend(another-list) – adds the elements of another-list at the end of the list which is called the extend method.
 
 
-# 
+# Difference between del, remove and pop Methods in Python ?
+
+1 ) 1) Python remove() Function
+
+       The remove function takes an element as an argument and removes it from a defined list. If the element doesn’t exist in the list, python throws          valueError exception.
+       
+       Emale :
+        
+             petlist = ['dog', 'cat', 'mouse', 'rabbit']
+             petlist.remove('mouse')
+             print ('Updated list of pets:', petlist)
+             
+             OUTPUT : Updated list of pets: ['dog', 'cat', 'rabbit'])
+             
+2) Python pop() Function
+
+       Python pop() function is used to return the removed element from the given list. It takes the index value of an element as an argument. If there          is no index value, python will throw index error: pop index out of range exception.
+
+       The index value is an optional parameter for pop() function. If no parameter is passed, the default index -1 is taken and it returns the last item        from the list.
+       
+       Example : 
+
+            #list of Languages
+            language = ['Hindi', 'English', 'Marathi', 'Bengali', 'urdu']
+            #Return value from pop()
+            #When 4 is passed
+            return_value = language.pop(4)
+            print('Return Value: ', return_value)
+            # Updated List
+            print('Updated List: ', language)
+       
+       OUTPUT : 
+       
+       Return Value:  urdu
+
+       Updated List:  ['Hindi', 'English', 'Marathi', 'Bengali']
+       
+       
+       
+
+3) Del Python List Function : 
+
+                         We use del() method to delete an item not to return any value. Using del() method we can also delete a range of value from the                            given list of elements.
+                         
+                         Example : 
+                         
+                         
+                         numberslist = [1, 2, 3, 4, 5, 6]
+                         # deleting the third item
+                         del numberslist[2]
+                         print ('the output list :', numberslist )
+                         
+                         
+                         
+                         OUTPUT : the output list : [1, 2, 4, 5, 6]
 
 
 
