@@ -843,7 +843,15 @@ Example :
 2 ) zip files and DLL files can also be modules.Inside the module, you can refer to the module name as a string that is stored in the global variable name .
 
 
+# Differentiate between append() and extend() methods ?
 
+Both append() and extend() methods are the methods of list. These methods are used to add the elements at the end of the list.
+
+1 ) append(element) – adds the given element at the end of the list which has called this method.
+2 ) extend(another-list) – adds the elements of another-list at the end of the list which is called the extend method.
+
+
+# 
 
 
 
