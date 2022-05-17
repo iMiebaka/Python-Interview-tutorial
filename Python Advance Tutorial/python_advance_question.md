@@ -4,8 +4,23 @@
 data la encapsulate karun thevne . 
 example:
 
-ak variable banavla A , B , C varti ani 100 thousand line nantar mala lakhat nahi A navacha variable banavla . pan aplyala mahit nahi aplya mahit nahi
-ki tya navacha ( A ) adhi ak variable banavlela ahe ashya veles conflict yet name conflict tya veles kam yeto encapsulation
+samja A,B,C variable ahe te mi var declare kelay ani 100 line nantar mi punha A declare kela . yamule kay hoil adhicha declare kelela variable
+ani attacha declare kelela variable conflict yein hi condition handle karnya sathi apan A,B,C ya variable la aka class madhe encapsulation karto 
+te class madhle variable private astat tyana class chya baher access hot nahi class chay atle variable private astat
 
-maga ya condition madhe encapsulate madhe data la (A,B,C) la aka class madhe Encapulate kel jat ani private banavla jat . yamul yana baherun access
-nahi kel jau shakt yacah scope baher nahiye
+# Abstraction
+
+abstraction mhanje jya goshtichi garaj ahe tyach dakhavne bakiche hide karne . mhanje user la tevdach dakhavla jat ki tyala jyachi garaj ahe
+bakicha sagla tya pasun hide karun thevla jat
+
+
+# Inheritance
+
+mhaje kuthli gosha virasat madhe milne jas father kadun son kade inheritance houn yene
+ya madhe code la repeate lihava lagat nahi . aka class madhun data 
+
+
+# Polymorphism
+
+function name same pan tyacha kam define kel ahe mhanje input madhe kay yetay tya according action perform karta tyachya according data show karto
+
