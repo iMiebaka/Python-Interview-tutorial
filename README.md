@@ -795,7 +795,26 @@ Token-based authentication is stateless: once a client sends the initial user cr
 
 
 
+# What is Garbage Collection ? 
 
+1 ) Garbage means remove unused object from memory location
+2 ) garbage collector is predefine program nused or unreferenced objects from the memory location.
+3 ) Any object reference count becomes zero then we call that object as a unused or unreferenced object Then no.of reference variables which are pointing the object is known as a reference count of the object.
+4 ) While executing the python program if any object reference count becomes zero, then internally python interpreter calls the garbage collector and garbage collector will remove that object from memory location.
+5 ) While executing the python program if any object reference count becomes zero, then internally python interpreter calls the garbage collector and garbage collector will remove that object from memory location.
+
+# How is memory managed in Python ?
+
+1 ) Python memory is managed by Python private heap space . 
+2 ) All Python objects and data structures are located in a private heap. 
+3 ) The programmer does not have an access to this private heap and interpreter
+4 ) Python also have an inbuilt garbage collector
+5 ) which recycle all the unused memory and frees the memory and makes it available to the heap space.
+6 ) The allocation of Python heap space for Python objects is done by Python memory manager. The core API gives access to some tools for the programmer to code.
+7 ) Python has a private heap space to hold all objects and data structures. Being programmers, we cannot access it; it is the interpreter that manages it. But with the core API, we can access some tools. The Python memory manager controls the allocation.
+
+
+# 
 
 
 
