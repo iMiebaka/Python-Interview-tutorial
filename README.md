@@ -814,7 +814,34 @@ Token-based authentication is stateless: once a client sends the initial user cr
 7 ) Python has a private heap space to hold all objects and data structures. Being programmers, we cannot access it; it is the interpreter that manages it. But with the core API, we can access some tools. The Python memory manager controls the allocation.
 
 
-# 
+# Diff between shallow copy and deep copy ?
+
+Deep COPY : A deep copy copies an object into another. This means that if you make a change to a copy of an object, it won't affect the original object.             In Python, we use the function deepcopy() for this, and we import the module copy. We use it like
+
+Example : 
+
+           import copy
+           b = copy.deepcopy (a)
+
+Shallow COPY : A shallow copy, however, copies one object's reference to another. So, if we make a change in the copy, it will affect the original                      object. For this, we have the function copy()
+
+
+Example : 
+
+         b = copy.copy(a)
+         
+         
+# Explain split(), sub(), subn() methods of re module in Python
+
+1 ) split() – uses a regex pattern to "split" a given string into a list.
+2 ) sub() – finds all substrings where the regex pattern matches and then replace them with a different string
+3 ) subn() – it is similar to sub() and also returns the new string along with the no. of replacements.subn() – it is similar to sub() and also returns       the new string along with the no. of replacements.
+
+# What is a Python module ? 
+
+1 ) A module is a Python script that generally contains import statements, functions, classes and variable definitions, and Python runnable code and it "lives" file with a '.py' extension.
+2 ) zip files and DLL files can also be modules.Inside the module, you can refer to the module name as a string that is stored in the global variable name .
+
 
 
 
