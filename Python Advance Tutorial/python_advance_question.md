@@ -412,3 +412,39 @@ Example :
         instance , it will effecct all the copies in the other instance
         
         
+        
+Example : 
+
+                                class Mobile:
+                                    fp = "Yes"   # class variable
+
+                                    def __init__(self):
+                                        self.model = "RealMe X"
+
+                                    def show_model(self):
+                                        print("Model :", self.model)
+
+                                    @classmethod    # Decorator
+                                    def is_fp(cls):
+                                        print(cls.fp)
+
+                                realme = Mobile()
+                                realme.show_model()
+                                Mobile.is_fp()
+
+                                # +++++++++ after modify
+                                print()
+                                Mobile.fp = "No"
+                                Mobile.is_fp()
+                                
+                                
+                                OUTPUT __________________________
+                                
+                                
+                                Model : RealMe X
+                                Yes
+                                No
+                                
+                                
+                                
+        
