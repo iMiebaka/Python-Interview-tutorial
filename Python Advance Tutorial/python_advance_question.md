@@ -144,11 +144,11 @@ _____________ Accessing class member using object __________
 
 1 ) We can access variable and method of a class using class object or instance of class
 
-object_name.variable_name
-realme.mode
+                        object_name.variable_name
+                        realme.mode
 
-object_name.method_name()
-realme.show_model():
+                        object_name.method_name()
+                        realme.show_model():
 
 _________________ Self variable ______
 
@@ -163,16 +163,16 @@ ___________ Object _______
 
 Each time you create an object of a class a copy of ech variable defined in the class is created
 
-class Mobile:
-    def __init__(self):
-        self.model  = "Readme X"
-        
-    def show_model(self):
-        print("Model",self.model)
+                class Mobile:
+                    def __init__(self):
+                        self.model  = "Readme X"
 
-realme = Mobile()
-redmi  = Mobile()
-geek   = Mobile()
+                    def show_model(self):
+                        print("Model",self.model)
+
+                realme = Mobile()
+                redmi  = Mobile()
+                geek   = Mobile()
 
 
 
