@@ -552,7 +552,89 @@ Example :
 
 
 
+_________________________________________________________________________________________________
+# Type Of Methods
+_________________________________________________________________________________________________
         
+ 
+ 
+ 1 ) Instance Methods
+        - Accessor Methods
+        - Mutator Methods
         
+ 2 ) Class Methods
+ 
+ 
+ 3 ) Static Mehod
+ 
+ 
+ ________________________________________________________________________________________________
+ 
+ # Instance Method
+ 
+ Instance methods are the methods which act upon the instance variables of the class instance method need to know the memory address of the instance       which is provided through self variable by default as first parameter for the instance method
+ 
+ 
+                 def method_name(self):
+                        function body
+
+  
+  # calling instance method W/O Argument
+  
+  instance methods are bound to object of the class so we call instance method with o bject name
+  
+  Syntax - object_name.method_name()
+  
+  
+  class Mobile:
+        def show_model(self):
+                print("RealMe X ")
+                
+  realme = Mobile()
+  realme.show_model()
+  
+  
+  
+  # Instance Method with Parameter
+  
+                  class Mobile:
+                        def __init__(self):
+                                self.model = "ReadMe X"
+
+
+                        def show_model(self , p):
+                                self.price = p
+                                print(self.model, self.price )
+
+                   realme = Mobile()
+   
+   # calling instance method with argument
+   
+   Syntax :- object_name.method_name(Actual_argument)
+   Ex :-     show_model(1000 )
+   
+                   class Mobile:
+                        def __init__(self):
+                                self.model = "RealMe X"
+
+                        def show_model(self , p ):
+                                self.price = p
+                                print(self.model , self.price )
+                   realme = Mobile()
+                   realme.show_model(1000)
+                   
+                   
+                   
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
         
         
