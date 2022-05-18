@@ -328,6 +328,43 @@ POINT :
                         redme = Mobile()
 
                         geek = Mobile()
+                        
+                        
+Example : 
+
+
+                                class Mobile:
+                                    def __init__(self):
+                                        self.model = "RealMe X"  # Instance Variable
+
+                                    def show_model(self):
+                                        print(self.model)        # Accessing instance Variable
+
+                                realme = Mobile()
+                                redmi = Mobile()
+                                geek = Mobile()
+
+
+                                print(realme.model , f"ID is {id(realme.model)}")
+                                print(redmi.model, f"Id Is {id(redmi.model)}")
+                                print(geek.model, f"ID is {id(geek.model)}")
+
+                                print()
+                                redmi.model = "Redmi 7s"
+
+                                print(realme.model , f"ID is {id(realme.model)}")
+                                print(redmi.model, f"Id Is {id(redmi.model)}")
+                                print(geek.model, f"ID is {id(geek.model)}")
+                                
+                                
+                                OUTPUT _____________
+                                RealMe X ID is 139975711000688
+                                RealMe X Id Is 139975711000688
+                                RealMe X ID is 139975711000688
+
+                                RealMe X ID is 139975711000688
+                                Redmi 7s Id Is 139975711001264
+                                RealMe X ID is 139975711000688
    
 
 
