@@ -199,8 +199,9 @@ class object banavlyavar constructor automatically call hoto yala call karnyachi
 jeva object create karto . 2 instance ( object ) banavle asle tar constructor 2 da call hoto 
 
 Example :
-                        class Mobile:
-                             def __init__(self): #_______________ ha constructor
+                       
+                       class Mobile:
+                             def __init__(self): _______________ ha constructor
                                 self.model = "RealME  x"
 
                         realme = Mobile()
@@ -250,14 +251,83 @@ Example :
                 
                 
                 
+ # Type of variable
+ 
+ instance variable la constroctor chay aat initilize ani define kel jat
+ 
+ 1 ) Instance  Variable 
+                1 ) Intance variable are the variable whose separate copy is created in every object instance varibale are defined and initialized using 
+                a constructor with self parameter
                 
+    
+  Example 
+  
+                  class Mobile:
+                    def __init__(self):
+                        self.model = "Realme X"
+
+                    def show_model(self):
+                        print(self.model)
+
+                realme = Model()
                 
-                
-                
-                
-                
-                
-                
+  ________________________________________________________________________________________
+  2 ) Accessing instance variable
+  ________________________________________________________________________________________
+    
+  with Instance method
+  
+  to access instance variable , we need instance methods with self as first parameter then we can access instance variable using self.variable_name
+  
+  Example : 
+  
+                          class Mobile:
+                            def __init__(self):
+                                self.model = "Realme X"   _____________ Instance variable
+                                
+                                print(self.model)
+                            def show_model(self):        _______________ Instance method
+                                print(self.model)        ________________ Accessing instance variable
+                                
+                        realme = Mobile()
+
+_______________________________________________
+Access instance variable outside class
+
+___________________________________
+
+class chay baher instance variable access karaycha aslyavar objectname.variable_name
+
+Example 
+
+                        class Mobile:
+                            def __init__(self):
+                                self.model = "Realme X"
+                            def show_model(self):
+                                self.model
+                        realme = Mobile()
+
+
+                        print(realme.model) ________________ we access outside of the class
+                        
+
+POINT : 
+        Intance variable are the variable whose separate copy is created in every object if we modify the copy of instance variable , it will not efect           all the copies in the other instance
+        
+        
+        ( ya madhe pratek object sathi ak navin copy banel copy object madhe changes kelyavar real object var effect padnar nahi ) 
+        
+                        class Mobile:
+                            def __init__(self):
+                                self.model = "Realme X"
+                            def show_model(self):
+                                print(self.model)
+
+                        realme = Mobile()
+
+                        redme = Mobile()
+
+                        geek = Mobile()
    
 
 
