@@ -586,12 +586,12 @@ ________________________________________________________________________________
   Syntax - object_name.method_name()
   
   
-  class Mobile:
-        def show_model(self):
-                print("RealMe X ")
-                
-  realme = Mobile()
-  realme.show_model()
+                  class Mobile:
+                        def show_model(self):
+                                print("RealMe X ")
+
+                  realme = Mobile()
+                  realme.show_model()
   
   
   
