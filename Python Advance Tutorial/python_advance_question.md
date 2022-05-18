@@ -446,5 +446,111 @@ Example :
                                 No
                                 
                                 
+
+
+__________________________________________________________________________________
+# Namespace 
+__________________________________________________________________________________
+        
+In python , namespace represents a memory block where names are mapped to object
+
+class Namespace - A class maintains it own namespace known as class namespace. in the class namespace , the names are mapped to class variables
+
+instance Namespace - Every instance have it's own namespace known as instance namespace . In the instance namespace , the names are mapped to instance variable
+
+
+____
+
+MARATHI :
+
+        yamadhe namespace ha represents karto mamory block la ani block ha mapped karto object la
+        
+        class namespace madhe name la class variable shi match kel jat
+        
+        instance name variable madhe instance variable la namespace shi match kel jat
+        
+        
+        
+        
+        
+ Example :
+         
+         class Mobile:
+                fp  = "Yes"
+                
+         realme = Mobile()
+         redmi  = Mobile()
+         geek   = Mobile()
+         
+         
+         
+         
+         ( Yamadhe  realme , redme , geek he instance name space ahe ) 
+         
+         
+         
+Example :
+
+                                class Mobile:
+                                    fp = "Yes"
+
+                                    @classmethod
+                                    def is_fp(cls):
+                                        print("Finger pring " , cls.fp)
+
+                                realme = Mobile()
+                                redmi  = Mobile()
+                                geek   = Mobile()
+
+                                print("Class FP" , Mobile.fp)
+                                print("realme" , realme.fp)
+                                print("redmi" , redmi.fp)
+                                print("Geek" , geek.fp)
+
+                                print()
+
+                                Mobile.fp = "No"
+                                print("Class FP" , Mobile.fp)
+                                print("realme" , realme.fp)
+                                print("redmi" , redmi.fp)
+                                print("Geek" , geek.fp)
+
+                                print()
+
+                                realme.fp = "Not Working"
+                                print("Class FP" , Mobile.fp)
+                                print("realme" , realme.fp)
+                                print("redmi" , redmi.fp)
+                                print("Geek" , geek.fp)
                                 
+                                
+                                OUTPUT :_____________________
+                                
+                                Class FP Yes
+                                realme Yes
+                                redmi Yes
+                                Geek Yes
+
+                                Class FP No
+                                realme No
+                                redmi No
+                                Geek No
+
+                                Class FP No
+                                realme Not Working
+                                redmi No
+                                Geek No
+
+
+
+
+
+
+
+
+
+
+        
+        
+        
         
