@@ -193,7 +193,57 @@ _______________ Real work Example ______
                 
                 
                 
+# Constructor
+
+class object banavlyavar constructor automatically call hoto yala call karnyachi garj nahi. ha akdach call hosto jeva instance create hoto
+jeva object create karto . 2 instance ( object ) banavle asle tar constructor 2 da call hoto 
+
+Example :
+                        class Mobile:
+                             def __init__(self): #_______________ ha constructor
+                                self.model = "RealME  x"
+
+                        realme = Mobile()
+                        
+                        
+ Example :
+ 
+                class Mobile:
+                    def __init__(self,m , v = 100):
+                        self.m = m
+                        self.v = v
+                        print("Construtor is call")
+
+
+                    def show_m(self , mobile , price):
+                        self.mobile = mobile
+                        self.price = price
+
+                        print(self.mobile)
+                        print(self.price)
+
+
+                m = Mobile("Iphone")
+                m.show_m(mobile = "Realme",price = 234)
+
+                ok = Mobile("Samsung")
+                ok.show_m(mobile = "Samsung" , price = 321)
                 
+                
+                OUTPUT : 
+                Construtor is call
+                Realme
+                234
+                Construtor is call
+                Samsung
+                321
+
+
+
+
+1 ) Python supports a special type of method called constructor for initializing the instance variable of a class
+2 ) A class constructor , if defined is called whenever a program creates an object of that class
+3 ) A constructor is called only once at the time of creating an instance . if two instance are created for a class , the constructor will be called once for each instance
                 
                 
                 
