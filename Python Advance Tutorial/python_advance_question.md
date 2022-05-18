@@ -371,5 +371,44 @@ Example :
 
 
 
+_______________________________________________________________________________________________
+2 ) Class Variable / Static Variable 
+_______________________________________________________________________________________________
+yamadhe akach object copy aste ti saglay madhe share hote . jar aka object chay variable madhe jar kahi update kel tar te saglay var update hot
 
+1 ) classs variable are the variable whose single copy is avaialble to all the instance of the class if we modify the copy of class variable in an instance , it will effect all the copies in the other instance
 
+Example :
+
+                class Mobile:
+                    fp = "Yes"
+
+                    def __init__(self):
+                        self.model = "Readme"
+
+                s = Mobile()
+                print(s.fp)
+                
+                
+ access class variable outside of the classs
+ 
+ Example :
+ 
+                         class Mobile:
+                            fp = "Yes"           # class variable
+                            def __init__(self):
+                                self.model = "Readme"
+                            def show_model(self):
+                                print(self.model)
+                            @classmethod
+                            def is_fp(cls):      # class method
+                                cls.fp
+                        s = Mobile()
+                        print(s.fp)
+                        
+                        
+  POINT : 
+        Class variable are the variable whose single copy is available to all the instance of the class . if we modify the copy of class variable in an 
+        instance , it will effecct all the copies in the other instance
+        
+        
