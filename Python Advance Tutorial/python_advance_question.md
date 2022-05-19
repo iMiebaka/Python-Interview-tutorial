@@ -626,7 +626,116 @@ ________________________________________________________________________________
                    
                    
    
+ # Nested Class
+ A class within a class is calles as nested calss or nesting of a class
  
+ Example :
+ 
+ 
+                         class OuterClassName():
+                                def __init__(self):
+                                        self.variable_name = value
+                                        self.innterClassObjectName = self.InnerClassName()
+
+                                def method_name(self):
+                                        method body
+
+
+
+                                class InnerClassName:
+                                        def __init__(self):
+                                                self.variable_name = value
+                                        def method_name(self):
+                                                method body
+                                                
+                                                
+
+
+Example 2 :
+ 
+ 
+                                class Army:
+                                    def __init__(self):
+                                         self.name = "Rahul"
+                                         self.gn   = self.Gun()
+
+                                    def show(self):
+                                         print(self.name)
+
+
+                                    class Gun:
+                                         def __init__(self):
+                                               self.name = "AK47"
+                                               self.capacity = "75 Rounds"
+                                               self.length   = "34.3 In"
+
+                                         def disp(self):
+                                               print(self.name , self.capacity , self.length)
+
+                                a = Army()
+                                
+                                
+Example 3 :
+
+                        class Army:
+                            def __init__(self):
+                                self.name = "Rahul"
+                                self.gn = self.Gun()
+
+                            def show(self):
+                                print("Name :",self.name)
+
+
+
+                            class Gun:
+                                def __init__(self):
+                                    self.name = "AK47"
+                                    self.capacity = "75 Round"
+                                    self.length  = "34.3 In"
+
+                                def disp(self):
+                                    print("Gun Name",self.name)
+                                    print("Capacity", self.capacity)
+                                    print("Length : ", self.length)
+
+
+                        a = Army()
+                        print(a.name)
+                        a.show()
+
+
+                        print(a.gn.name)
+                        
+                        
+                         OUTPUT :::
+                         
+                         Rahul
+                         Name : Rahul
+                         AK47
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
  
  
  
