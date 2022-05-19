@@ -797,46 +797,46 @@ class Mobile:
  ________________________________ Parent Class __________
  
  
-                                                                                                                                                                                                                        class Employee:
-                                                                     id = 1
-                                                                     @classmethod
+                                                                                                                                                                                        class Employee:
+                                     id = 1
+                                     @classmethod
 
-                                                                     def getid(cls):
-                                                                        return cls , id
+                                     def getid(cls):
+                                        return cls , id
 
-                                                                     def setname(self , name ):
-                                                                        self.name = name
+                                     def setname(self , name ):
+                                        self.name = name
 
-                                                                     def getname(self):
-                                                                        return self.name
+                                     def getname(self):
+                                        return self.name
 
-                                                                     def setsalary(self):
-                                                                         self.salary = salary
+                                     def setsalary(self):
+                                         self.salary = salary
 
-                                                                     def getsalary(self , salary):
-                                                                         return self.salary
+                                     def getsalary(self , salary):
+                                         return self.salary
 
-                                                                     def setovertime ( self , ot):
-                                                                         self.ot = ot
+                                     def setovertime ( self , ot):
+                                         self.ot = ot
 
-                                                                     def getovertime(self):
-                                                                         return self.ot
+                                     def getovertime(self):
+                                         return self.ot
 
 
-                                                                ________________________ Child Class________
+                                ________________________ Child Class________
 
-                                                                class Manager:
-                                                                    def setsalary(self , salary):
-                                                                        self.salary = salary
+                                class Manager:
+                                    def setsalary(self , salary):
+                                        self.salary = salary
 
-                                                                    def getsalary(self):
-                                                                        return self.salary
+                                    def getsalary(self):
+                                        return self.salary
 
-                                                                    def getseniorname(self , sname):
-                                                                        self.name = sname
+                                    def getseniorname(self , sname):
+                                        self.name = sname
 
-                                                                    def getseniorname(self):
-                                                                        return self.sname
+                                    def getseniorname(self):
+                                        return self.sname
          
          
          
