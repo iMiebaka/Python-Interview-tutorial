@@ -766,27 +766,27 @@ class Mobile:
 
 
 
-class Employee:
-    id = 1
-    
-    @classmethod
-    def getid(cls):
-        return cls.id
-        
-     def setname(self , name):
-        self.name
-        
-     def getname(self , name):
-        self.name
-        
-     def getsalary(self , salary):
-        return self.salary
-        
-     def setovertime ( self , ot):
-        self.ot = ok
-    
-     def getovertime(self):
-        return self.ot
+                        class Employee:
+                            id = 1
+
+                            @classmethod
+                            def getid(cls):
+                                return cls.id
+
+                             def setname(self , name):
+                                self.name
+
+                             def getname(self , name):
+                                self.name
+
+                             def getsalary(self , salary):
+                                return self.salary
+
+                             def setovertime ( self , ot):
+                                self.ot = ok
+
+                             def getovertime(self):
+                                return self.ot
         
         
         
@@ -797,46 +797,46 @@ class Employee:
  ________________________________ Parent Class __________
  
  
-class Employee:
-     id = 1
-     @classmethod
-     
-     def getid(cls):
-        return cls , id
-        
-     def setname(self , name ):
-        self.name = name
-        
-     def getname(self):
-        return self.name
-        
-     def setsalary(self):
-         self.salary = salary
-         
-     def getsalary(self , salary):
-         return self.salary
-         
-     def setovertime ( self , ot):
-         self.ot = ot
-         
-     def getovertime(self):
-         return self.ot
-         
-         
-________________________ Child Class________
+                                                                                                                                                                                                                        class Employee:
+                                                                     id = 1
+                                                                     @classmethod
 
-class Manager:
-    def setsalary(self , salary):
-        self.salary = salary
-        
-    def getsalary(self):
-        return self.salary
-        
-    def getseniorname(self , sname):
-        self.name = sname
-     
-    def getseniorname(self):
-        return self.sname
+                                                                     def getid(cls):
+                                                                        return cls , id
+
+                                                                     def setname(self , name ):
+                                                                        self.name = name
+
+                                                                     def getname(self):
+                                                                        return self.name
+
+                                                                     def setsalary(self):
+                                                                         self.salary = salary
+
+                                                                     def getsalary(self , salary):
+                                                                         return self.salary
+
+                                                                     def setovertime ( self , ot):
+                                                                         self.ot = ot
+
+                                                                     def getovertime(self):
+                                                                         return self.ot
+
+
+                                                                ________________________ Child Class________
+
+                                                                class Manager:
+                                                                    def setsalary(self , salary):
+                                                                        self.salary = salary
+
+                                                                    def getsalary(self):
+                                                                        return self.salary
+
+                                                                    def getseniorname(self , sname):
+                                                                        self.name = sname
+
+                                                                    def getseniorname(self):
+                                                                        return self.sname
          
          
          
