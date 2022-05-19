@@ -845,13 +845,90 @@ class Mobile:
  _________________________________________________________________________
  # Type Of Inheritance
  
+ 1 ) Single Inheritance
+ 2 ) Multi-level Inheritance
+ 3 ) Hierarchical inheritance
+ 4 ) Multiple Inheritance
+ 
  ________________________________________________________________________
+ 
+ # Declaration of child class
+ 
+ class ChildCLassName(ParentClassName):
+      members of child class
+      
+ class Mobile(object):
+      members of child class
+      
+ class Mobile:
+      
+      
  
  # Single Inheritance
  
+ if a class is derived from one base class ( Parent Class ) , it is called single inheritance
+ 
+ 
+ Syntax :
+ 
+                 class ParentClassName(object):
+                      members of parent class
+
+                 class ChildClassName(ParentClassName):
+                      members of child class
+      
+  Exmaple:
+  
+  
+                          class Father:
+                              members of class father
+
+                          class Son(Father):
+                              members of class son
+ 
  
 
+Example :
 
+                        class Father:
+                            money = 1000
+                            def show(self):
+                                print("Parent Class Instance method")
+
+                            @classmethod
+                            def showmoney(cls):
+                                print("Parent Class Class Method",cls.money)
+
+
+                            # static method use karta yete ki nahi
+                            @staticmethod
+                            def stat():
+                                a = 10 
+                                print("Child class instance method")
+
+
+                        class Son(Father):
+                            def disp(self):
+                                print("Child CLass Instance method")
+
+                        s = Son()
+                        s.disp()
+                        s.show()
+                        s.showmoney()
+                        s.stat()
+                        print("__________________________")
+                        f = Father()
+                        f.show()
+                        
+                        
+                        OUTPUT ___________________________
+                        
+                        Child CLass Instance method
+                        Parent Class Instance method
+                        Parent Class Class Method 1000
+                        Child class instance method
+                        __________________________
+                        Parent Class Instance method
 
 
 
