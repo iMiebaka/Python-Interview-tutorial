@@ -715,8 +715,155 @@ Example 3 :
                                                 
                                                 
                                                 
-                                                
-                                                
+
+_______________________________________________________________________________________________________________________
+
+
+# Iheritance
+
+
+_______________________________________________________________________________________________________________________
+
+1 ) The mechanism of deriving a new calss from an old one  ( existing class ) such that the new class inherit all the member (variable and method ) of odd class is called inheritance or derivation .
+
+
+
+
+
+old class pasun new class banavne tyala inheriitance mahantat
+
+_________________________________________________________________________________________________________________________________
+Other Name
+
+
+Parent Class         - Base Class or Super Class
+Child Class          - Derived Class or Sub Class
+
+
+
+# Super Class And Sub Class 
+
+The old class is referred to as the Super class and the new one is called the sub class
+
+
+
+# Inheritance
+
+1 ) All classes in python are built in from a single super class called "object"  so whenever we create a class in python  , object will become super class for them internally
+
+
+Class Mobile(object):
+class Mobile:
+
+
+2 ) The main advantage of inheritance is code reusability
+
+
+
+
+# Why do we need Inheritance
+
+
+
+
+class Employee:
+    id = 1
+    
+    @classmethod
+    def getid(cls):
+        return cls.id
+        
+     def setname(self , name):
+        self.name
+        
+     def getname(self , name):
+        self.name
+        
+     def getsalary(self , salary):
+        return self.salary
+        
+     def setovertime ( self , ot):
+        self.ot = ok
+    
+     def getovertime(self):
+        return self.ot
+        
+        
+        
+        
+ # inherit two classs
+ 
+ 
+ ________________________________ Parent Class __________
+ 
+ 
+class Employee:
+     id = 1
+     @classmethod
+     
+     def getid(cls):
+        return cls , id
+        
+     def setname(self , name ):
+        self.name = name
+        
+     def getname(self):
+        return self.name
+        
+     def setsalary(self):
+         self.salary = salary
+         
+     def getsalary(self , salary):
+         return self.salary
+         
+     def setovertime ( self , ot):
+         self.ot = ot
+         
+     def getovertime(self):
+         return self.ot
+         
+         
+________________________ Child Class________
+
+class Manager:
+    def setsalary(self , salary):
+        self.salary = salary
+        
+    def getsalary(self):
+        return self.salary
+        
+    def getseniorname(self , sname):
+        self.name = sname
+     
+    def getseniorname(self):
+        return self.sname
+         
+         
+         
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                                 
                                                 
                                                 
