@@ -1086,20 +1086,225 @@ Example :
                                                 
                                                 
                                                 
+# how can we call parent class constructor
+
+
+
+class Father:
+    def __init__(self):
+        self.mondy = 2000
+        print("Father Class Constructor")
+        
+        
+class Son(Father):
+    def __init__(self):
+        self.money = 5000
+        print("Son Class Constructor")
+    
+    def disp(self):
+        print(self.money)
+        
+s = Son()
+s.disp()
+
+
+# constructor with super() method
+
+1 ) if we write constroctor in the both classes , parent class and child class then the parent class constructor is not available to the child class
+2 ) in this case only child class constructor is accessible which means child class constructor is replacing parent class constructor
+
+3 ) super() method is used to call parent class constructor or methods from the child class
+                                                
+                                                
+( super cha use karto parent class chya constructor use (call ) karnya sathi )                                                 
                                                 
                                                 
                                                 
+ Eample :
+ 
+ 
+                 class Father:
+                    def __init__(self):
+                        print("Father class constructor")
+
+                    def show(self):
+                        print("Father class Instance method")
+
+
+
+                class Son(Father):
+                    def __init__(self):
+                        super().__init__()  # this is calling parent class constructor
+                        print("Son class constructor")
+
+                    def disp(self):
+                        print("Son class instance method")
+
+                s = Son()
+                            
+                            
+                OUTPUT : 
+                
+                Father class constructor
+                Son class constructor
                                                 
                                                 
                                                 
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
+# Multi-Level Inheritance
+
+in Multi-level inheritance , the class inherits the feature of another derived class ( Child Class ) 
+
+multi leval mhanje  aka class adun inherit houn dusrya class dusrya class madhun inherit houn disrya class kade inherits hoto
+
+A class
+  |
+B class
+  |
+C Class
+
+
+
+Syntax -
+
+                class ParentClassName:
+                     member of parent class
+
+
+                class ChildClassName(ParentClassName):
+                     members of child class
+
+
+                class GrandChildClassName(ChilclassName):
+                      memberf of grand child class
+
+
+      
+
+
+
+Example 1 
+
+                        class Father(object):
+                             members of class Father
+
+                        class Son(Father):
+                             members of class son
+
+                        class GrandSon(Son):
+                             members of class grandSon
+
+
+
+
+Example :
+
+
+
+                        class Father:
+
+                            def showF(self):
+                                print("Father Class method")
+
+                        class Son(Father):
+
+                            def showS(self):
+                                print("Son Class method")
+
+                        class GrandSon(Son):
+
+                            def showG(self):
+                                print("Son Class method")  
+
+
+                        g = GrandSon()        
+
+                        g.showG()
+                        g.showF()
+                        g.showS()
+                        
+                        
+                        
+                        OUTPUT _____________________________
+                        
+                        Son Class method
+                        Father Class method
+                        Son Class method
+
+
+
+
+# Hierarchical Inheritance
+
+Ya madhe aka class madhun multiple child class banvto tyala hierachical inheritance mhantat
+
+Syntax :-
+
+
+                class ParentClasssName(object):
+                      members of parent class
+
+                class ChildClassName1(ParentClassName):
+                      members of child class 1
+
+                class ChildClassName2(ParentClassName):
+                      members of child class 2
+
+
+
+Example :
+
+
+                class Father(object):
+                     members of class father
+
+                class Son(Father):
+                     members of class son
+
+                class Daugher(Father):
+                     members of class Daughter
+
+
+
+
+
+
+Example :
+
+yamdhe daughter ani son akmekanche member variable acces karu shakta nahi
+
+
+
+
+                class Father:
+                    def showF(self):
+                        print("Father Class Method")
+
+                class Son(Father):
+                    def showS(self):
+                        print("Son Class Method")       
+
+
+
+                class Daughter(Father):
+                    def showD(self):
+                        print("Dougher Class Method")      
+
+                s = Son()
+                s.showS()
+                s.showF()
+                
+                
+                OUTPUT ______________________
+                
+                Son Class Method
+                Father Class Method
+
+
+
+
+
+
+
  
  
  
