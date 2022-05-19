@@ -933,7 +933,62 @@ Example :
 
 
 
+# Constructor in Inheritance
 
+By default , The constructor in the parent class is available to the child class
+
+
+Ex
+
+                        class Father:
+                             def __init__(self):
+                                  self.money = 2000
+                                  print("Father Class Constructor")
+
+                        class Son(Fateher):
+                              def disp(self):
+                                  print("Son class Instance method:" self.money)
+
+                        s = Son()
+                        s.disp()
+
+
+_____ CODE
+
+constructor la child class madhe call karaychi garj nahi to automatic call hoto
+
+constructor ha automatic call hoto child class mahe
+
+
+Example:
+
+
+
+                        class Father:
+                            def __init__(self , m):
+                                self.money = m
+                                print("Father Class COnstructor")
+
+                            def show(self):
+                                print("Father Class Instance Method")
+
+
+                        class Son(Father):
+                            def disp(self):
+                                print("Son class instance method")
+
+                        s = Son(1000)
+                        print(s.money)
+                        s.show()
+                        s.disp()
+                        
+                        
+                        OUTPUT ________________________________
+                        
+                        Father Class COnstructor
+                        1000
+                        Father Class Instance Method
+                        Son class instance method
 
 
 
