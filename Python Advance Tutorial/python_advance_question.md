@@ -1302,6 +1302,42 @@ yamdhe daughter ani son akmekanche member variable acces karu shakta nahi
 
 
 
+_______________________ Using Constructor _____________
+Example :
+
+
+
+                        class Father:
+                            def __init__(self):
+                                print("Father class constructor")
+
+                            def showF(self):
+                                print("Father Class Method")
+
+                        class Son(Father):
+                            def __init__(self):
+                                print("Son class constructor")
+
+                            def showS(self):
+                                print("Son Class Method")       
+
+
+                        class Daughter(Father):
+                            def __init__(self):
+                                print("Daughter class constructor")
+
+                            def showD(self):
+                                print("Dougher Class Method")      
+
+                        s = Daughter()
+                        
+                        
+                        OUTPUT _____________________
+                        Daughter class constructor
+                        
+                        
+
+
 
 
 
