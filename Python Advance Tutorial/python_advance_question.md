@@ -994,15 +994,93 @@ Example:
 
 
 
+# Constructor In Inheritance
+
+
+By default , The Constructor in the parent class is available to the child class
+
+Samja parent class madhe pan constructor ahe ani child class madhe pan constructor ahe
+
+
+Example : 
+
+                        class Father:
+                            def __init__(self):
+                                self.money = 1000
+                                print("Father CLass Construtor")
+
+                        class Son(Father):
+                            def disp(self):
+                                print("Son class instance :",self.money)
+
+                        s = Son()
+                        s.disp()
 
 
 
 
+# Constructor Overriding 
+
+1 ) if we write constructor in the both class , parent class and child class then the parent class constroctor is not available to the child class
+  ( jar parent ani child class madhe donhi kade constructor asel tar parent class cha constructor available child class sathi ) 
+  
+2 ) in this case only child class construcotr is accessessible which means child class constructor is replacing parent class constroctor
+  
+  (mhanje jar donhi kade construcotr define kelele asel tar child class cha constructor ha parent class chya constructor la override karto yalacha 
+   constructor overriding mhantat ) 
+   
+
+Example :
+
+                class Father:
+                     def __init__(self):
+                        self.money = 2000
+                        print("Father Class Constructor")
+
+                     def disp(self):
+                        print(self.mondy)
+
+                s = Son()
 
 
 
 
+Example : 
 
+
+                class Father:
+                    def __init__(self):
+                        self.money = 1000
+
+                        print("Father Class Constructor")
+
+
+                    def show(self):
+                        print("Father class instance method")
+
+
+                class Son(Father):
+
+                    def __init__(self):
+                        self.money = 5000
+                        self.car = "BWM"
+                        print("Son CLass Constructor")
+
+                    def disp(self):
+                        print("Son class Instance method")
+
+
+                #______________________
+                s = Son()
+                print(s.money)
+                print(s.car)
+                s.disp()
+                s.show()
+
+                # ___________ Pan hya condition madhe
+                print("____________________")
+                f = Father()
+                print(f.money)
                                                 
                                                 
                                                 
