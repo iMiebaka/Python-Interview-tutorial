@@ -74,6 +74,119 @@ Marathi :
    
    
 
+# What are Dict and List comprehensions
+
+List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+
+Example :
+
+             a = [1,2,3,4,5,6,7]
+             a = [i for i in a if i % 2 == 0]
+             print(a)
+
+             OUTPUT : [2, 4, 6]
+
+#  what is the use of .pyc file in python
+
+pyc file contains the “compiled bytecode” of the imported module/program so that the “translation” from source code to bytecode can be skipped on subsequent imports of the *. py file. Having a *. pyc file saves the compilation time of converting the python source code to byte code, every time the file is imported.
+
+
+
+# .What are Literals in Python and explain about different Literals
+
+A literal in python source code represents a fixed value for primitive data types
+
+1 ) String literals : A string literal is created by assigning some text enclosed in single or double quotes to a variable. To create multiline              literals, assign the multiline text enclosed in triple quotes. Eg.name=”Tanya”
+
+2 ) A character literal : It is created by assigning a single character enclosed in double quotes. Eg. a=’t’
+
+3 ) Numeric literals : They include numeric values that can be either integer, floating point value, or a complex number. Eg. a=50
+
+4 ) Boolean literals : These can be 2 values- either True or False.
+
+5 ) Literal Collections– These are of 4 types-
+a) List collections-Eg. a=[1,2,3,’Amit’]
+
+             b) Tuple literals- Eg. a=(5,6,7,8)
+
+c) Dictionary literals- Eg. dict={1: ’apple’, 2: ’mango, 3: ’banana`’}
+
+d) Set literals- Eg. {“Tanya”, “Rohit”, “Mohan”}
+
+
+# What are python modules? Name some commonly used built-in modules in Python
+
+1 ) os
+2 ) sys
+3 ) math
+4 ) random
+5 ) data time
+6 ) JSON
+
+# What are local variables and global variables in Python?
+
+Global Variables:
+
+Variables declared outside a function or in global space are called global variables. These variables can be accessed by any function in the program.
+
+Local Variables:
+
+Any variable declared inside a function is known as a local variable. This variable is present in the local space and not in the global space.
+
+Example : 
+
+                     a=2  # Global Variable
+                     def add():
+                         b=3    # Local Variable
+                         c=a+b
+                         print(c)
+                     add()
+
+
+# What is the difference between Python Arrays and lists
+
+1 L ) Can consist of elements belonging to different data types
+
+2 A ) Only consists of elements belonging to the same data type
+
+1 L ) No need to explicitly import a module for declaration
+
+2 A ) Need to explicitly import a module for declaration
+
+1 L ) Cannot directly handle arithmetic operations
+
+2 A ) Can directly handle arithmetic operations
+
+1 L ) Can be nested to contain different type of elements
+
+2 A ) Must contain either all nested elements of same size
+
+1 L ) Preferred for shorter sequence of data items
+
+2 A ) Preferred for longer sequence of data items
+
+1 L ) Greater flexibility allows easy modification (addition, deletion) of data
+
+2 A ) Less flexibility since addition, deletion has to be done element wise
+
+1 L ) The entire list can be printed without any explicit looping
+
+2 A ) A loop has to be formed to print or access the components of array
+
+1 L ) Consume larger memory for easy addition of elements
+
+2 A ) Comparatively more compact in memory size
+
+
+
+
+
+
+
+
+
+
+
 
 
 
