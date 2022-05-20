@@ -1,4 +1,98 @@
 # Python-Interview-tutorial
+__________________________________________________________________________________________________________
+# Basic Interview Question 
+
+# What is list
+
+A list in Python is used to store the sequence of various types of data. Python lists are mutable type its mean we can modify its element after it created. A list can be defined as a collection of values or items of different types. The items in the list are separated with the comma (,) and enclosed with the square brackets [ ]. The element of the list can access by index
+
+
+# what is namespace
+
+1 ) In python , namespace represents a memory block where names are mapped to object
+
+2 ) The objects are variables and functions . As each object is created, its name along with space(the address of the outer function in which the object is), gets created. 
+
+3 ) The namespaces are maintained in python like a dictionary where the key is the namespace and value is the address of the object.
+
+Type of namespace
+
+A ) Built-in namespace– These namespaces contain all the built in objects in python and are available whenever python is running . print() and input()
+
+B ) Local Namespace: This namespace includes local names inside a function. This namespace is created when a function is called, and it only lasts until     the function returns.   
+
+C ) Global Namespace: This namespace includes names from various imported modules that you are using in a project
+
+
+
+ 
+# What are decorators in Python
+
+Decorators are used to add some design patterns to a function without changing its structure
+Decorators generally are defined before the function they are enhancing. To apply a decorator we first define the decorator function. 
+Then we write the function it is applied to and simply add the decorator function above the function it has to be applied to. For this, we use the @ symbol before the decorator.
+
+Example : 
+
+            def decor_result(result_function):
+                def destinction(marks):
+                    for m in marks:
+                        if m > 40:
+                            print("Destinction Mark")
+
+                    result_function(marks)        
+
+                return destinction
+
+            @decor_result
+            def result(marks):
+                for res in marks:
+                    if res > 33:
+                        pass
+                    else:
+                        print("Result Fail")
+                        break
+                else:
+                    print("Pass")
+
+
+            result([50,60,49,43,53])
+            
+            OUTPUT : 
+            
+            Destinction Mark
+            Destinction Mark
+            Destinction Mark
+            Destinction Mark
+            Destinction Mark
+            Pass
+
+Marathi :
+
+   decorator mule apan design pattern change karu shakto without changign main function . yamadhe main function chay adhi ( @decorator_fun_name ) 
+   lihayach . mhanje adhi decorator wala functioin call hoil
+   
+   
+
+
+
+
+
+__________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # What are generators in Python ? 
 
