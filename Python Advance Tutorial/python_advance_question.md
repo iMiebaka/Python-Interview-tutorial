@@ -1553,14 +1553,63 @@ Example :
 
 
 
+# Operator Overloading
+
+if any operator performs additional actions other than what it is meant for , it is called operator overloading
+
+Marathi : 
+        yamadhe akhadya operator ( + , * , / ) la apla akhada work assign karu shakatoy 
+        
+        kuthlahi add , sub , multi  karaycha aslyavar apan magic method la call hoto ( print(dir(int)) ) ( 
+        
+        
+        
+
+
+
+Example : 
+
+                        class A:
+                            def __init__(self ,x):
+                                self.x = x
+
+                            def __add__(self , other):
+                                return self.x + other.x
+
+                        class B:
+                            def __init__(self ,x):
+                                self.x = x
+
+                        a  = A(100)
+                        b  = B(100)
+
+                        print(a + b)
+
+
+# module 
+
+A module is a file containing python definitation and statements .
+A module is a file containing group of variables , method , function and classes 
+They are executed only the first time the module name is encountered in an import statemnt
+the file name is the module name with the suffix .py appended
+
+Ex :- mymodule.py
+
+_______________________________________________________________
+Type of Module
+_______________________________________________________________
+
+
+1 ) User-defined Modules
+2 ) Build-n Modules
+
+        Ex :- array , math , numpy , sys
 
 
 
 
 
-
-
-
+# Video No 30
 
 
 
