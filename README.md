@@ -184,11 +184,21 @@ Python Functions is a block of related statements designed to perform a computat
 
 
 
+# What is self in Python
+
+The self parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class.
 
 
 
+# wha tis Iterators
 
+An iterator is an object that contains a countable number of values. Iterator in python is an object that is used to iterate over iterable objects like lists, tuples, dicts, and sets. The iterator object is initialized using the iter() method. It uses the next() method for iteration
 
+1 ) __iter(iterable)__ : method that is called for the initialization of an iterator. This returns an iterator object
+
+2 ) next ( __next__    : in Python 3) The next method returns the next value for the iterable. When we use a for loop to traverse any iterable object, internally it uses the iter() method to get an iterator object which further uses next() method to iterate over. This method raises a StopIteration to signal the end of the iteration.
+
+ 
 
 
 
