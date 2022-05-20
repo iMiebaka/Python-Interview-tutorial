@@ -1339,7 +1339,239 @@ Example :
 
 
 
-# video no 21 is playing
+# Polymorphism
+
+
+
+Ploymorphism is a word that came from two greek words, poly means many and morphos means forms
+
+if a variable , object or method perform different behavior according to situation, it is called polymorphism
+
+1 ) Duck typing
+2 ) Operator overloading
+3 ) Method overloading
+4 ) Method overriding
+
+
+
+# Dock Typing
+
+In python , we follow a principle - if 'it walks like a duck and talks like a duck , it must be a duck ' which means python doesn't care about
+which class of object it is , if it is an object and required behavior is present for that object then it will work . The type of object is distinguished only at runtime . This is called as duck typing .
+
+python doesn't care about which class of object it is , in order to call an existing method on an object . if the method is defined on the object then 
+it will be called  .
+
+Marathi:
+
+        Ya madhe he nahi pahila jat ki jo object ahe to kuthlya type cha ahe konchay class cha ahe to phakt hech pahato jo miltoy to object ahe method 
+        ahe ani yala phakata call karaychay 
+        
+        jar kuthla dog ahe ani to duck sarkah chaltoy tari tyala dock mhanun consider kar , 
+        
+        Ya madhe yala pharak padat nahi ki ha konta object ahe jar yala akhada object bhetla tar to yala direct call karto
+        
+        
+ Example : 
+         
+                 class Duck:
+                    def walk(self):
+                        print("Thapak Thapak Thapak ")
+
+                class Horse:
+                    def walk(self):
+                        print("Tabdak Tabdak Tabdak Tabdak ")
+
+                def myfunction(obj):
+                    obj.walk()
+
+                d = Duck()
+                myfunction(d)   
+                
+                
+                OUTPUT  : Thapak Thapak Thapak 
+                
+
+
+Example  :-2
+
+
+                        class Duck:
+                            def walk(self):
+                                print("Thapak Thapak Thapak ")
+
+                        class Horse:
+                            def walk(self):
+                                print("Tabdak Tabdak Tabdak Tabdak ")
+
+
+                        class Cat:
+                            def talk(self):
+                                print("Meow Meow")
+
+
+                        def myfunction(obj):
+                            obj.walk()
+
+                        d = Duck()
+                        myfunction(d)
+
+                        h = Horse()
+                        myfunction(h)
+
+                        c  = Cat()
+                        myfunction(c)
+
+                        (This class will show error )
+                        __________________________________________________________________________
+                        
+                        Thapak Thapak Thapak 
+                        Tabdak Tabdak Tabdak Tabdak
+                        
+                        AttributeError: 'Cat' object has no attribute 'walk'
+
+
+        
+
+# Strong Typing
+
+We Can check wether the object passed to the method has the method being invoked or not
+
+hasattr() function is uesed to check wether the object has a method or not 
+
+Syntax :- hasattr(object , attribute)
+
+Where attribute can be a method or variable . if it is found in the object then this method return True else False
+
+
+
+Example :
+
+
+
+                                class Duck:
+                                    def walk(self):
+                                        print("Thapak Thapak Thapak ")
+
+                                class Horse:
+                                    def walk(self):
+                                        print("Tabdak Tabdak Tabdak Tabdak ")
+
+                                class Cat:
+                                    def talk(self):
+                                        print("Meow Meow")
+
+                                def myfunction(obj):
+                                    if hasattr(obj , "walk"): # yane kay hoil jar fun madhe walk asel tar tarach execute hoil otherwise error print hoil
+                                        obj.walk()
+                                    else:
+                                        print("Error")
+
+
+                                d = Duck()
+                                myfunction(d)
+
+                                h = Horse()
+                                myfunction(h)
+
+                                c = Cat()
+                                myfunction(c)
+                                
+                                OUTPUT ____________________________
+                                
+                                Thapak Thapak Thapak 
+                                Tabdak Tabdak Tabdak Tabdak 
+                                Error
+
+
+
+
+
+# Method Overloading
+
+( Python madhe method overloading nahiye pan apan yala achive karu shakot code madhe cahnges karun ) 
+
+
+When more thatn one method with the same name is defined in the same class . it is known as method overloading . 
+in python , if a method is written such it can perform more than one task , it is called method overloading . 
+
+Example :- 
+
+
+# method Overloading
+
+                        class Myclass:
+                            def sum(self , a=None, b=None , c=None):
+                                if a!=None and b != None and c !=None:
+                                    s = a + b + c
+
+                                elif a != None and b !=None:
+                                    s = a + b
+
+                                elif a != None:
+                                    s = a
+                                else:
+                                    s = "Invalid"
+                                return s
+
+                        obj = Myclass()
+                        print(obj.sum(2 , 19,29,))
+                        
+                        
+                        
+                        OUTPUT _____ : 50
+                        
+                        
+
+# method Overriding
+
+if we write method in the both classes , parent class and child class then the parent class method is not avaiable to the child class
+in this case only child class method is accessible which means child class method is replacing parent class method
+
+method overriding is used wehn programmer want to modify the existing behavior of a method
+
+
+Example : 
+
+                        class Myclass:
+                            def sum(self , a=None, b=None , c=None):
+                                if a!=None and b != None and c !=None:
+                                    s = a + b + c
+
+                                elif a != None and b !=None:
+                                    s = a + b
+
+                                elif a != None:
+                                    s = a
+                                else:
+                                    s = "Invalid"
+                                return s
+
+                        obj = Myclass()
+                        print(obj.sum(2 , 19,29,))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
  
