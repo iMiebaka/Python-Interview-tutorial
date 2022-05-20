@@ -200,14 +200,57 @@ An iterator is an object that contains a countable number of values. Iterator in
 
  
 
+# What is Python Generator ? 
+
+it generate data any logical pattern based . example serias even number generate , karne , yavelei generator karne
+
+generater function always return eterator object
 
 
+Example :
 
+            def evenNumbers(n):
+                i = 1
+                while n:
+                    yield 2*i
+                    i += 1
+                    n -= 1
 
+            it = evenNumbers(10)        
+            even_list = []
 
+            while True:
+                try:
+                    even_list.append(next(it))
+
+                except :
+                    break
+            print(even_list)
+            
+            
+            OUTPUT : [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
 
 __________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Advance Interview Question 
