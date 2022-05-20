@@ -178,6 +178,12 @@ Example :
 2 A ) Comparatively more compact in memory size
 
 
+# what is function 
+
+Python Functions is a block of related statements designed to perform a computational, logical, or evaluative task. The idea is to put some commonly or repeatedly done tasks together and make a function so that instead of writing the same code again and again for different inputs, we can do the function calls to reuse code contained in it over and over again.
+
+
+
 
 
 
@@ -194,7 +200,7 @@ Example :
 __________________________________________________________________________________________________________
 
 
-
+# Advance Interview Question 
 
 
 
