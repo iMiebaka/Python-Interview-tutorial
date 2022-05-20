@@ -231,28 +231,61 @@ Example :
             OUTPUT : [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
 
+# What is monkey patching in Python ? 
+
+it is dynamically replacement of attribute at runtime ) 
+
+( jo class banvto tyat je members attribute banavto tyala monkey patching mhantat 
+
+Example :
+
+apan kay kel ak class banvla tyat ak function banvla pan apan code la replace kel aka dusrya function object ne hi ahe minkey  patching
+
+yat apan aka object chya behaviour la change kelay at the runtime tya attribute chay aat changes kelet at the runtime
+
+
+Example :
+
+              class Test:
+
+                  def __init__(self,x):
+                      self.a = x;
+
+                  def get_data(self):
+                      print("Some code to fetch data from database")
+
+                  def f1(self):
+                      self.get_data()
+
+                  def f2(self):
+                      self.get_data()
+
+              t1 = Test(5)
+              # t1.f1()
+              # t1.f2()
+              
+              # _______ Ata class la hya code ne replace kel 
+              
+              def new_get_data(self):
+                  print("Some code to fetch data from test data")
+              Test.get_data = new_get_data
+              print("Afer Monkey Patching")
+              t1.f1()
+              t1.f2()
+              
+              OUTPUT : 
+              
+              Afer Monkey Patching
+              Some code to fetch data from test data
+              Some code to fetch data from test data
+
+
+
+
+
+
+
 __________________________________________________________________________________________________________
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Advance Interview Question 
 
 
