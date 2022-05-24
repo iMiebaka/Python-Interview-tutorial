@@ -1609,23 +1609,70 @@ _______________________________________________________________
 
 
 
-# Video No 30
+# Abstract class VS Interface
+
+1 ) an abstract class can have abstract methods as well as concrete methods , but all methods of an interface are abstract
+2 ) we use abstract class when there are some common feature shared by all the objects as they are while we use interface if all the feature need to be iimplemented differently for different objects
+3 ) its programmer job to write child class for abstract class while in interface any third party vendor will take responsibility to write child class
+4 ) Interface are slow when compared to abstract class
+
+
+
+Marathi :
+        hi programmer chi responsibility aste jo abstract class banavto to child class bhi banavto 
 
 
 
 
 
+# Multitasking
+
+Executing multiple task at the same time
+
+
+
+# type of multitasking
+
+1 ) Process based multitasking
+2 ) Thread based multitasking
+
+
+# Process based multitasking
+
+Executing multiple task at the same time where each task is a separate independent program( process ) ,is called process based multitasking
+It is suitable for Operating system level
+
+
+Marathi : 
+        akach veles jeva multiple task execute hotat ani jyatun pratek ak task seprate asto , ani aka task chi dusrya task var dependancey nasti
+        exmaple : Jas ki OS madhe apach veles multitasking chalu ast 
 
 
 
 
+# Thread based multitasking
+
+Executing multiple task at the same time where each task is a separate independent part of the same program ( process ) , is called thread based multitasking and each independent part is called thread . It is suitable for programmatic level .
+
+
+Marathi : 
+
+        ya madhe same program cha seprate task ahe pan task cha ak dusryashi sambandh nahi 
+        
+        example : microsoft word madhe jyaveli typing karto tyach veli to spelling pan check karto
+        
 
 
 
  
  
  
+ # Thread
  
+ Thread is a separate flow of execution . Every thread has a task
+ 
+ Marathi :
+        ya madhe multiple thread asel tar aka thread cha dusrya thread var effect hot nahi 
  
  
  
