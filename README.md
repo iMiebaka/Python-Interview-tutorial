@@ -2,6 +2,10 @@
 __________________________________________________________________________________________________________
 # Basic Interview Question 
 
+# what is diffrence between function and mehtod 
+F ) function can call by it's name 
+M ) method can't call by it's name
+F ) 
 # What is list
 
 A list in Python is used to store the sequence of various types of data. Python lists are mutable type its mean we can modify its element after it created. A list can be defined as a collection of values or items of different types. The items in the list are separated with the comma (,) and enclosed with the square brackets [ ]. The element of the list can access by index
