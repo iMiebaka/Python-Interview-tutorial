@@ -54,9 +54,24 @@ _____________________________________________________________
 
 # Introduction To Project
 
-      Roosket is a tourism related application this application is help to user ffinding best tourist destination. this is help to  
+      Roosket is a tourism related application this application is help to user ffinding best tourist destination with affortable cost . 
+      as well as providing reviews, ratings, and valuable details of a particular location .It enables users to browse and find details 
+      about their planned destinations .user can book any packages , as like diwali packages , summer packages and other
+      
+      
+# Porject Module
+      1 ) Webiste
+      2 ) admin panel
+      3 ) mobile application
+      
+ # Functionality of applicatioin
+ 
+      user can book any tourist package by mobile application or web application , also all packages , images , activity all this type of information
+      can be added by admin panel ,also user can do online payment 
 
 
+# Tool & Technology
+      
 
 
 
