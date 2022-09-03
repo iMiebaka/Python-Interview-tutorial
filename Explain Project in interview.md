@@ -72,7 +72,12 @@ _____________________________________________________________
 
 # Tool & Technology
       
-
+      for this application backend is develop in python django and front end is in html , css, bootstrap  , javascript , and this application is host
+      on AWS
+      
+ # Role
+      my role and responsibility was to develop web application and add feture as like display packages , add packages and empliment payment 
+      getway
 
 
 
