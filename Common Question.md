@@ -34,3 +34,25 @@
       That data can be used to GET , PUT , POST and DELETE data type which referes to the readign , updating , creating and delete of operations conerning<br/>
       resource
       
+  # 8 ) What is difference between REST and web API
+  
+      web api are lightweight architecture , they are designed for gadgets constrained to devices like smartphones . 
+      
+  # 9 ) what are the rest method 
+  
+       1 ) GET  = Retrive information about the REST API resource <br/>
+       2 ) POST = create a REST API resource<br/>
+       3 ) PUT  = update a rest API resource<br/>
+       4 ) DELETE = Delete REST api resource or related componet<br/>
+       
+  # 10 ) what is serializer in Django
+  
+        DRF is responsible for converting objects into data types understandable by javascript and front end framework
+        
+  # 11 ) what doees a serializer do
+        
+          serializers allow complex data such as querysets and model instances to be converted to native python datatypes that can be easily <br/>
+          rendered into JSON , XML or other content types
+          
+   # 12 ) 
+      
