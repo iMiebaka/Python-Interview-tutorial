@@ -54,5 +54,9 @@
           serializers allow complex data such as querysets and model instances to be converted to native python datatypes that can be easily <br/>
           rendered into JSON , XML or other content types
           
-   # 12 ) 
+   # 12 ) what is slug in django
+          
+          A slug is a short label for something , containig only latters , numbers , underscores or hyphens
+          
+   # 13 )
       
