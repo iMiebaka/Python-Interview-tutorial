@@ -68,5 +68,9 @@
         . The Jinja template engine allows customization of tags, filters, tests, and globals. Also, unlike the<br/>
         Django template engine, Jinja allows the template designer to call functions with arguments on objects
         
-   # 15 ) 
+   # 15 ) what is coockes
+        
+         A cookie is a small piece of information which is stored in the client browser.It is used to store user's <br/>
+         data in a file permanently (or for the specified time) . Cookie has its expiry date and time and removes <br/>
+         automatically when gets expire. Django provides built-in methods to set and fetch cookie.
       
