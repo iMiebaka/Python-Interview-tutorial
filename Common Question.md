@@ -58,5 +58,9 @@
           
           A slug is a short label for something , containig only latters , numbers , underscores or hyphens
           
-   # 13 )
+   # 13 ) what is jwt token
+   
+          JWT, short for JSON Web Token is an open standard for communicating authorization details between server and client.
+          
+   # 
       
