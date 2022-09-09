@@ -62,5 +62,11 @@
    
           JWT, short for JSON Web Token is an open standard for communicating authorization details between server and client.
           
-   # 
+   # 14 ) what is jinja template
+   
+        It is a text-based template language and thus can be used to generate any markup as well as source code<br/>
+        . The Jinja template engine allows customization of tags, filters, tests, and globals. Also, unlike the<br/>
+        Django template engine, Jinja allows the template designer to call functions with arguments on objects
+        
+   # 15 ) 
       
