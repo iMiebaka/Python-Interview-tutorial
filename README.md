@@ -1,6 +1,20 @@
 # Python-Interview-tutorial
 __________________________________________________________________________________________________________
-# Basic Interview Question 
+# Basic Interview Question
+
+# what is pip 8 ?
+
+in python PP 8 has appears as the style guide that most project hold to it .
+it provides a very readable and eye-pleasing coding style
+A full form of PEP is python enhancement proposal
+PEP 8 recommends use 4 spaces to show indentation and tabs should only be used to maintain
+consistency in the program
+
+# Is the python interpreted language
+A python is an interpreted lanugage python language program runs directly from the code
+python convert the source code into language code and it is again translated into machine language 
+An interpreted language is any programming language that isn't already in machine code prior to runtime
+python is full under byte code interprted the .py code source code is first compled to byte code as pyc
 
 # what is diffrence between function and mehtod 
 F ) function can call by it's name 
