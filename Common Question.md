@@ -1,3 +1,23 @@
+# how JWT token works ?
+
+
+
+    Let's take example of 'Client' (A) and 'Server' (B).
+
+    The Client(A) wants to access some protected data on our Server(B), but the Server knows Clients cannot be trusted.
+
+    The Server only wants to give the data to a trustworthy Client. So our Client sends a request to our Server along with data to verify who it is.
+
+    Instead of saving the user data, the Server instead creates a token and this token is returned to the Client and it's up to the Client to store this data, and send it along as required for any requests to the Server.
+
+    The next time our Client makes a request along a secure route, It sends along the job token.
+
+    But our Server knows not to trust the Client, So our Server verifies this token is who it says it's from and that it hasn't been tampered with.
+
+    If everything checks out to be OK, the Server sends back a response with the requested data. That's it !!.
+
+
+
 
 # 1 ) Difference between authentication and authorization
 
