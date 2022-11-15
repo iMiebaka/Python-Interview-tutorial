@@ -12,10 +12,15 @@ ________________________________________________________________________________
 7 ) diffrent between functional programming and class programming
 ------------------------------------------------------
 
+
+
+
+
 # difference between sql and mysql
 MySQL is software, but SQL is a database language
 
-# 
+# What is context in python
+Context Managers: The <b> with </b> keyword is used. When it gets evaluated it should result in an object that performs context management.
 
 # what is pip 8 ?
 
