@@ -2,6 +2,16 @@
 __________________________________________________________________________________________________________
 # Basic Interview Question
 
+
+1 ) mixing
+2 ) with keyword
+3 ) what is view
+4 ) diff btw sql and mysql
+5 ) dynamic url
+6 ) django combine multiple query
+7 ) diffrent between functional programming and class programming
+------------------------------------------------------
+
 # what is pip 8 ?
 
 in python PP 8 has appears as the style guide that most project hold to it .
@@ -844,6 +854,14 @@ Example :
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # DJANGO INTERVIEW QUESTION
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
  
  # what architecture does djagno follow
  Django follow MVT patterns . stand for model view template
