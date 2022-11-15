@@ -12,6 +12,11 @@ ________________________________________________________________________________
 7 ) diffrent between functional programming and class programming
 ------------------------------------------------------
 
+# difference between sql and mysql
+MySQL is software, but SQL is a database language
+
+# 
+
 # what is pip 8 ?
 
 in python PP 8 has appears as the style guide that most project hold to it .
