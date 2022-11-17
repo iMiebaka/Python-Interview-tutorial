@@ -76,3 +76,58 @@ Now you can find the users where first_name==last_name
  # 11. How to find second largest record using Django ORM
  
             user = User.objects.order_by('-last_login')[1]
+            
+ # 12. Find rows which have duplicate field values¶
+ 
+            duplicates = User.objects.values( 'first_name' ).annotate(name_count=Count('first_name')).filter(name_count__gt=1)
+            
+ # 13. How to find distinct field values from queryset
+ 
+            distinct = User.objects.values( 'first_name' ).annotate( name_count=Count('first_name') ).filter(name_count=1) records =           User.objects.filter(first_name__in=[item['first_name'] for item in distinct])
+
+
+
+# 14. How to use Q objects for complex queries
+
+In previous chapters we used Q objects for OR and AND and NOT operations. Q objects provides you complete control over the where clause of the query.
+
+
+            from django.db.models import Q
+            queryset = User.objects.filter( Q(first_name__startswith='R') | Q(last_name__startswith='D') )
+
+            OUTPUT ---->>>
+
+            <QuerySet [<User: Ricky>, <User: Ritesh>, <User: Radha>, <User: Raghu>, <User: rishab>]>
+            
+# 15. How to group records in Django ORM
+
+Grouping of records in Django ORM can be done using aggregation functions like Max, Min, Avg, Sum. Django queries help to create, retrieve, update and delete objects. But sometimes we need to get aggregated values from the objects
+
+            from django.db.models import Avg, Max, Min, Sum, Count
+
+            1 ) User.objects.all().aggregate(Avg('id'))
+
+            OUTPUT --->> {'id__avg': 7.571428571428571}
+
+            2 ) User.objects.all().aggregate(Max('id'))
+
+            OUTPUT -->> {'id__max': 15}
+
+            3 ) User.objects.all().aggregate(Min('id'))
+
+            OUTPUT --->> {'id__min': 1}
+
+            4 ) User.objects.all().aggregate(Sum('id'))
+
+            OUTPUT -->> {'id__sum': 106}
+            
+_________________________________________________________________________________
+
+# Creating, Updating and Deleting things
+
+_________________________________________________________________________________
+
+# 1. How to create multiple objects in one shot
+
+            Category.objects.bulk_create( [Category(name="God"), Category(name="Demi God"), Category(name="Mortal")] )
+            
