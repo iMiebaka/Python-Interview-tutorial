@@ -63,3 +63,16 @@ Now you can find the users where first_name==last_name
 
     User.objects.filter(last_name=F("first_name"))
     
+# 9. How to filter FileField without any file
+
+
+            no_files_objects = MyModel.objects.filter(
+                Q(file='')|Q(file=None)
+            )
+# 10. How to perform join operations in django ORM
+
+            a1 = Article.objects.select_related('reporter') // Using select_related
+            
+ # 11. How to find second largest record using Django ORM
+ 
+            user = User.objects.order_by('-last_login')[1]
