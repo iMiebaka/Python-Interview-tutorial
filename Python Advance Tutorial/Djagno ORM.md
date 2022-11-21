@@ -1,3 +1,14 @@
+# what is select_related
+
+the select related obtains all data at one time through multi table join association query and improves performance by reducing the number of database queries . select_related is used with the foreign key relationship, and it performs the INNER join operations with the associate table
+
+
+
+
+
+
+
+
 
 # How to do OR queries in Django ORM
 
