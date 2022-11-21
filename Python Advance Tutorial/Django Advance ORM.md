@@ -1,3 +1,32 @@
+# What is celeary
+
+celery is a task que. in this ques wise working means FIFO ( first in first out ). this use of it when heavy task is in system. but we
+dont want to execute that in system invorment process effect should not be on system , we use that whenever we want to bulk task 
+
+in celery we need to use redis 
+
+
+# what is message broker
+
+which task have to done tha all task store in redis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         from datetime import date
 
         from django.db import models
