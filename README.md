@@ -12,6 +12,19 @@ ________________________________________________________________________________
 7 ) diffrent between functional programming and class programming
 ------------------------------------------------------
 
+# What is Try , Except , Finally block
+    try:
+           # Some Code.... 
+
+    except:
+           # optional block
+           # Handling of exception (if required)
+
+    else:
+           # execute if no exception
+
+    finally:
+          # Some code .....(always executed)
 
 # what is map funtion
 Map in Python is a function that works as an iterator to return a result after applying a function to every item of an iterable 
