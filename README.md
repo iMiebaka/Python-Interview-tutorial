@@ -13,7 +13,12 @@ ________________________________________________________________________________
 ------------------------------------------------------
 
 
+# what is map funtion
+Map in Python is a function that works as an iterator to return a result after applying a function to every item of an iterable 
+(tuple, lists, etc.). It is used when you want to apply a single transformation function to all the iterable elements.
 
+# What is filter
+filter() is a built-in function that allows you to process an iterable and extract those items that satisfy a given condition
 
 
 # difference between sql and mysql
