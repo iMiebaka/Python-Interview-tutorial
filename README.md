@@ -12,6 +12,32 @@ ________________________________________________________________________________
 7 ) diffrent between functional programming and class programming
 ------------------------------------------------------
 
+# what is use of ( if __name__ == '__main__' : )
+
+suppose we have two files File A and File B
+
+file_a.py___________
+
+def add(a,b):
+    return a + b
+
+
+if __name__ == '__main__' :
+    print(add(5,5))
+    
+    
+file_b.py ____________
+
+import file_a
+
+
+print(file_a.add(4,6))
+
+
+and if we call file_by file so in that case only first file function will execute will not print file a function
+
+
+
 # What is Try , Except , Finally block
     try:
            # Some Code.... 
