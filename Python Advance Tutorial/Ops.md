@@ -209,6 +209,51 @@ class Mobile:
 data = Mobile()
 data.show()
 
+ ___________________________________________________________
+ 
+# Inheritance
+
+The mechanism of deriving a new class from an old one ( existing class ) such that the new clas inherit all the members ( variable and mehods ) of old class is called inheritance or derivation
+
+
+ old class
+    |
+    |
+ New CLass
+
+
+# Super class and sub class
+
+The old class is referred to as the super class and the new one is called the sub class
+
+* Parent class - Base class  or super class
+* Child class  - Derived class or sub class
 
 
 
+<b>Real life example<b>
+ 
+         Father
+          1) Home
+          2) Money
+          3) Business
+
+         Son
+           1 ) BMW
+
+
+
+# Inheritance
+ 
+All classes in python are build from a single super class called 'object' so whenever we create a class inpython, object will become super class for 
+ them internally.
+ 
+         class Mobile(object):
+         class Mobile:
+
+* The main advantage of inheritance is code resuability.
+ 
+ 
+ <a href="https://www.youtube.com/watch?v=ZDd-hNawRbY&list=PLbGui_ZYuhijd1hUF2VWiKt8FHNBa7kGb&index=19&ab_channel=GeekyShows">YOUTUBE LINK</a>
+ 
+ 
