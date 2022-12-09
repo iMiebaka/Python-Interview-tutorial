@@ -99,3 +99,116 @@ OUTPUT
 
 RealMe Pro2
 Modelo : RealMe Pro2
+
+
+_____________________________________________________
+
+# Constructor
+
+Python supports a special type of method called constructor for initializiing the instance variable of a class
+A class constructor , if defined is called whenever a program creates an objec of that class
+
+A construcotr is called only once at the time of creating an instance
+if two instance are created for a class, the constructor will be called once for each instance
+
+
+
+
+# Constructor without parameter
+
+       class Mobile:
+
+          def __init__(self , a):
+              self.name = a
+
+      data = Mobile("I-phone")
+
+      print(data.name)
+
+
+# Type of variable
+
+1 ) Instance variables are the variables whose separate copy is created in every object
+
+2 ) Instance variables are defined and initialized using a constructor with self parameter
+
+
+        class Mobile:
+            def __init__(self):
+                self.name = "Iphone"     <<---- Instance Variable
+
+        data = Mobile()
+
+# Accessing Instance Variable
+
+
+To access instance variable, we need instance methods with self as first parameter then we can access instance variable using self.variable_name
+
+
+       class Mobile:
+           def __init__(self):
+               self.name = "I-Phone" <<---- Instance Variable
+
+           def show(self):      <<------ Instance Method
+               self.name <<----  Accessing instance variable
+
+       mobile = Mobile()
+       print(mobile.name)
+
+
+# Accessing Instance Variable
+
+<b>Outside Class</b>
+
+We can access instance variable using <b>object_name.variable_name</b>
+
+
+      class Mobile:
+          def __init__(self):
+              self.name = "I-Phone"
+
+      data = Mobile()
+      print(data.name)      <<----- Access instance variable
+      
+ 
+
+# Instance Variable
+
+Instance variable are the variables whose separate copy is created in every object. if we modify the copy of instance variable in an instance, it will
+not effect all the copies in the other instance
+
+
+
+       class Mobile:
+           def __init__(self):
+               self.model = "RealMe X"
+
+           def show_model(self):
+               print(self.model)
+
+       realme = Mobile()
+       redmi = Mobile()
+       geek = Mobile()
+
+
+
+
+# class Variable / Static Variable
+
+
+class variables are the variables whose single copy is available to all the instance of the class
+if we modify the copy of class variable in an instance, it will effect all the copies in the other instance
+
+class Mobile:
+    fp = "yes"     <<<<---- class varaible
+    
+    def show(self):
+        self.name = "sachin"
+        print(self.fp)
+    
+data = Mobile()
+data.show()
+
+
+
+
