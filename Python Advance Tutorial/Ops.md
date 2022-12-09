@@ -254,6 +254,8 @@ All classes in python are build from a single super class called 'object' so whe
 * The main advantage of inheritance is code resuability.
  
  
- <a href="https://www.youtube.com/watch?v=ZDd-hNawRbY&list=PLbGui_ZYuhijd1hUF2VWiKt8FHNBa7kGb&index=19&ab_channel=GeekyShows">YOUTUBE LINK</a>
+
+ # Single Inheritance
+ 
  
  
