@@ -10,6 +10,9 @@ ________________________________________________________________________________
 5 ) dynamic url
 6 ) django combine multiple query
 7 ) diffrent between functional programming and class programming
+8 ) what is meta
+9 ) what is generics view
+10 ) 
 ------------------------------------------------------
 
 # what is use of ( if __name__ == '__main__' : )
