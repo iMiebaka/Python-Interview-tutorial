@@ -258,4 +258,19 @@ All classes in python are build from a single super class called 'object' so whe
  # Single Inheritance
  
  
+ <b> Type of Inheritance </b>
+ 
+ 1 ) Single Inheritance
+ 2 ) Multi - Level Inheritance
+ 3 ) Hierarchical Inheritance
+ 4 ) Multiple Inheritance
+
+ 
+ 
+ # declaration of child class
+ 
+  <a href="https://www.youtube.com/watch?v=7vAJGN9o_SQ&list=PLbGui_ZYuhijd1hUF2VWiKt8FHNBa7kGb&index=21&ab_channel=GeekyShows">VIDEO LINK</a>
+ 
+ 
+ 
  
