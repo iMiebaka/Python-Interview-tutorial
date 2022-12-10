@@ -391,6 +391,110 @@ All classes in python are build from a single super class called 'object' so whe
  
  
  
+ # Hierarchical Inheritance
+ 
+ In this clas we create a one class to multiple child class
+ 
+ 
+ 
+        class Father:
+           member oif class father
+
+
+       class Son(Father):
+           member of class son
+
+       class Daughter(Father):
+           member of class daughter
+
+ 
+ 
+ 
+ <b>example</b>
+ 
+            class Father:
+               def showF(self):
+                   self.name = "sachin"
+                   print("Father class mehod")
+
+
+           class Son(Father):
+               def showS(self):
+                   print("Son class mehod")
+
+
+
+           class Daughter(Father):
+               def showD(self):
+                   print("Daughter class mehod")
+
+           data = Daughter()
+           data.showD()
+           data.showF()
+ 
+ 
+ 
+ # Multiple Inheritance
+ 
+ if a class is derived from more than one parent classs, then it is called multiple inheritance.
+ 
+ <b>Syntax :-</b>
+ 
+          class ParentClassName1(object):
+             member of parnet class
+
+         class ParentClassName2(object):
+             member of parent class
+
+
+         class ChildClassName(ParentClassName1,ParentClassName2):
+ 
+ 
+ 
+ ----- Eample
+ 
+ 
+          class Father(object):
+             member of father class
+
+         class Mother(object):
+             member of mother class
+
+
+         class Son(Father,Mother):
+
+-------
+ 
+ 
+         class Father(object):
+            def showF(self):
+                print("father class method")
+
+
+        class Mother(object):
+            def showM(self):
+                print("Mother class method")
+
+
+        class Son(Father, Mother):
+            def showS(self):
+                print("son class mehtod")
+
+        data = Son()
+        data.showS()
+        data.showM()
+        data.showF()
+
+ 
+ 
+ # Polymorphism
+ 
+ 
+ plymorphism means same function name ( but different signuture ) being uses for different types
+ 
+ 
+ 
+ 
  
  
  
