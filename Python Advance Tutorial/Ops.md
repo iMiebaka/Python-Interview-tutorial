@@ -269,7 +269,129 @@ All classes in python are build from a single super class called 'object' so whe
  
  # declaration of child class
  
-  <a href="https://www.youtube.com/watch?v=7vAJGN9o_SQ&list=PLbGui_ZYuhijd1hUF2VWiKt8FHNBa7kGb&index=21&ab_channel=GeekyShows">VIDEO LINK</a>
+ 
+ # Single Inheritance
+ 
+ If a class is derived from one base class ( Parent Class ), it is called single inheritance.
+ 
+ <b> Syntax:- </b>
+ 
+ 
+       class ParentClassName(object):
+          members of parent class
+
+       class ChildClassName(ParentClassName):
+          member of child class
+ 
+ 
+ 
+ <b>Example</b>
+ 
+ 
+
+         class Father:
+             money = 100
+             def show(self):
+                 print("Parent clss instance method")
+
+             @classmethod
+             def showmoney(cls):
+                 print("Parent class method",cls.money)
+
+             @staticmethod
+             def stat():
+                 a = 10
+                 print("static method class",a)
+
+         class Son(Father):
+             def disp(self):
+                 print("Child class instance method")
+
+         s = Son()
+         s.disp()
+         s.show()
+         s.showmoney()
+         s.stat()
+ 
+ 
+ 
+# Constructor in inheritance in python
+ 
+ By default , The Constructor in the parent class is available to the child class
+ 
+ 
+          class Father:
+
+              def __init__(self):
+                  self.name = "sachin"
+
+          class Son(Father):
+
+              def show(self):
+                  print(self.name)
+
+          data = Son()
+          data.show()
+ 
+ 
+ # constructor Overriding in python
+ 
+ if we write constructor in the both classes , parent class and child class then the parent class constructor is not available to the child class.
+ in this case only child class constructor is accesible which means child class constructor is replacing class constructor
+ 
+ ( jar child class madhe constructor define asel tar to parent class cha constructor ghet nahi. ani jar parent class cha constructor call kela tar
+ error yeil )
+ 
+ 
+           class Father:
+
+              def __init__(self):
+                  self.name = "sachin"
+
+          class Son(Father):
+
+              def __init__(self):
+                  self.name = "sagar"
+
+              def show(self):
+                  print(self.name)
+
+          data = Son()
+          data.show()
+
+           ----------- OUTPUT -----
+           sagar
+ 
+ 
+ 
+ 
+ # Multi-Level Inheritance
+ 
+ In multi-level inheritance, the class inherits the feature of another derived class
+ 
+ 
+         class Father:
+            def showF(self):
+                print("Father class Method")
+                self.name = 100
+
+        class Son(Father):
+            def showS(self):
+                print("Son class Method")
+
+        class G_Son(Son):
+            def showG(self):
+                print("Grand son class Method")
+
+        data   = G_Son()
+
+        data.showG()
+        data.showS()
+        data.showF()
+ 
+ 
+ 
+ 
  
  
  
