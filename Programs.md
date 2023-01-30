@@ -1,3 +1,28 @@
+# Decorator  in python
+
+
+
+                LOGIN = True
+
+                def login_decorator(func):
+                    def check_login():
+                        if LOGIN:
+                            func()
+                        else:
+                            print("Please login page")
+
+                    return check_login
+
+
+                @login_decorator
+                def dashboard():
+                    print("Dashbord")
+
+                dashboard()
+
+
+
+
 # Given a string, find the length of the longest substring without repeating characters.
 
 
