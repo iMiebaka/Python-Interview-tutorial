@@ -149,6 +149,6 @@ Query ) select sum(Price) from Products;
 
 Query ) select * from Customers where Address like "%a"
 
-<tbody><tr><th align="left">CustomerID</th><th align="left">CustomerName</th><th align="left">ContactName</th><th align="left">Address</th><th align="left">City</th><th align="left">PostalCode</th><th align="left">Country</th></tr><tr><td valign="top">54</td><td valign="top">Océano Atlántico Ltda.</td><td valign="top">Yvonne Moncada</td><td valign="top">Ing. Gustavo Moncada 8585 Piso 20-A</td><td valign="top">Buenos Aires</td><td valign="top">1010</td><td valign="top">Argentina</td></tr></tbody>
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">CustomerID</th><th align="left">CustomerName</th><th align="left">ContactName</th><th align="left">Address</th><th align="left">City</th><th align="left">PostalCode</th><th align="left">Country</th></tr><tr><td valign="top">54</td><td valign="top">Océano Atlántico Ltda.</td><td valign="top">Yvonne Moncada</td><td valign="top">Ing. Gustavo Moncada 8585 Piso 20-A</td><td valign="top">Buenos Aires</td><td valign="top">1010</td><td valign="top">Argentina</td></tr></tbody></table>
 
 
