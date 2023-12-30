@@ -40,3 +40,45 @@ selected column नाव ने  alphabetical order ne table order hoil
 Query ) <h4>select * from Customers order by City DESC;
 
 Query ) <h4>select * from Customers order by City ASC;
+
+# ORDER BY Several Columns Example
+
+Query ) select * from Customers order by ContactName, City;
+
+Query ) select * from Customers order by City ASC, Country DESC;
+
+<hr>
+<hr>
+
+# The MySQL INSERT INTO Statement
+
+Query ) INSERT INTO Customers (CustomerName, City, Country) VALUES ('Cardinal', 'Stavanger', 'Norway');
+
+<hr>
+<hr>
+
+# MySQL NULL Values
+
+<b>The IS NULL Operator</b>
+
+Query ) select * from Customers where City is null;
+
+<b> The IS NOT NULL Operator <b>
+
+Query ) select City, Address from Customers where Address is not null;
+
+<hr>
+<hr>
+
+# MySQL UPDATE Statement
+
+Query ) update Customers set City="Pune" where CustomerID = 1;
+
+<hr>
+<hr>
+
+<br>
+
+# Delete All Records
+
+
