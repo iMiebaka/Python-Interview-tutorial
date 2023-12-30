@@ -81,4 +81,74 @@ Query ) update Customers set City="Pune" where CustomerID = 1;
 
 # Delete All Records
 
+Delete single record 
+
+Query ) delete from Customers where CustomerID =1;
+
+Delete all records
+
+Query ) delete from Customers;
+
+<hr>
+<hr>
+
+# MySQL LIMIT Clause
+
+Query ) select * from Customers limit 2;
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">CustomerID</th><th align="left">CustomerName</th><th align="left">ContactName</th><th align="left">Address</th><th align="left">City</th><th align="left">PostalCode</th><th align="left">Country</th></tr><tr><td valign="top">1</td><td valign="top">Alfreds Futterkiste</td><td valign="top">Maria Anders</td><td valign="top">Obere Str. 57</td><td valign="top">Berlin</td><td valign="top">12209</td><td valign="top">Germany</td></tr><tr><td valign="top">2</td><td valign="top">Ana Trujillo Emparedados y helados</td><td valign="top">Ana Trujillo</td><td valign="top">Avda. de la Constitución 2222</td><td valign="top">México D.F.</td><td valign="top">05021</td><td valign="top">Mexico</td></tr></tbody></table>
+
+
+Query ) select * from Customers limit 2 OFFSET 5;
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">CustomerID</th><th align="left">CustomerName</th><th align="left">ContactName</th><th align="left">Address</th><th align="left">City</th><th align="left">PostalCode</th><th align="left">Country</th></tr><tr><td valign="top">6</td><td valign="top">Blauer See Delikatessen</td><td valign="top">Hanna Moos</td><td valign="top">Forsterstr. 57</td><td valign="top">Mannheim</td><td valign="top">68306</td><td valign="top">Germany</td></tr><tr><td valign="top">7</td><td valign="top">Blondel père et fils</td><td valign="top">Frédérique Citeaux</td><td valign="top">24, place Kléber</td><td valign="top">Strasbourg</td><td valign="top">67000</td><td valign="top">France</td></tr></tbody></table>
+
+Query ) select * from Customers where Country="Germany" limit 3;
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">CustomerID</th><th align="left">CustomerName</th><th align="left">ContactName</th><th align="left">Address</th><th align="left">City</th><th align="left">PostalCode</th><th align="left">Country</th></tr><tr><td valign="top">1</td><td valign="top">Alfreds Futterkiste</td><td valign="top">Maria Anders</td><td valign="top">Obere Str. 57</td><td valign="top">Berlin</td><td valign="top">12209</td><td valign="top">Germany</td></tr><tr><td valign="top">6</td><td valign="top">Blauer See Delikatessen</td><td valign="top">Hanna Moos</td><td valign="top">Forsterstr. 57</td><td valign="top">Mannheim</td><td valign="top">68306</td><td valign="top">Germany</td></tr><tr><td valign="top">17</td><td valign="top">Drachenblut Delikatessend</td><td valign="top">Sven Ottlieb</td><td valign="top">Walserweg 21</td><td valign="top">Aachen</td><td valign="top">52066</td><td valign="top">Germany</td></tr></tbody></table>
+
+
+<hr>
+<hr>
+
+# MySQL MIN() and MAX() Functions
+
+Query ) select min(Price) from Products;
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">min(Price)</th></tr><tr><td valign="top">2.50</td></tr></tbody></table>
+
+Query ) select max(Price) from Products;
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">max(Price)</th></tr><tr><td valign="top">263.50</td></tr></tbody></table>
+
+
+
+<hr>
+<hr>
+<br>
+
+# MySQL COUNT(), AVG() and SUM() Functions
+
+Query ) select count(*) from Products;
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">count(*)</th></tr><tr><td valign="top">77</td></tr></tbody></table>
+
+Query ) select AVG(Price) from Products;
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">AVG(Price)</th></tr><tr><td valign="top">28.866364</td></tr></tbody></table>
+
+Query ) select sum(Price) from Products;
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">sum(Price)</th></tr><tr><td valign="top">2222.71</td></tr></tbody></table>
+
+<hr>
+<hr>
+
+# MySQL LIKE Operator
+
+
+Query ) select * from Customers where Address like "%a"
+
+<tbody><tr><th align="left">CustomerID</th><th align="left">CustomerName</th><th align="left">ContactName</th><th align="left">Address</th><th align="left">City</th><th align="left">PostalCode</th><th align="left">Country</th></tr><tr><td valign="top">54</td><td valign="top">Océano Atlántico Ltda.</td><td valign="top">Yvonne Moncada</td><td valign="top">Ing. Gustavo Moncada 8585 Piso 20-A</td><td valign="top">Buenos Aires</td><td valign="top">1010</td><td valign="top">Argentina</td></tr></tbody>
+
 
