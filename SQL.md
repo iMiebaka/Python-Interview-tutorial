@@ -193,3 +193,18 @@ BETWEEN with IN Example
 Query ) select * from Products where Price between 10 and 12 and Price not in (11);
 
 <table class="w3-table-all notranslate"><tbody><tr><th align="left">ProductID</th><th align="left">ProductName</th><th align="left">SupplierID</th><th align="left">CategoryID</th><th align="left">Unit</th><th align="left">Price</th></tr><tr><td valign="top">3</td><td valign="top">Aniseed Syrup</td><td valign="top">1</td><td valign="top">2</td><td valign="top">12 - 550 ml bottles</td><td valign="top">10.00</td></tr><tr><td valign="top">21</td><td valign="top">Sir Rodney's Scones</td><td valign="top">8</td><td valign="top">3</td><td valign="top">24 pkgs. x 4 pieces</td><td valign="top">10.00</td></tr><tr><td valign="top">46</td><td valign="top">Spegesild</td><td valign="top">21</td><td valign="top">8</td><td valign="top">4 - 450 g glasses</td><td valign="top">12.00</td></tr><tr><td valign="top">74</td><td valign="top">Longlife Tofu</td><td valign="top">4</td><td valign="top">7</td><td valign="top">5 kg pkg.</td><td valign="top">10.00</td></tr></tbody></table>
+
+
+BETWEEN Text Values Example
+
+
+Query ) SELECT * FROM Products WHERE ProductName BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni' ORDER BY ProductName;
+
+
+
+
+
+
+
+
+
