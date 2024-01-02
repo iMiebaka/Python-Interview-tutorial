@@ -152,3 +152,44 @@ Query ) select * from Customers where Address like "%a"
 <table class="w3-table-all notranslate"><tbody><tr><th align="left">CustomerID</th><th align="left">CustomerName</th><th align="left">ContactName</th><th align="left">Address</th><th align="left">City</th><th align="left">PostalCode</th><th align="left">Country</th></tr><tr><td valign="top">54</td><td valign="top">Océano Atlántico Ltda.</td><td valign="top">Yvonne Moncada</td><td valign="top">Ing. Gustavo Moncada 8585 Piso 20-A</td><td valign="top">Buenos Aires</td><td valign="top">1010</td><td valign="top">Argentina</td></tr></tbody></table>
 
 
+<hr>
+<hr>
+
+# MySQL IN Operator
+
+Query ) select * from Customers where City in ("London");
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">CustomerID</th><th align="left">CustomerName</th><th align="left">ContactName</th><th align="left">Address</th><th align="left">City</th><th align="left">PostalCode</th><th align="left">Country</th></tr><tr><td valign="top">4</td><td valign="top">Around the Horn</td><td valign="top">Thomas Hardy</td><td valign="top">120 Hanover Sq.</td><td valign="top">London</td><td valign="top">WA1 1DP</td><td valign="top">UK</td></tr><tr><td valign="top">11</td><td valign="top">B's Beverages</td><td valign="top">Victoria Ashworth</td><td valign="top">Fauntleroy Circus</td><td valign="top">London</td><td valign="top">EC2 5NT</td><td valign="top">UK</td></tr><tr><td valign="top">16</td><td valign="top">Consolidated Holdings</td><td valign="top">Elizabeth Brown</td><td valign="top">Berkeley Gardens 12 Brewery </td><td valign="top">London</td><td valign="top">WX1 6LT</td><td valign="top">UK</td></tr><tr><td valign="top">19</td><td valign="top">Eastern Connection</td><td valign="top">Ann Devon</td><td valign="top">35 King George</td><td valign="top">London</td><td valign="top">WX3 6FW</td><td valign="top">UK</td></tr><tr><td valign="top">53</td><td valign="top">North/South</td><td valign="top">Simon Crowther</td><td valign="top">South House 300 Queensbridge</td><td valign="top">London</td><td valign="top">SW7 1RZ</td><td valign="top">UK</td></tr><tr><td valign="top">72</td><td valign="top">Seven Seas Imports</td><td valign="top">Hari Kumar</td><td valign="top">90 Wadhurst Rd.</td><td valign="top">London</td><td valign="top">OX15 4NB</td><td valign="top">UK</td></tr></tbody></table>
+
+
+Query ) select * from Customers where Country not in ("UK",'Germany','Mexico','France','USA');
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">CustomerID</th><th align="left">CustomerName</th><th align="left">ContactName</th><th align="left">Address</th><th align="left">City</th><th align="left">PostalCode</th><th align="left">Country</th></tr><tr><td valign="top">5</td><td valign="top">Berglunds snabbköp</td><td valign="top">Christina Berglund</td><td valign="top">Berguvsvägen 8</td><td valign="top">Luleå</td><td valign="top">S-958 22</td><td valign="top">Sweden</td></tr><tr><td valign="top">8</td><td valign="top">Bólido Comidas preparadas</td><td valign="top">Martín Sommer</td><td valign="top">C/ Araquil, 67</td><td valign="top">Madrid</td><td valign="top">28023</td><td valign="top">Spain</td></tr><tr><td valign="top">10</td><td valign="top">Bottom-Dollar Marketse</td><td valign="top">Elizabeth Lincoln</td><td valign="top">23 Tsawassen Blvd.</td><td valign="top">Tsawassen</td><td valign="top">T2F 8M4</td><td valign="top">Canada</td></tr><tr><td valign="top">12</td><td valign="top">Cactus Comidas para llevar</td><td valign="top">Patricio Simpson</td><td valign="top">Cerrito 333</td><td valign="top">Buenos Aires</td><td valign="top">1010</td><td valign="top">Argentina</td></tr><tr><td valign="top">20</td><td valign="top">Ernst Handel</td><td valign="top">Roland Mendel</td><td valign="top">Kirchgasse 6</td><td valign="top">Graz</td><td valign="top">8010</td><td valign="top">Austria</td></tr></tbody></table>
+
+
+<hr>
+<hr>
+
+# The MySQL BETWEEN Operator
+
+The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.
+
+<b> Select between range </b>
+
+Query ) select * from Products where Price between 10 and 12;
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">ProductID</th><th align="left">ProductName</th><th align="left">SupplierID</th><th align="left">CategoryID</th><th align="left">Unit</th><th align="left">Price</th></tr><tr><td valign="top">3</td><td valign="top">Aniseed Syrup</td><td valign="top">1</td><td valign="top">2</td><td valign="top">12 - 550 ml bottles</td><td valign="top">10.00</td></tr><tr><td valign="top">21</td><td valign="top">Sir Rodney's Scones</td><td valign="top">8</td><td valign="top">3</td><td valign="top">24 pkgs. x 4 pieces</td><td valign="top">10.00</td></tr><tr><td valign="top">46</td><td valign="top">Spegesild</td><td valign="top">21</td><td valign="top">8</td><td valign="top">4 - 450 g glasses</td><td valign="top">12.00</td></tr><tr><td valign="top">74</td><td valign="top">Longlife Tofu</td><td valign="top">4</td><td valign="top">7</td><td valign="top">5 kg pkg.</td><td valign="top">10.00</td></tr></tbody></table>
+
+
+Not Between Range
+
+Query ) select * from Products where Price not between 1 and 70;
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">ProductID</th><th align="left">ProductName</th><th align="left">SupplierID</th><th align="left">CategoryID</th><th align="left">Unit</th><th align="left">Price</th></tr><tr><td valign="top">9</td><td valign="top">Mishi Kobe Niku</td><td valign="top">4</td><td valign="top">6</td><td valign="top">18 - 500 g pkgs.</td><td valign="top">97.00</td></tr><tr><td valign="top">20</td><td valign="top">Sir Rodney's Marmalade</td><td valign="top">8</td><td valign="top">3</td><td valign="top">30 gift boxes</td><td valign="top">81.00</td></tr><tr><td valign="top">29</td><td valign="top">Thüringer Rostbratwurst</td><td valign="top">12</td><td valign="top">6</td><td valign="top">50 bags x 30 sausgs.</td><td valign="top">123.79</td></tr><tr><td valign="top">38</td><td valign="top">Côte de Blaye</td><td valign="top">18</td><td valign="top">1</td><td valign="top">12 - 75 cl bottles</td><td valign="top">263.50</td></tr></tbody></table>
+
+BETWEEN with IN Example
+
+
+Query ) select * from Products where Price between 10 and 12 and Price not in (11);
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">ProductID</th><th align="left">ProductName</th><th align="left">SupplierID</th><th align="left">CategoryID</th><th align="left">Unit</th><th align="left">Price</th></tr><tr><td valign="top">3</td><td valign="top">Aniseed Syrup</td><td valign="top">1</td><td valign="top">2</td><td valign="top">12 - 550 ml bottles</td><td valign="top">10.00</td></tr><tr><td valign="top">21</td><td valign="top">Sir Rodney's Scones</td><td valign="top">8</td><td valign="top">3</td><td valign="top">24 pkgs. x 4 pieces</td><td valign="top">10.00</td></tr><tr><td valign="top">46</td><td valign="top">Spegesild</td><td valign="top">21</td><td valign="top">8</td><td valign="top">4 - 450 g glasses</td><td valign="top">12.00</td></tr><tr><td valign="top">74</td><td valign="top">Longlife Tofu</td><td valign="top">4</td><td valign="top">7</td><td valign="top">5 kg pkg.</td><td valign="top">10.00</td></tr></tbody></table>
