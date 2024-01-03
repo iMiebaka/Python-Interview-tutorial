@@ -201,6 +201,17 @@ BETWEEN Text Values Example
 Query ) SELECT * FROM Products WHERE ProductName BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni' ORDER BY ProductName;
 
 
+<hr>
+<hr>
+
+# MySQL Joins
+
+Query ) select Orders.OrderID, Customers.CustomerName, Orders.OrderDate from Orders inner join Customers on Orders.CustomerID = Customers.CustomerID limit 5;
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">OrderID</th><th align="left">CustomerName</th><th align="left">OrderDate</th></tr><tr><td valign="top">10248</td><td valign="top">Wilman Kala</td><td valign="top">1996-07-04</td></tr><tr><td valign="top">10249</td><td valign="top">Tradição Hipermercados</td><td valign="top">1996-07-05</td></tr><tr><td valign="top">10250</td><td valign="top">Hanari Carnes</td><td valign="top">1996-07-08</td></tr></tbody></table>
+
+
+
 
 
 
