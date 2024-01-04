@@ -228,7 +228,66 @@ Query ) select Products.ProductName, Suppliers.SupplierName, Categories.Category
 # MySQL INNER JOIN Keyword
 
 
+Query)  select Orders.OrderID, Customers.CustomerName from Orders inner join Customers on Orders.CustomerID = Customers.CustomerID limit 3;
 
 
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">OrderID</th><th align="left">CustomerName</th></tr><tr><td valign="top">10248</td><td valign="top">Wilman Kala</td></tr><tr><td valign="top">10249</td><td valign="top">Tradição Hipermercados</td></tr><tr><td valign="top">10250</td><td valign="top">Hanari Carnes</td></tr></tbody></table>
+
+
+<hr>
+<hr>
+
+# MySQL LEFT JOIN Keyword
+
+
+Query ) SELECT Customers.CustomerName, Orders.OrderID FROM Customers LEFT JOIN Orders ON Customers.CustomerID=Orders.CustomerID ORDER BY Customers.CustomerName limit 3;
+
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">CustomerName</th><th align="left">OrderID</th></tr><tr><td valign="top">Alfreds Futterkiste</td><td valign="top">10692</td></tr><tr><td valign="top">Alfreds Futterkiste</td><td valign="top">11011</td></tr><tr><td valign="top">Alfreds Futterkiste</td><td valign="top">10952</td></tr></tbody></table>
+
+
+
+
+<hr>
+<hr>
+
+# Union 
+
+The MySQL UNION Operator <br>
+The UNION operator is used to combine the result-set of two or more SELECT statements.<br>
+
+Every SELECT statement within UNION must have the same number of columns<br>
+The columns must also have similar data types<br>
+The columns in every SELECT statement must also be in the same order<br>
+
+
+Query ) select City from Customers UNION select City from Suppliers order by City limit 3;
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">City</th></tr><tr><td valign="top">Aachen</td></tr><tr><td valign="top">Albuquerque</td></tr><tr><td valign="top">Anchorage</td></tr></tbody></table>
+        
+
+
+<b> SQL UNION With WHERE </b>
+
+
+Query ) SELECT City, Country FROM Customers WHERE Country='Germany' UNION SELECT City, Country FROM Suppliers WHERE Country='Germany' ORDER BY City limit 3;
+
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">City</th><th align="left">Country</th></tr><tr><td valign="top">Aachen</td><td valign="top">Germany</td></tr><tr><td valign="top">Berlin</td><td valign="top">Germany</td></tr><tr><td valign="top">Brandenburg</td><td valign="top">Germany</td></tr></tbody></table>
+
+
+
+<b> SQL UNION ALL With WHERE </b>
+
+Query ) SELECT City, Country FROM Customers WHERE Country='Germany' UNION ALL SELECT City, Country FROM Suppliers WHERE Country='Germany' ORDER BY City limit 3;
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">City</th><th align="left">Country</th></tr><tr><td valign="top">Aachen</td><td valign="top">Germany</td></tr><tr><td valign="top">Berlin</td><td valign="top">Germany</td></tr><tr><td valign="top">Berlin</td><td valign="top">Germany</td></tr></tbody></table>
+
+<b> Another UNION Example </b>
+
+Query ) SELECT 'Customer' AS Type, ContactName, City, Country FROM Customers UNION SELECT 'Supplier', ContactName, City, Country FROM Suppliers limit 3;
+
+<table class="w3-table-all notranslate"><tbody><tr><th align="left">Type</th><th align="left">ContactName</th><th align="left">City</th><th align="left">Country</th></tr><tr><td valign="top">Customer</td><td valign="top">Maria Anders</td><td valign="top">Berlin</td><td valign="top">Germany</td></tr><tr><td valign="top">Customer</td><td valign="top">Ana Trujillo</td><td valign="top">México D.F.</td><td valign="top">Mexico</td></tr><tr><td valign="top">Customer</td><td valign="top">Antonio Moreno</td><td valign="top">México D.F.</td><td valign="top">Mexico</td></tr></tbody></table>
 
 
