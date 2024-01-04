@@ -212,7 +212,20 @@ Query ) select Orders.OrderID, Customers.CustomerName, Orders.OrderDate from Ord
 
 
 
+Query ) select Products.ProductName, Suppliers.SupplierName, Categories.CategoryName from Products inner join Suppliers on Products.SupplierID = Suppliers.SupplierID inner join Categories on Products.CategoryID = Categories.CategoryID limit 3;
 
+
+<body>
+<div style="margin-bottom:10px;">Number of Records: 3</div><table class="w3-table-all notranslate"><tbody><tr><th align="left">ProductName</th><th align="left">SupplierName</th><th align="left">CategoryName</th></tr><tr><td valign="top">Chais</td><td valign="top">Exotic Liquid</td><td valign="top">Beverages</td></tr><tr><td valign="top">Chang</td><td valign="top">Exotic Liquid</td><td valign="top">Beverages</td></tr><tr><td valign="top">Aniseed Syrup</td><td valign="top">Exotic Liquid</td><td valign="top">Condiments</td></tr></tbody></table>
+
+</body>
+
+
+<hr>
+<hr>
+
+
+# MySQL INNER JOIN Keyword
 
 
 
