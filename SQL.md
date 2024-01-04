@@ -290,4 +290,9 @@ Query ) SELECT 'Customer' AS Type, ContactName, City, Country FROM Customers UNI
 
 <table class="w3-table-all notranslate"><tbody><tr><th align="left">Type</th><th align="left">ContactName</th><th align="left">City</th><th align="left">Country</th></tr><tr><td valign="top">Customer</td><td valign="top">Maria Anders</td><td valign="top">Berlin</td><td valign="top">Germany</td></tr><tr><td valign="top">Customer</td><td valign="top">Ana Trujillo</td><td valign="top">México D.F.</td><td valign="top">Mexico</td></tr><tr><td valign="top">Customer</td><td valign="top">Antonio Moreno</td><td valign="top">México D.F.</td><td valign="top">Mexico</td></tr></tbody></table>
 
+<hr>
+<hr>
+
+# MySQL GROUP BY Statement
+
 
