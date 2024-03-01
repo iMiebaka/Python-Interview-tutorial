@@ -3,15 +3,15 @@ ________________________________________________________________________________
 # Basic Interview Question
 
 
-1 ) mixing
-2 ) with keyword
-3 ) what is view
-4 ) diff btw sql and mysql
-5 ) dynamic url
-6 ) django combine multiple query
-7 ) diffrent between functional programming and class programming
-8 ) what is meta
-9 ) what is generics view
+1 ) mixing <br>
+2 ) with keyword <br>
+3 ) what is view <br>
+4 ) diff btw sql and mysql <br>
+5 ) dynamic url <br>
+6 ) django combine multiple query <br>
+7 ) diffrent between functional programming and class programming <br>
+8 ) what is meta <br>
+9 ) what is generics view <br>
 10 ) 
 ------------------------------------------------------
 
