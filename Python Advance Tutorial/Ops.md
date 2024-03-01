@@ -277,11 +277,11 @@ All classes in python are build from a single super class called 'object' so whe
  <b> Syntax:- </b>
  
  
-       class ParentClassName(object):
-          members of parent class
+       class Person(object):
+          person info
 
-       class ChildClassName(ParentClassName):
-          member of child class
+       class Employee(ParentClassName):
+          employee info
  
  
  
@@ -289,29 +289,39 @@ All classes in python are build from a single super class called 'object' so whe
  
  
 
-         class Father:
-             money = 100
-             def show(self):
-                 print("Parent clss instance method")
+         # Base class (superclass)
+         class Vehicle:
+             def __init__(self, brand, model):
+                 self.brand = brand
+                 self.model = model
+         
+             def display_info(self):
+                 print(f"{self.brand} {self.model}")
+         
+         # Derived class (subclass) inheriting from Vehicle
+         class Car(Vehicle):
+             def __init__(self, brand, model, color):
+                 # Calling the __init__ method of the base class using super()
+                 super().__init__(brand, model)
+                 self.color = color
+         
+             def honk(self):
+                 print("Beep beep!")
+         
+         # Example usage
+         if __name__ == "__main__":
+             # Creating an instance of the Car class
+             my_car = Car("Toyota", "Camry", "Blue")
+         
+             # Accessing attributes from the base class
+             my_car.display_info()
+         
+             # Accessing attribute from the derived class
+             print(f"The color of the car is {my_car.color}.")
+         
+             # Calling method from the derived class
+             my_car.honk()
 
-             @classmethod
-             def showmoney(cls):
-                 print("Parent class method",cls.money)
-
-             @staticmethod
-             def stat():
-                 a = 10
-                 print("static method class",a)
-
-         class Son(Father):
-             def disp(self):
-                 print("Child class instance method")
-
-         s = Son()
-         s.disp()
-         s.show()
-         s.showmoney()
-         s.stat()
  
  
  
@@ -320,17 +330,17 @@ All classes in python are build from a single super class called 'object' so whe
  By default , The Constructor in the parent class is available to the child class
  
  
-          class Father:
+          class Person:
 
               def __init__(self):
                   self.name = "sachin"
 
-          class Son(Father):
+          class Employee(Person):
 
               def show(self):
                   print(self.name)
 
-          data = Son()
+          data = Person()
           data.show()
  
  
@@ -370,24 +380,47 @@ All classes in python are build from a single super class called 'object' so whe
  In multi-level inheritance, the class inherits the feature of another derived class
  
  
-         class Father:
-            def showF(self):
-                print("Father class Method")
-                self.name = 100
+        #Base class (superclass)
+        class Person:
+            def __init__(self, name, age):
+                self.name = name
+                self.age = age
+        
+            def display_info(self):
+                print(f"Name: {self.name}, Age: {self.age}")
+        
+        # Derived class inheriting from Person
+        class Employee(Person):
+            def __init__(self, name, age, employee_id):
+                super().__init__(name, age)
+                self.employee_id = employee_id
+        
+            def display_employee_info(self):
+                print(f"Employee ID: {self.employee_id}")
+        
+        # Further derived class inheriting from Employee
+        class Manager(Employee):
+            def __init__(self, name, age, employee_id, department):
+                # Calling the __init__ method of the immediate base class using super()
+                super().__init__(name, age, employee_id)
+                self.department = department
+        
+            def display_manager_info(self):
+                print(f"Manager in {self.department} department")
+        
+        # Example usage
+        if __name__ == "__main__":
+            # Creating an instance of the Manager class
+            manager = Manager("Alice", 35, "M56789", "Human Resources")
+        
+            # Accessing attributes and methods from the base and intermediate classes
+            manager.display_info()
+            manager.display_employee_info()
+        
+            # Accessing attribute from the derived class
+            manager.display_manager_info()
 
-        class Son(Father):
-            def showS(self):
-                print("Son class Method")
 
-        class G_Son(Son):
-            def showG(self):
-                print("Grand son class Method")
-
-        data   = G_Son()
-
-        data.showG()
-        data.showS()
-        data.showF()
  
  
  
@@ -451,39 +484,51 @@ All classes in python are build from a single super class called 'object' so whe
  
  
  
- ----- Eample
- 
- 
-          class Father(object):
-             member of father class
+ ------ Code 
 
-         class Mother(object):
-             member of mother class
+        class Person:
+           def __init__(self, name, age):
+               self.name = name
+               self.age = age
+       
+           def display_info(self):
+               print(f"Name: {self.name}, Age: {self.age}")
+       
+       class Employee(Person):
+           def __init__(self, name, age, employee_id):
+               super().__init__(name, age)
+               self.employee_id = employee_id
+       
+           def display_info(self):
+               super().display_info()
+               print(f"Employee ID: {self.employee_id}")
+       
+       class Student(Person):
+           def __init__(self, name, age, student_id):
+               super().__init__(name, age)
+               self.student_id = student_id
+       
+           def display_info(self):
+               super().display_info()
+               print(f"Student ID: {self.student_id}")
+       
+       class EmployeeAndStudent(Employee, Student):
+           def __init__(self, name, age, employee_id, student_id, role):
+               # Using explicit calls to the constructors of both superclasses
+               Employee.__init__(self, name, age, employee_id)
+               Student.__init__(self, name, age, student_id)
+               self.role = role
+       
+           def display_info(self):
+               super(Employee, self).display_info()  # Call display_info from Employee
+               super(Student, self).display_info()   # Call display_info from Student
+               print(f"Role: {self.role}")
+       
+       # Example usage
+       if __name__ == "__main__":
+           person = EmployeeAndStudent(name="Alice", age=25, employee_id="E123", student_id="S456", role="Intern")
+           person.display_info()
 
-
-         class Son(Father,Mother):
-
--------
- 
- 
-         class Father(object):
-            def showF(self):
-                print("father class method")
-
-
-        class Mother(object):
-            def showM(self):
-                print("Mother class method")
-
-
-        class Son(Father, Mother):
-            def showS(self):
-                print("son class mehtod")
-
-        data = Son()
-        data.showS()
-        data.showM()
-        data.showF()
 
  
  
