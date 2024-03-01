@@ -532,16 +532,115 @@ All classes in python are build from a single super class called 'object' so whe
 
  
  
- # Polymorphism
+ # Encapsulation in Python
+
+ encapsulation ne apan purn access det nahi kahi private thevto
+
+ An objects variable should not always be directly accessible.
+ The methods can ensure the correct values are set. if an incorrect value is set, the method can return an error
+
+
+ private variable direct object chya throught direct accesss nahi karu shakat try kel tar error yeil jas khali kelay pan apan aat madhe use karu shakto 
+
+      class Student:
+         __name = "Ravi"
+     
+     obj = Student()
+     print(obj.__name)
+
+how to we can use
+
+      class Student:
+          __name = "Ravi"
+          
+          def __init__(self):
+              print(self.__name)
+      
+      obj = Student()
+
+ apan private method pan baher access karu shakat nahi kel tar error yeil
+
+      class Student:
+         __name = "Ravi"
+         
+         def __init__(self):
+             print(self.__name)
+             
+         def __result(self):
+             print("Welcome")
+     
+     obj = Student()
+     obj.__result()
+
+apan atlya at method call karu shakto
+
+       class Student:
+           __name = "Ravi"
+           
+           def __init__(self):
+               print(self.__name)
+               self.__result() # ithe call kela 
+               
+           def __result(self):
+               print("Welcome")
+       
+       obj = Student()
+       
+       OUTPUT:
+       Ravi 
+       Welcome
+ 
+Definition:
+
+Encapsulation is one of the four fundamental principles of object-oriented programming (OOP), alongside inheritance, polymorphism, and abstraction.
+It involves bundling the data (attributes) and methods (functions) that operate on the data into a single unit known as a class.
+Access Modifiers:
+
+Public Attributes and Methods: Accessible from outside the class, forming the class's public interface.
+Private Attributes and Methods: Indicated by a double underscore (__) prefix, not directly accessible from outside the class.
+Access Control:
+
+Encapsulation controls access to the internal details of a class, restricting direct access to private attributes and methods.
+Promotes information hiding, allowing changes to the internal implementation without affecting external code.
+Getter and Setter Methods:
+
+Getter methods are used to access the values of private attributes.
+Setter methods are used to modify the values of private attributes, providing controlled access.
+Property Decorator:
+
+The property decorator allows a cleaner syntax for defining getter, setter, and deleter methods for an attribute.
+It simplifies the process of encapsulating attribute access.
+Benefits:
+
+Enhances Code Reliability: By restricting direct access to internal details, encapsulation helps prevent unintended interference.
+Promotes Modularity: Encapsulation encourages breaking down code into smaller, manageable units, promoting modular design.
+Facilitates Maintenance: Changes to the internal implementation are isolated, making the code more maintainable over time.
+Real-world Analogy:
+
+Encapsulation can be compared to packaging a product in a box with a rulebook. The box protects the product (internal details), and the rulebook guides users on how to interact with it (public interface).
+Implementation in Python:
+
+In Python, encapsulation is achieved through access modifiers (public, private, etc.), getter and setter methods, and the property decorator.
  
  
- plymorphism means same function name ( but different signuture ) being uses for different types
  
  
+       class Student:
+           def __init__(self):
+               self.__name = ""
+           
+           def getname(self):
+               return self.__name
+           
+           def setname(self,name):
+               self.__name = name
+       
+       data = Student()
+       data.setname("testing")
+       output = data.getname()
+       print(output)
  
  
- 
- 
- 
+
  
  
