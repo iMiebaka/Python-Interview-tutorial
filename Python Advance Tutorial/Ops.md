@@ -642,5 +642,57 @@ In Python, encapsulation is achieved through access modifiers (public, private, 
  
  
 
- 
- 
+ # Polymorphism
+
+ **Polymorphism** means same function name ( but different signatures ) being uses for different type
+
+
+ Method overloading is a form of compile-time polymorphism where a class has multiple methods with the same name but different parameter lists.
+
+ example len function in python we can pass string also we can pass list will give the output here as you can see len function is same but we passign diffrent data
+
+        class MathOperations:
+           def add(self, x, y, z=0):
+               return x + y + z
+       
+       # Example usage
+       math_operations = MathOperations()
+       result1 = math_operations.add(2, 3)        # Calls the add method with two arguments
+       result2 = math_operations.add(2, 3, 5)     # Calls the add method with three arguments
+
+
+
+**Method overriding**
+ya madhe jar donhi class madhe same name ne jar method asel ani  second class madhe first class inherit kela tar first class chay method override karel
+
+         class Ws:
+             def displayinfo(self):
+                 print("Welcome to Wscubetech")
+         
+         class IIP(Ws):
+             def displayinfo(self):
+                 print("Welcome to sachin")
+         
+         obj = IIP()
+         obj.displayinfo()
+         
+         OUTPUT:
+         Welcome to sachin
+
+pan aplyala jar donhi method call karaychya asel tar apan super keywork use karto
+
+        class Ws:
+            def displayinfo(self):
+                print("Welcome to Wscubetech")
+        
+        class IIP(Ws):
+            def displayinfo(self):
+                super().displayinfo()
+                print("Welcome to sachin")
+        
+        obj = IIP()
+        obj.displayinfo()
+
+        OUTPUT:
+        Welcome to Wscubetech
+        Welcome to sachin
