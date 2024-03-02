@@ -1219,20 +1219,37 @@ Token-based authentication is stateless: once a client sends the initial user cr
 
 # Diff between shallow copy and deep copy ?
 
-Deep COPY : A deep copy copies an object into another. This means that if you make a change to a copy of an object, it won't affect the original object.             In Python, we use the function deepcopy() for this, and we import the module copy. We use it like
-
-Example : 
-
-           import copy
-           b = copy.deepcopy (a)
-
-Shallow COPY : A shallow copy, however, copies one object's reference to another. So, if we make a change in the copy, it will affect the original                      object. For this, we have the function copy()
+Shallow copy madhe je aple old object ahe tyancha refrence ghetla jato. ya madhe jar first list madhe change kele tar second list madhe changes hot nahi
 
 
-Example : 
+                list1 = [1,2,3,4]
+                list2 = list1.copy()
+                
+                list1[-1][0]= 0 # jar list1 madhe new list add keli ani run kel tar donhi list madhe changes hoil karan only regrence la copy kelay
+                
+                print(list1)
+                print(list2)
 
-         b = copy.copy(a)
-         
+                OUTPUT:
+                [1,2,3,0]
+                [1,2,3,4]
+                
+
+**Deep copy** madhe je aplya kad object hote tya object chi copy banavli jate recursively
+
+                        import copy
+                        
+                        list1 = [1,2,3,4,[1,2]]
+                        list2 = copy.deepcopy(list1)
+                        
+                        list1[-1][0]= 0
+                        
+                        print(list1)
+                        print(list2)
+                        
+                        OUTPUT:
+                        [1, 2, 3, 4, [0, 2]]
+                        [1, 2, 3, 4, [1, 2]]
          
 # Explain split(), sub(), subn() methods of re module in Python
 
