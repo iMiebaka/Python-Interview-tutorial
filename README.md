@@ -642,7 +642,8 @@ OUTPU : name sachin
 
 # what is Lambda
 
-A lambda function is a small anonymous function. A lambda function can take any number of arguments, but can only have one expression
+A lambda function is a small anonymous function. A lambda function can take any number of arguments, but can only have one expression 
+one expression mhanje yat 1 line chi coading valid aste
 
 Syntax : lambda arguments : expression
 
@@ -703,7 +704,11 @@ Emaple :
        
 # what is filter function
 
-The filter() method filters the given sequence with the help of a function that tests each element in the sequence to be true or not.
+The filter() method filters the given sequence with the help of a function that tests each element in the sequence to be true or not. 
+
+The filter() function returns an iterator where the items are filterd through a function to test if the item is accepted or not
+
+
 
 Example : 
 
