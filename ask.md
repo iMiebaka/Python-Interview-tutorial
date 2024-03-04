@@ -60,7 +60,10 @@ CommonFields serves as an abstract base class with common fields (name and descr
 
 
 7 ) what is MVT model  <br>
-8 ) Process of requst and response how it is process <br>
+# 8 ) Process of requst and response how it is process <br>
+
+Client Sends a Request --->> DNS Resolution (if necessary) --->> HTTP Request --->> Server Receives the Request --->> 
+
 9 ) what are middleware in djagno <br>
 10 ) what is abstract base calss and mixing class <br>
 11 ) Django signles <br>
