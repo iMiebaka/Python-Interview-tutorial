@@ -64,7 +64,7 @@ CommonFields serves as an abstract base class with common fields (name and descr
 9 ) what are middleware in djagno <br>
 10 ) what is abstract base calss and mixing class <br>
 11 ) Django signles <br>
-12 ) Django cache strategies  <br>
+# 12 ) Django cache strategies  <br>
 
 Cache means jya veles user kadun request yeti kiwa API hit hoti tar pratek veles data ha database madhun anat nahi jar as kela tar persormance down hoil tar ya thikani apan
 cache use karto mhanje user kadun request ali database madhe data gheun yeto ani ti cache memory madhe store karto ha data ram madhe pan store karu shakto kiwa local memory madhe
