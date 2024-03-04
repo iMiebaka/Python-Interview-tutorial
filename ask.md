@@ -93,7 +93,7 @@ madhla data update hoto
                                 return HttpResponse(f"Original Data: {original_data}")
 
 
-13 ) diffrence between class based view and function view in djagno <br>
+# 13 ) diffrence between class based view and function view in djagno <br>
 
 **Function-Based Views (FBVs)** <br>
 FBVs are often simpler and more straightforward, especially for simpler views or views that involve less logic. <br>
