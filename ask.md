@@ -65,6 +65,34 @@ CommonFields serves as an abstract base class with common fields (name and descr
 10 ) what is abstract base calss and mixing class <br>
 11 ) Django signles <br>
 12 ) Django cache strategies  <br>
+
+Cache means jya veles user kadun request yeti kiwa API hit hoti tar pratek veles data ha database madhun anat nahi jar as kela tar persormance down hoil tar ya thikani apan
+cache use karto mhanje user kadun request ali database madhe data gheun yeto ani ti cache memory madhe store karto ha data ram madhe pan store karu shakto kiwa local memory madhe
+pan store karu shakto ani jeva akhada user same data sathi request hit karel teva just cache memory madhun data send karto ani jar db madhe new data add zala tar just cache memory
+madhla data update hoto
+
+                        from django.core.cache import cache
+                        from django.shortcuts import render
+                        from django.http import HttpResponse
+                        
+                        def my_view(request):
+                            # Check if the data is already in the cache
+                            cached_data = cache.get('my_cached_data')
+                        
+                            if cached_data is not None:
+                                # If data is in the cache, use it
+                                return HttpResponse(f"Cached Data: {cached_data}")
+                        
+                            else:
+                                # If data is not in the cache, fetch it from the original source
+                                original_data = "Data fetched from the original source"
+                        
+                                # Store the fetched data in the cache for future use (with a timeout of 300 seconds in this example)
+                                cache.set('my_cached_data', original_data, timeout=300)
+                        
+                                return HttpResponse(f"Original Data: {original_data}")
+
+
 13 ) diffrence between class based view and function view in djagno <br>
 14 ) what is function base view and how you can define those <br>
 15 ) how data is mapping in djagno <br>
