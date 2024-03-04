@@ -22,7 +22,7 @@
 21 ) role of serializer in DRF <br>
 22 ) diffrence between var and varchar in SQL <br>
 23 ) what is primary key  <br>
-24 ) indexing in mysql
+24 ) indexing in mysql <br>
 25 ) what is asset property in DB transaction
       
  
