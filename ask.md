@@ -36,10 +36,29 @@ Tuple: Tuples are generally more memory-efficient and may provide faster iterati
 
 
 
-3 ) what is list and linked list <br>
+# 3 ) what is list and linked list <br>
 4 ) scope resulation in python acceblity ( global variable and local variable ) <br>
 5 ) what is abstraction and encapsulation ( example ) <br>
-6 ) what is inheritance ( explain in django ) <br>
+# 6 ) what is inheritance ( explain in django ) <br>
+
+CommonFields serves as an abstract base class with common fields (name and description). MyModel1 and MyModel2 inherit from CommonFields, sharing those fields without creating an additional database table for CommonFields.
+
+            from django.db import models
+            
+            class CommonFields(models.Model):
+                name = models.CharField(max_length=255)
+                description = models.TextField()
+            
+                class Meta:
+                    abstract = True
+            
+            class MyModel1(CommonFields):
+                additional_field_1 = models.IntegerField()
+            
+            class MyModel2(CommonFields):
+                additional_field_2 = models.BooleanField()
+
+
 7 ) what is MVT model  <br>
 8 ) Process of requst and response how it is process <br>
 9 ) what are middleware in djagno <br>
