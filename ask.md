@@ -94,6 +94,37 @@ madhla data update hoto
 
 
 13 ) diffrence between class based view and function view in djagno <br>
+
+**Function-Based Views (FBVs)** <br>
+FBVs are often simpler and more straightforward, especially for simpler views or views that involve less logic. <br>
+The flow of the code is more explicit and linear, making it easier to follow for smaller views.<br>
+FBVs often use decorators (e.g., @login_required, @require_http_methods, etc.) to add functionality to views. <br>
+
+            from django.shortcuts import render
+            
+            def my_view(request):
+                # View logic
+                return render(request, 'template.html')
+
+
+**Class-Based Views (CBVs)** <br>
+
+CBVs promote code reuse by allowing the use of mixins and inheritance. Different parts of a view can be implemented in separate methods or classes.<br>
+Views are organized as classes, which can lead to a more organized and modular code structure, especially for larger and more complex views.<br>
+CBVs allow the use of mixins and inheritance to extend or modify behavior, making it easier to create variations of views.<br>
+CBVs allow for better separation of concerns, with different methods or attributes handling different aspects of the view (e.g., get(), post(), etc.).
+
+            from django.views import View
+            from django.shortcuts import render
+            
+            class MyView(View):
+                def get(self, request):
+                    # View logic
+                    return render(request, 'template.html')
+
+
+
+
 14 ) what is function base view and how you can define those <br>
 15 ) how data is mapping in djagno <br>
 16 ) what is djagno migrations <br>
