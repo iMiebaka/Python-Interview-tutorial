@@ -1,6 +1,41 @@
 
-1 ) List vs Tupple <br>
-2 ) diffrent between class and function <br>
+# 1 ) List vs Tupple <br>
+**Mutability:**
+
+**List: <br>**
+Lists are mutable, meaning their elements can be changed or modified after the list is created. You can add, remove, or modify elements in a list.
+**Tuple:** <br>
+Tuples are immutable, which means once they are created, their elements cannot be changed or modified. You cannot add, remove, or alter elements in a tuple.
+Syntax:
+
+List: Lists are defined using square brackets []. For example: my_list = [1, 2, 3]. <br>
+Tuple: Tuples are defined using parentheses (). For example: my_tuple = (1, 2, 3).<br>
+**Performance:**
+
+List: Due to their mutability, lists might have slightly higher memory overhead and slower performance compared to tuples.
+Tuple: Tuples are generally more memory-efficient and may provide faster iteration because of their immutability.
+
+
+# 2 ) diffrent between class and function <br>
+
+**Function:** <br> A function is a block of code that performs a specific task or set of tasks. It encapsulates a sequence of instructions and can be called with specific arguments to produce a result. <br>
+
+**Class:** <br> A class, on the other hand, is a blueprint for creating objects. It defines a data structure and methods that operate on that data. Objects created from a class are instances of that class. <br>
+
+**Function:** <br> Functions are typically used for modularizing code, making it reusable, and promoting a clear and organized structure in a program. <br>
+
+**Class:** <br> Classes are used for creating and managing objects. They provide a way to model real-world entities and their behaviors in a program. <br>
+
+**Function:** <br> Functions do not store data by themselves. They may take input parameters and return output, but they don't have internal states. <br>
+
+**Class:** <br> Classes can have attributes (data members) that store information about the object's state. Methods in a class can operate on this data. <br>
+
+
+**Function:** <br> Functions don't support inheritance. They are standalone units of code. <br>
+**Class:** <br> Classes support inheritance, allowing one class to inherit properties and methods from another. This promotes code reuse and hierarchy in object-oriented programming. <br>
+
+
+
 3 ) what is list and linked list <br>
 4 ) scope resulation in python acceblity ( global variable and local variable ) <br>
 5 ) what is abstraction and encapsulation ( example ) <br>
