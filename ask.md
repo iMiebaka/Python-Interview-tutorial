@@ -139,6 +139,62 @@ CBVs allow for better separation of concerns, with different methods or attribut
 22 ) diffrence between var and varchar in SQL <br>
 23 ) what is primary key  <br>
 24 ) indexing in mysql <br>
-25 ) what is asset property in DB transaction
+25 ) what is asset property in DB transaction<br>
+# 26) select related and prefetch related in DJNGO
+
+            from djagno.db import models
+            
+            class Author(models.Models):
+            	name = models.CharField(max_length = 30)
+            
+            
+            class Course(models.Model):
+            	name = models.CharField(max_length=30)
+            	author = models.ForeignKey(Author,on_delete=models.CASCADE,related_name)
+
+
+jeva apan **Course.objects.all()** hi query karto tya veles backend madhe khalchi sql query execute hote
+
+            SELECT "app_course"."id","app_course"."name","app_course"."author_id" FROM "app_course" LIMIT 1; args=()
       
- 
+
+ jeva apan **Course.object.all()[0].author** hi query execute karto tar backend la khalchay donhi query execute hotat
+
+             SELECT "app_course"."id","app_course"."name","app_course"."author_id" FROM "app_course" LIMIT 1; args=();
+             SELECT "app_author"."id","app_author"."name" FROM "app_author" WHERE "app_author"."id" = 1 LIMIT = 1; args=(1)
+
+ani jeva apan select related use karto teva to **inner join** karto **Course.objects.select_related()**
+
+            SELECT "app_course"."id","app_course"."name","app_course"."app_author"."id","app_author"."name"
+            FROM "app_course" INNER JOIN "app_author" ON ("app_course"."author_id" = "app_author"."id") LIMIT 21; args=()
+
+**Use** : jya veles fakt mala Course che name pahije asta teva **Course.objects.all()** use karaycha ani jeva mala foreign key cha data pan pahije teva **select_related** use karaych
+
+
+**Prefetch_related** ---------------------
+
+
+            from django.db import models
+            
+            class Author(models.Model):
+                name = models.CharField(max_length=100)
+            
+            class Book(models.Model):
+                title = models.CharField(max_length=200)
+                authors = models.ManyToManyField(Author)
+
+jary apan prefetch related query use keli  **books = Book.objects.prefetch_related('authors').all()** tar backend la left join query run hoti
+
+            SELECT
+                "yourapp_author"."id",
+                "yourapp_author"."name",
+                "yourapp_book_authors"."book_id",
+                "yourapp_book_authors"."author_id"
+            FROM
+                "yourapp_author"
+            LEFT JOIN
+                "yourapp_book_authors" ON ("yourapp_author"."id" = "yourapp_book_authors"."author_id")
+            WHERE
+                "yourapp_book_authors"."book_id" IN (<list_of_book_ids>);
+
+**USE** Jya veles many to many field asti tya veles **prefetch_related** use karaych
