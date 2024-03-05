@@ -91,4 +91,212 @@
         ]))
         <b> OUTPUT : [1,2,3,6,9,8,7,4,5] </b>
       
- # 
+ # Count Vowels and Consonants in a String
+
+        name = "sachin pawar"
+        vovels = "aeiou"
+        
+        output = {}
+        for res in name:
+            if res in vovels:
+                output[res] = name.count(res)
+        print(output)
+        
+        
+        {'a': 3, 'i': 1}
+
+
+# Write a Python function to reverse the order of words in a given string
+
+      name = "sachin pawar"
+      
+      output = ""
+      for res in name:
+          output = res +output
+      
+      print(output)
+      
+      OUTPUT : rawap nihcas
+
+# Write a Python function that checks if two strings are anagrams of each other.
+
+
+    s1 ="listen"
+    s2 ="silent"
+    
+    
+    if sorted(s1) == sorted(s2):
+        print("Yes")
+    else:
+        print("No")
+
+
+# Write a Python function to convert the first letter of each word in a string to uppercase.
+
+        name = "this is schin pawar"
+        
+        output = []
+        for res in name.split():
+            output.append(res.title())
+        
+        print(" ".join(output))
+
+
+# Write a Python function to perform basic string compression using the counts of repeated characters
+
+
+          name = "sachina"
+          count = {}
+          for res in name:
+              count[res] = name.count(res)
+          print(count)
+
+# Write a Python function to find the longest common prefix of a list of strings.
+
+            #Example usage:
+            strings = ["flower", "flow", "flight"]
+            
+            #Sort the list of strings
+            strings.sort()
+            
+            #Compare the first and last strings
+            common_prefix = ""
+            
+            #Iterate over characters in the first string
+            for i in range(len(strings[0])):
+                # Check if the character is the same in the last string
+                if i < len(strings[-1]) and strings[0][i] == strings[-1][i]:
+                    common_prefix += strings[0][i]
+                else:
+                    break
+            
+            print(common_prefix)
+            
+            
+            OUTPUT: fl
+
+# Question: Remove Duplicates from String
+
+          original_string = "programming"
+          
+          output = ""
+          for res in original_string:
+              if res not in output:
+                  output  = output +res
+          
+          print(output)
+
+
+# String Palindromes
+
+          string = "programming"
+          
+          output = ""
+          for res in string:
+              output = res + output
+          
+          if string == output:
+              print("Palindrome")
+          else:
+              print("Not Palindrome")
+
+# Write a Python function to determine if a string has all unique characters
+
+
+        string = "programming"
+        
+        output = ""
+        
+        for res in string:
+            if string.count(res) < 2 :
+                output = output +res
+        
+        print(output)
+        
+        OUTPUT : poain
+
+
+# Write a Python function to determine if a string has all unique characters
+
+
+        name = "hello"
+        
+        output = None
+        
+        for res in name:
+            if name.count(res) > 1:
+                output = False
+            else:
+                output = True
+        print(output)
+
+
+# Write a Python function to check if a given sentence is a pangram (contains every letter of the alphabet at least once).
+
+      alpha = "qwertyuioplkjhgfdsazxcvbnm"
+      
+      name = "sachinpawar"
+      output = 0
+      for res in name:
+          if res in alpha:
+              output = output
+          else:
+              output = 1
+              
+      if output == 0:
+          print("pangram string")
+      else:
+          print("Not pangram string")
+
+
+# Write a Python function to count the number of words in a sentence that have a palindromic length.
+
+      test_sentence = "The radar and level are examples of palindromic length words"
+      count = 0
+      for res in test_sentence.split():
+          if res == res[::-1]:
+              count = count +1
+      
+      print(count)
+
+
+# Write a Python function to reverse the order of vowels in a given string.
+
+        def reverse_vowels(input_string):
+            vowels = "aeiouAEIOU"
+            input_list = list(input_string)
+            
+            # Collect vowels in the string
+            vowel_positions = [i for i, char in enumerate(input_list) if char in vowels]
+            
+            # Reverse the order of vowels
+            for i in range(len(vowel_positions)//2):
+                input_list[vowel_positions[i]], input_list[vowel_positions[-i-1]] = input_list[vowel_positions[-i-1]], input_list[vowel_positions[i]]
+        
+            return ''.join(input_list)
+        
+        #Example usage:
+        input_str = "Hello, World!"
+        output_str = reverse_vowels(input_str)
+        print(f'Input: "{input_str}", Output: "{output_str}"')
+
+
+# Write a Python function to find the longest palindromic substring in a given string.
+
+        test_sentence = "ThT computer appa otho server and application sas a"
+        
+        output = {}
+        for res in test_sentence.split():
+            if res == res[::-1]:
+                output[res] = len(res)
+        
+        
+        max_value = max(output.values())
+        for key,value in zip(output.keys(),output.values()):
+            if value == max_value:
+                output = f"Palindrome is {key} and length is. {value}"
+        
+        print(output)
+
+# Given a string and a dictionary, find the longest word in the dictionary that can be formed by deleting some characters from the given string.
+
