@@ -324,5 +324,112 @@
         
         print(output)
 
-# Given a string and a dictionary, find the longest word in the dictionary that can be formed by deleting some characters from the given string.
+# Write a Python function to check if a given string representing a mathematical expression has valid parenthesis
 
+        s = "()())()"
+        stack = []
+        result = []
+        
+        #Find indices of invalid parentheses
+        for i, char in enumerate(s):
+            if char in {'(', ')'}:
+                if char == '(':
+                    stack.append(i)
+                elif not stack:
+                    result.append(i)
+                else:
+                    stack.pop()
+        
+        #Remove the minimum number of parentheses
+        removals = set(stack + result)
+        valid_string = ''.join(char for i, char in enumerate(s) if i not in removals)
+        
+        
+        
+        print("Input String:", s) # INPUT : ()())()
+        print("Minimum Valid Parentheses Removals:", valid_string) #output ()()()
+
+
+# Write a Python function to rotate an array to the right by a given number of steps
+
+              n = 1
+              lst = [10, 20, 30, 40, 50]
+              
+              data = lst[-n:] + lst[:-n]
+              print(data)
+
+              OUTPUT: [50, 10, 20, 30, 40]
+
+# Given an array containing n+1 integers where each integer is between 1 and n, write a Python function to find the duplicate number.
+
+              input_array = [3, 1, 3, 4, 2]
+              
+              num = None
+              
+              for res in input_array:
+                  if input_array.count(res) > 1:
+                      num = res
+              
+              print(num)
+
+
+
+# Write a Python function to merge two dictionaries, and combine values for common keys into a list.
+
+          record1 = {'name': 'Alice', 'age': 25, 'city': 'New York'}
+          
+          #Record 2
+          record2 = {'name': 'Bob', 'age': 30, 'city': 'Los Angeles'}
+          
+          
+          key_list = list(set(record1.keys()))
+          
+          output = {}
+          for key,r1,r2 in zip(key_list,record1.values(),record2.values()):
+              
+              output[key] = [r1,r2]
+          
+          print(output)
+          
+          #OUTPUT : {'city': ['Alice', 'Bob'], 'name': [25, 30], 'age': ['New York', 'Los Angeles']}
+
+
+
+# Write a Python function to sort a dictionary based on its values.
+
+          footballers_goals = {'Eusebio': 120, 'Cruyff': 104, 'Pele': 150, 'Ronaldo': 132, 'Messi': 125}
+          
+          sorted_footballers_by_goals = sorted(footballers_goals.items(), key=lambda x:x[1])
+          
+          output = {}
+          for res in sorted_footballers_by_goals:
+              output[res[0]] = res[1]
+          print(output)
+          
+          #{'Cruyff': 104, 'Eusebio': 120, 'Messi': 125, 'Ronaldo': 132, 'Pele': 150}
+
+# Write a Python function to remove keys from a dictionary that have None values.
+
+          dict1 = {'a': 1, 'b': None, 'c': 3, 'd': None, 'e': 5}
+          output = {}
+          for key,value in zip(dict1.keys(),dict1.values()):
+              if value is not None:
+                  output[key] = value
+          print(output)
+          
+          OUTPUT: {'a': 1, 'c': 3, 'e': 5}
+
+# Write a Python function to find and return the unique values in a dictionary.
+
+          input_dict = {'a': 1, 'b': 2, 'c': 1, 'd': 3, 'e': 2}
+          
+          output = []
+          for res in input_dict.items():
+              if res[1] not in output:
+                  output.append(res[1])
+          print(output)
+          
+          OUTPUT :[1, 2, 3]
+
+
+# 
