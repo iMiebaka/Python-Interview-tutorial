@@ -23,7 +23,33 @@
 
 
 
-# Given a string, find the length of the longest substring without repeating characters.
+# Write a Python function to remove the minimum number of invalid parentheses to make the input string valid
+
+
+
+      #Example usage:
+      input_string = "()())(()"
+      s = input_string
+      stack = []
+      result = []
+      
+      #Find indices of invalid parentheses
+      for i, char in enumerate(s):
+          if char in {'(', ')'}:
+              if char == '(':
+                  stack.append(i)
+              elif not stack:
+                  result.append(i)
+              else:
+                  stack.pop()
+      
+      #Remove the minimum number of parentheses
+      removals = set(stack + result)
+      valid_string = ''.join(char for i, char in enumerate(s) if i not in removals)
+      
+      print("Input String:", input_string)
+      print("Minimum Valid Parentheses Removals:", valid_string)
+
 
 
         def lengthOfLongestSubstring(s):
