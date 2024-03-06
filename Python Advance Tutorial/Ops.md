@@ -696,3 +696,50 @@ pan aplyala jar donhi method call karaychya asel tar apan super keywork use kart
         OUTPUT:
         Welcome to Wscubetech
         Welcome to sachin
+
+
+
+# Operator overloading
+
+Operator overloading in Python allows you to redefine or extend the behavior of existing operators for user-defined objects. It enables you to use the same operator symbols (+, -, *, etc.) with instances of your own classes and define how those operations should behave.
+
+
+Arithmetic Operators:
+
+__add__(self, other): Addition (+)
+__sub__(self, other): Subtraction (-)
+__mul__(self, other): Multiplication (*)
+__truediv__(self, other): Division (/)
+__floordiv__(self, other): Floor Division (//)
+__mod__(self, other): Modulus (%)
+__pow__(self, other, modulo=None): Exponentiation (**)
+Comparison Operators:
+
+__eq__(self, other): Equal to (==)
+__ne__(self, other): Not equal to (!=)
+__lt__(self, other): Less than (<)
+__le__(self, other): Less than or equal to (<=)
+__gt__(self, other): Greater than (>)
+__ge__(self, other): Greater than or equal to (>=)
+Unary Operators:
+
+__neg__(self): Unary negation (-)
+__pos__(self): Unary plus (+)
+__abs__(self): Absolute value (abs())
+__invert__(self): Bitwise NOT (~)
+
+
+         class Point:
+             def __init__(self, x, y):
+                 self.x = x
+                 self.y = y
+         
+             def __add__(self, other):
+                 # Redefine the '+' operator for Point objects
+                 return Point(self.x + other.x, self.y + other.y)
+         
+         # Usage
+         p1 = Point(1, 2)
+         p2 = Point(3, 4)
+         result = p1 + p2
+         print(result.x, result.y)  # Output: 4 6
