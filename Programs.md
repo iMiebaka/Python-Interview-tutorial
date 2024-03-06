@@ -612,3 +612,61 @@ Display the account details.
               
               #Display account details
               account1.display_details()
+--------------------------------------------------------------------------------
+
+# find max number from list without using built in function
+
+              lst = [11,2,5,4,6,8,4]
+              
+              output = lst[0]
+              for res in lst:
+                  if res > output:
+                      output = res
+              print(output)
+
+
+
+# find small number from list without using built in function
+
+              lst = [11,2,5,4,6,8,4]
+              
+              output = lst[0]
+              for res in lst:
+                  if res < output:
+                      output = res
+              print(output)
+
+
+# Find the list of words that are loger than n from a given list of words
+
+              name  = "The quick brown fox jumps over the lazy dog"
+              
+              num = 4
+              output = []
+              
+              for res in name.split():
+                  count = 1
+                  for j in res:
+                      if count > num:
+                          output.append(res)
+                      count = count + 1
+              
+              print(output)
+
+
+# Take two lists and return true if they have at least one common member
+
+            lst1 = [1,2,3,4]
+            lst2 = [5,6,7,4]
+            
+            output = []
+            for res in lst2:
+                if res in lst1:
+                    output.append(res)
+            print(output)
+
+
+
+
+
+
