@@ -465,4 +465,150 @@
 
 ----------------------------------------------------------------------------------------------------------------
 
+Create a Python class representing a book. The class should have the following attributes:
 
+Title
+Author
+ISBN (International Standard Book Number)
+Published Year
+Implement methods to get and set each attribute. Additionally, create a method to display the book details.
+
+
+
+
+            class Book:
+                def set_title(self,title):
+                    self.title = title
+                
+                def set_author(self,author):
+                    self.author = author
+                
+                def set_isbn(self,isbn):
+                    self.isbn = isbn
+                
+                def set_published_year(self,published_year):
+                    self.published_year = published_year
+                
+                def display(self):
+            
+                    print(self.title)
+                    print(self.author)
+                    print(self.isbn)
+                    print(self.published_year)
+            
+            data = Book()
+            data.set_title("The Catcher in the Rye")
+            data.set_author("J.D. Salinger")
+            data.set_isbn("978-0-316-76948-0")
+            data.set_published_year(1951)
+            data.display()
+
+  
+---------------------------------------------------------
+
+Student Class:
+
+Student ID
+Name
+Courses Enrolled (a list)
+Course Class:
+
+Course Code
+Course Title
+Maximum Capacity
+Students Enrolled (a list)
+Implement methods to:
+
+Enroll a student in a course (check for capacity).
+Display the details of a student, including the courses enrolled.
+Display the details of a course, including the students enrolled.
+
+
+            class Course:
+                def setcourse(self,code,title,capacity,enroll_list):
+                    self.code = code
+                    self.title = title
+                    self.capacity = capacity
+                    self.enroll_list = enroll_list
+                
+                def display_details(self):
+                    print("Course Code:", self.code)
+                    print("Course Title:", self.title)
+                    print("Maximum Capacity:", self.capacity)
+                    print("Students Enrolled", self.enroll_list)
+            
+            
+            class Student(Course):
+                def setstudentinfo(self,sutdent_id,name,course_enroll):
+                    
+                    self.sutdent_id = sutdent_id
+                    self.name = name
+                    self.course_enroll = course_enroll
+                
+                def student_info(self):
+                    print("Student ID:", self.sutdent_id)
+                    print("Name:", self.name)
+                    print("Courses Enrolled:", self.course_enroll)
+            
+            course_obj = Course()
+            student_obj = Student()
+            
+            #Setting course information
+            course_obj.setcourse("CS101", "Introduction to Programming", 3, ['CS101', 'CS102'])
+            
+            #Setting student information
+            student_obj.setstudentinfo(1, "Alice", ['CS101'])
+            
+            
+            student_obj.student_info()
+            course_obj.display_details()
+
+
+-------------------------------------------------------------------------------
+
+
+Create a Python class representing a bank account. The class should have the following attributes:
+
+Account Number
+Account Holder Name
+Balance
+Implement methods to:
+
+Deposit money into the account.
+Withdraw money from the account (ensure sufficient balance).
+Display the account details.
+
+              class BankAccount:
+                  def __init__(self,account_number,holder,balance = 0):
+                      self.account_number = account_number
+                      self.holder = holder
+                      self.balance = balance
+                  
+              
+                  def deposit(self,amount):
+                      self.balance = self.balance+amount
+                  
+                  def withdraw(self,withdraw_amount):
+                      self.withdraw_amount = withdraw_amount
+                      if self.withdraw_amount < 0 or self.withdraw_amount > self.balance:
+                          print("Invalid Amount")
+                      else:
+                          self.balance = self.balance - self.withdraw_amount
+              
+                  def display_details(self):
+                      print('Account Number:', self.account_number)
+                      print('Account Holder Name:', self.holder)
+                      print('Balance:', self.balance)
+              
+              
+              #Creating an instance of the BankAccount class
+              account1 = BankAccount("123456", "Alice", 1000.0)
+              
+              #Deposit money
+              account1.deposit(500.0)
+              
+              #Withdraw money
+              account1.withdraw(300.0)
+              
+              #Display account details
+              account1.display_details()
