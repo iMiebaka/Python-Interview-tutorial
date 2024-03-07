@@ -698,4 +698,16 @@ Display the account details.
             print(new)
 
 
-# 
+# find second highest number in a list
+
+
+          lst = [4,3,5,7,4,2,8]
+          
+          max_num = lst[0]
+          output = []
+          second_max = None
+          for res in lst:
+              if res > max_num:
+                  second_max = max_num
+                  max_num = res
+          print(second_max)
