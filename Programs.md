@@ -667,6 +667,35 @@ Display the account details.
 
 
 
+# Python program to calculate the diffrendce between the two list
 
 
 
+
+
+            lst1 = [1,2,3,4,7]
+            lst2 = [5,6,7,4]
+            
+            output =[]
+            for res in lst1:
+                if res not in lst2:
+                    output.append(res)
+            
+            for res in lst2:
+                if res not in lst1:
+                    output.append(res)
+            print(output)
+
+
+# Sort dictionary by key
+
+
+            dict1 = {1:3,4:3,2:6}
+            output = sorted(dict1.keys())
+            new = {}
+            for res in output:
+                new[res] = dict1[res]
+            print(new)
+
+
+# 
