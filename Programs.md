@@ -738,3 +738,29 @@ Display the account details.
                 else:
                     return not value
         print(main(value)) # True, False
+
+# Python reverse list without using built in function
+
+
+
+      lst = [1,2,3,4,5,6,7]
+      
+      output = []
+      for res in lst:
+          output = [res] + output
+      print(output)
+
+
+# Check number is prime or not
+
+
+      num = 4  # Replace with the number you want to check
+      
+      for i in range(2, int(num**0.5) + 1):
+          if num % i == 0:
+              print(f"{num} is not a prime number.")
+              break
+      else:
+          print(f"{num} is a prime number.")
+
+# 
