@@ -763,4 +763,27 @@ Display the account details.
       else:
           print(f"{num} is a prime number.")
 
+# Python Fibonacci Series
+
+      a = 0
+      b = 1
+      for i in range(0,10):
+          print(a)
+          c = a + b
+          a = b
+          b = c
+
+      OUTPUT:
+      0
+      1
+      1
+      2
+      3
+
+# Finding the Middle Element in a List
+
+      lst = [1,2,3,4,5,6,7,8,9,10,11]
+      data = int(len(lst)/2)
+      print(lst[data])
+
 # 
