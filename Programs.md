@@ -724,3 +724,17 @@ Display the account details.
         
         print(lst)
 
+# check parentheses valid or not
+
+        value = '{[()]}'
+        def main(value):
+            while True:
+                if "[]" in value:
+                    value = value.replace("[]","")
+                elif "{}" in value:
+                    value = value.replace("{}","")
+                elif "()" in value:
+                    value = value.replace("()","")
+                else:
+                    return not value
+        print(main(value)) # True, False
