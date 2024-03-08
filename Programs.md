@@ -711,3 +711,16 @@ Display the account details.
                   second_max = max_num
                   max_num = res
           print(second_max)
+
+# sort list without using built in function
+
+
+        lst = [3,5,7,4,1,8,5,4,3,2,6]
+        
+        for i in range(0,len(lst)):
+            for j in range(0,i):
+                if lst[i] < lst[j]:
+                    lst[i],lst[j] = lst[j],lst[i]
+        
+        print(lst)
+
