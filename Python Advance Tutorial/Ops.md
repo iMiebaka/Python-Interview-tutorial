@@ -743,3 +743,40 @@ __invert__(self): Bitwise NOT (~)
          p2 = Point(3, 4)
          result = p1 + p2
          print(result.x, result.y)  # Output: 4 6
+
+# diffrence between class variable and instance variable
+
+class variable is a associated with class
+
+
+
+         class Demo:
+             company_name = "Appli"      # this is a class variable
+             
+             def __init__(self):
+                 print("Helo")
+                 
+             def info(self):
+                 print(f"{self.company_name}")
+         
+         data = Demo()
+         data.info()
+
+
+**Instance variable**
+
+instance variable are associated with instance of the class
+
+       class Demo:
+           company_name = "Appli"
+           
+           def __init__(self,name):
+               print("Helo")
+               self.raise_salary = 1.3  # instance variable
+               
+           def info(self):
+               print(f"{self.company_name}",self.raise_salary)
+       
+       data = Demo("Sachin")
+       data.raise_salary = 1.5
+       data.info()
