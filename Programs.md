@@ -754,14 +754,21 @@ Display the account details.
 # Check number is prime or not
 
 
-      num = 4  # Replace with the number you want to check
+      import copy
+
+
+      a = 1213
+      num = copy.copy(a)
+      b = 0
       
-      for i in range(2, int(num**0.5) + 1):
-          if num % i == 0:
-              print(f"{num} is not a prime number.")
-              break
+      while(a > 0):
+          b = b * 10 + a %10
+          a = a//10
+      
+      if b == num:
+          print("Palindrome")
       else:
-          print(f"{num} is a prime number.")
+          print("Not palindrome")
 
 # Python Fibonacci Series
 
