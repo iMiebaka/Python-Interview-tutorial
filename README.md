@@ -1337,7 +1337,35 @@ Both append() and extend() methods are the methods of list. These methods are us
 
 
 
+# how to achive multiprocessing and multithreding in python
 
+**Multithreading**
+
+        1 ) it is a technique where multiple threads are spawned by a process to do diffrent task, at about the same time, just one after the other
+        2 ) This gives you the illusiton that the threads are running in parallel, but they are actually run in concurrent manner.
+        3 ) In python, the Global interpreter Lock ( GIL) prevents the threads from running simultaneously
+
+**Multiprocessing**
+
+        1 ) It is a technique where parallelism in its truest form is achieved
+        2 ) Multiple processes are run across multiple CPU cores, which do not share the resources among them
+        3 ) Each process can have many threds running in its own memory space.
+        4 ) In python , each process has its own instance of python interpreter dong the job of executing the instructions
+
+
+# What is GIL. Explain
+
+        1 ) The global interpreter lock ( GIL) of python allows only one thread to be executed at a time. it is often a hurdle, as
+        it does not allow multi-threading in python to save time
+        2 ) The python Global interpreter lock or GIL, in python words , is a mutex ( Or a lock ) that allows only one thread to hold the control of the python interpreter.
+
+        3 ) This means that only one thread can be in a state of execution at any point in time. The impact of the GIL isn't visible to developers who execute single-
+        thereaded programs, but it can be performance bottleneck in CPU-bound and multi-threaded code
+
+        4 ) Since the GIL allows only one thread to execute at a time even in a multi-thereaded architecture with more than one CPU core, the GIL has gained a reputation as
+        an "Infamous" fature of python
+
+        5 ) Basically, GIL inpython doesn't allow multi-thereading which can sometimes be considered as a disadvantage.
 
 
 
