@@ -793,4 +793,76 @@ Display the account details.
       data = int(len(lst)/2)
       print(lst[data])
 
-# 
+# FizzBuzz Problem
+
+
+
+      #FizzBuzz Problem
+      #if number divisible by 3 - print Fizz
+      #If number divisible by 5 - print Buzz
+      #If number divisible by 15 - Print FizzBuzz
+      # else print the number
+      
+      #1 -1
+      # 2 -2
+      # 3 - Fizz
+      # 4 - 4
+      # 5 - Buzz
+      # 6 - Fizz
+      # ----
+      # 15 - FizzBizz
+      num = 10
+      for i in range(1,num+1):
+          if i % 3 == 0:
+              print("Fizz")
+          elif i % 5 ==0:
+              print("Buzz")
+          elif i % 15 == 0:
+              print("FizzBuzz")
+          else:
+              print(num)
+
+**FizzBuizz Problem using Dictionary**
+
+      num = 15
+      dict1 = {3:"Fizz",5:"Buzz",15:"FizzBuzz"}
+      
+      for i in range(1,num+1):
+          output = ""
+          for j in dict1.keys():
+              if i % j ==0:
+                  output = output+dict1[j]
+      
+          if output:
+              print(output)
+          else:
+              print(num)
+
+# count repeating character in a string get who is minimum character
+
+        name = "thisissachinpawar"
+        output  = {}
+        for i in name:
+            output[i] = name.count(i)
+        
+        data = max(output,key = output.get)
+        print(data)
+
+
+# find prime number
+
+        # Price nuber te astat je swatahashi devide hotat kiwa 1 shi divide hotat
+        n = 4
+        
+        flag = False
+        
+        if n > 1:
+            for i in range(2,n//2+1):
+                if n%2 ==0:
+                    flag = True
+                    break
+        if flag:
+            print("No ! its not a prime nuber")
+        else:
+            print("Yes !  it's prime number")
+
