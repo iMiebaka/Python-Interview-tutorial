@@ -1,3 +1,17 @@
+# sort list of string without using built in function
+
+
+
+        string = ["apple","system","machine",'robot']
+        
+        n = len(string)
+        
+        for i in range(n):
+            for j in range(0,n-i-1):
+                if string[j] > string[j+1]:
+                    string[j],string[j+1] = string[j+1],string[j]
+        print(string)
+
 # Decorator  in python
 
 
