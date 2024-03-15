@@ -1625,58 +1625,24 @@ Marathi :
 
 
 
-# Multitasking
+# Multithereading in python
 
-Executing multiple task at the same time
+**Multi-tasking in python**
 
+ Executing multiple task at the same time
 
+ **Type**
 
-# type of multitasking
+ **1 ) Process based multi- tasking**
+         1 ) Each task is an independent program/process
+         2 ) Used in os level
 
-1 ) Process based multitasking
-2 ) Thread based multitasking
+        process based multi tasking madhe akach veles multiple application open astat example akach veles pycharm, chrome, team ase application open astat
 
+**2 ) Thread based multi-tasking**
+        Each task is an independent thread ( Separate part of program )
+        used in programmatic level 
 
-# Process based multitasking
-
-Executing multiple task at the same time where each task is a separate independent program( process ) ,is called process based multitasking
-It is suitable for Operating system level
-
-
-Marathi : 
-        akach veles jeva multiple task execute hotat ani jyatun pratek ak task seprate asto , ani aka task chi dusrya task var dependancey nasti
-        exmaple : Jas ki OS madhe apach veles multitasking chalu ast 
-
-
-
-
-# Thread based multitasking
-
-Executing multiple task at the same time where each task is a separate independent part of the same program ( process ) , is called thread based multitasking and each independent part is called thread . It is suitable for programmatic level .
-
-
-Marathi : 
-
-        ya madhe same program cha seprate task ahe pan task cha ak dusryashi sambandh nahi 
-        
-        example : microsoft word madhe jyaveli typing karto tyach veli to spelling pan check karto
-        
-
-
-
- 
- 
- 
- # Thread
- 
- Thread is a separate flow of execution . Every thread has a task
- 
- Marathi :
-        ya madhe multiple thread asel tar aka thread cha dusrya thread var effect hot nahi 
- 
- 
- 
- 
- 
+        yamadhe akach application asta akach program asto ani tya program che part astat (exmaple calculator madhe addition, multipication, subtraction ) 
         
         
