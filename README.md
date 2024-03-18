@@ -1368,4 +1368,29 @@ Both append() and extend() methods are the methods of list. These methods are us
         5 ) Basically, GIL inpython doesn't allow multi-thereading which can sometimes be considered as a disadvantage.
 
 
+# what is Recursion in python
 
+Recursion in Python refers to the programming technique where a function calls itself to solve a problem. Python supports recursion, allowing functions to call themselves with modified arguments to break down a complex problem into simpler subproblems. This can lead to elegant and concise solutions for certain types of problems.
+
+
+                def factorial(n):
+                
+                    if n == 1:
+                        return 1
+                    else:
+                
+                        return (n * factorial(n-1))
+                    
+                print(factorial(5))
+
+Count down
+
+                def coun_down(n):
+                
+                    if n == 0 or n == 1:
+                        print("Done")
+                    else:
+                        print(n)
+                        coun_down(n-1)
+                
+                coun_down(5)
