@@ -1,3 +1,28 @@
+# Python sort dictionary by it's value
+
+          student_marks = {
+            "Alice": 85,
+            "Bob": 92,
+            "Charlie": 78,
+            "David": 90,
+            "Eve": 82
+          }
+          items = list(student_marks.items())
+          n = len(items)
+          for i in range(n):
+                  for j in range(0, n-i-1):
+                      if items[j][1] > items[j+1][1]:
+                          items[j], items[j+1] = items[j+1], items[j]
+          
+          output = {}
+          for res in items:
+              output[res[0]] = res[1]
+          print(output)
+          
+          #output  : {'Charlie': 78, 'Eve': 82, 'Alice': 85, 'David': 90, 'Bob': 92}
+
+
+
 # fibonacci series using recursion function
 
                 n = 10
