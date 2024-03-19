@@ -1,3 +1,22 @@
+# fibonacci series using recursion function
+
+                n = 10
+                a = 0
+                b = 1
+                def main(n):
+                    global a
+                    global b
+                    if n == 0:
+                        return 0
+                    else:
+                        print(a)
+                        c = a + b
+                        a = b
+                        b = c
+                        return main(n-1)
+                
+                main(n)
+
 # sort list of string without using built in function
 
 
