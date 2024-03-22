@@ -1394,3 +1394,18 @@ Count down
                         coun_down(n-1)
                 
                 coun_down(5)
+
+# check number is prime or no
+
+
+                num = 10
+                is_prime = True
+                
+                for i in range(2,num):
+                    if num % i ==0:
+                        is_prime = False
+                        break
+                if is_prime:
+                    print("Prime")
+                else:
+                    print("Not Prime")
