@@ -148,9 +148,9 @@
  # Split a string of length N into string of width K
  
           some_string="lakmsldsmsdf sdksv"
-          x=4
-          res=[some_string[y-x:y] for y in range(x, len(some_string)+x,x)]
-          print(res)
+          n = 5
+          data = [some_string[i:i+n] for i in range(0,len(some_string),n)]
+          print(data)
           
  # Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
  
