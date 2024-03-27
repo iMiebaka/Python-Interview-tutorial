@@ -39,3 +39,12 @@ The valume of work or information flowing through a system <br>
 **Defination**
 
 Throughput is the amount of data transmitted per unit of time. It is the process flow rate. Throughput is measured in bites per second i.e bps
+
+# What is availability 
+application is not available when multiple users try to access that
+
+# how to increase the availablity
+1 ) Replication of the system <br>
+2 ) Distrubuted system <br>
+
+
