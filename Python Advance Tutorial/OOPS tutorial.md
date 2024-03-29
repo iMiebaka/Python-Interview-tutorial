@@ -199,5 +199,143 @@ we can set value by help of this
     
     print(getattr(e2,"name")) # Output :- tushar
 
+**delattr**
 
+for delete attribute
+
+
+    class Employee:
+        def __init__(self, name,age):
+            self.name = name
+            self.age = age
+    
+    
+    e1 = Employee("Sachin",21)
+    e2 = Employee("Sagar",22)
+    
+    delattr(e2,"age")
+    print(e2.__dict__) # output :- {'name': 'tushar'}
+
+**hasattr**
+
+yat check kel jat object kad attribute ahe ka nahi
+
+    class Employee:
+        def __init__(self, name,age):
+            self.name = name
+            self.age = age
+    
+    e1 = Employee("Sachin",21)
+    e2 = Employee("Sagar",22)
+    
+    print(hasattr(e1,"name")) #output :- True 
+
+# built in class attribute
+
+1 ) __dict__ :- Dictionary containing class's namespace
+2 ) __doc__ :- class documentation string
+3 ) __name__ :- class name
+4 ) __module__ :- Module name in which class is defined
+5 ) __bases__ :- list of base classes
+
+**__doc__**
+
+yane doc string maintain keli jati
+
+
+    class Employee:
+        """ This is employee class for maintaining """
+        def __init__(self, name,age):
+            self.name = name
+            self.age = age
+    
+    e1 = Employee("Sachin",21)
+    e2 = Employee("Sagar",22)
+    
+    print(Employee.__doc__) # This is employee class for maintaining
+
+**__dict__**
+
+yacha wapar class cha data pahayla hoto dictionary format madhe
+
+    class Employee:
+        def __init__(self, name,age):
+            self.name = name
+            self.age = age
+    
+    e1 = Employee("Sachin",21)
+    e2 = Employee("Sagar",22)
+    
+    
+    print(Employee.__dict__) # {'__module__': '__main__', '__doc__': ' This is employee class for maintaining ', '__init__': <function Employee.__init__ at 0x7d40ca134720>, '__dict__': <attribute '__dict__' of 'Employee' objects>, '__weakref__': <attribute '__weakref__' of 'Employee' objects>}
+
+
+**__name__**
+
+Yane class cha name print hoil
+    
+    class Employee:
+        def __init__(self, name,age):
+            self.name = name
+            self.age = age
+    
+    e1 = Employee("Sachin",21)
+    e2 = Employee("Sagar",22)
+    
+    
+    print(Employee.__name__) # Employee
+
+# what is instance variable in python
+
+**Types of variable**
+
+1 ) instance variable <br>
+2 ) class variable
+
+
+**Instance variable**
+
+1 ) instance variable he object shi associated astat <br>
+2 ) suppose tumchya kad 3 object asel tar instance variable chi 3 copy bantil <br>
+3 ) values of variables differs from object to object <br>
+4 ) modification is one object wont effect other object <br>
+
+
+aka instance varibale change kelyavar dusrya var affect hot nahi, yala apan delete pan karu shakto.
+
+    class Student:
+        def __init__(self, name,mark):
+            self.name = name
+            self.mark = mark
+    
+    a1 = Student("Sachin",21)
+    a2 = Student("sagar",21)
+    a3 = Student("tushar",21)
+    
+    a1.age =21
+    print(a1.__dict__) # Output :- {'name': 'Sachin', 'mark': 21, 'age': 21}
+
+
+**Instance method**
+
+    class Student:
+        def __init__(self, name,mark):
+            self.name = name
+            self.mark = mark
+        
+        def display(self):
+            print(self.name,self.mark)
+        
+        def change_data(self):
+            self.name = "abc"
+            self.mark = 100
+    
+    a1 = Student("Sachin",21)
+    a2 = Student("sagar",21)
+    a3 = Student("tushar",21)
+    
+    a1.change_data()
+    print(a1.__dict__) # {'name': 'abc', 'mark': 100}
+
+# class variable & class method
 
