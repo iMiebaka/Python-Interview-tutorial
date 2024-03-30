@@ -441,5 +441,33 @@ Instance variable sathi multiple copy banavli jatat, tasach class variable sathi
 
 # Inheritance in python ( 14 )
 
+Deriving a new class from an existing class so that new class inherits all members ( attributes  + methods ) of existing class is called as inheritance.
+
+
+        class Employee:
+            bouns = 2000
+            
+            def display(self):
+                print(f"This is employee class method")
+        
+        class Manager(Employee):
+            bonus1 = 5000
+            
+            def show(self):
+                print("This is manager class method")
+        
+        e1 = Employee()
+        m1 = Manager()
+        m1.display()
+        m1.show()
+
+# what is need of inheritance
+
+1 ) For code reusablity ( write once use many times ) <br>
+2 ) when you have relations among classes <br>
+
+
+# How constructor works in inheritance ( 16 )
+
 
 
