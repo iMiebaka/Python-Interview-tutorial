@@ -339,3 +339,107 @@ aka instance varibale change kelyavar dusrya var affect hot nahi, yala apan dele
 
 # class variable & class method
 
+Instance variable sathi multiple copy banavli jatat, tasach class variable sathi akach copy banavli jat
+
+**Class Variable**
+
+1 ) Variables made for entire class ( All objects ) <br>
+2 ) Only one copy is created and distributed to all objects <br>
+3  ) Modification in class variable impact on all objects <br>
+
+
+
+        class Employee:
+            company_name = "infosys" # class variable
+            def __init__(self,name,salary):
+                self.name = name
+                self.salary = salary
+        
+        e1 = Employee("sachin",300)
+        e2 = Employee("Tusahr",500)
+        
+        print(Employee.company_name) # output :- infosys ) access class variable )
+        
+        """class variable modify karnya sathi aplyala class ghyava lagto"""
+        
+        Employee.company_name = "TCS"
+        print(Employee.company_name) #output :- TCS
+
+
+**Class Method**
+
+1 ) Method which works on class variable <br> 
+2 ) First argument is class reference <br>
+3 ) Made using decorator **@classmethod** <br>
+
+
+
+      class Employee:
+          company_name = "infosys" # class variable
+          def __init__(self,name,salary):
+              self.name = name
+              self.salary = salary
+          
+          @classmethod  # class method banavnya sathi
+          def get_comapny_name(cls):
+              cls.company_name = 'TCS'
+              print(cls.company_name)
+              
+      
+      e1 = Employee("sachin",300)
+      e2 = Employee("Tusahr",500)
+      
+      Employee.get_comapny_name() # Output :- Comapy name is  infosys
+
+
+# setter method & getter method
+
+**Instance method**
+
+**1 ) setter method :-** set values of instance variable <br>
+**2 ) getter method :-** get values of instance variables <br>
+
+
+      class Employee:
+          def setName(self,name): # setter method
+              self.name = name
+          
+          def getName(self):
+              print(f"the name is {self.name}") # getter method
+      
+      e1 = Employee()
+      
+      e1.setName("sachin") # set value
+      e1.getName() # get value
+      
+      print(e1.__dict__) # output:- {'name': 'sachin'}
+
+
+
+# static method
+
+1 ) methods which performs operations on external data <br>
+2 ) it can also perform operations on class data <br>
+3 ) No need to pass object or class reference <br>
+4 ) created using decorator **@staticmethod** <br>
+
+
+
+
+      class Bank:
+          bank_name = "BOI"
+          rate_of_interest = 12.5
+          
+          def simple_interest(amount,years):
+              si = (amount*year*Bank.rate_of_interest)/100
+              print(si)
+      
+      amount = 10000
+      year = 3
+      Bank.simple_interest(amount,year)
+
+
+# Inheritance in python ( 14 )
+
+
+
