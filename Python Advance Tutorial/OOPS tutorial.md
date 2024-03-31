@@ -647,3 +647,159 @@ Deriving a new class from an existing class so that new class inherits all membe
 
 
 # MRO :- method resoluation order (21)
+
+**Hybrid Inheritance**
+
+1 ) It contains multiple type of inheritance
+
+**What is MRO**
+
+1 ) MRO represents how properties ( Attributes + methods ) are searched in inheritance
+
+
+**Rules - 1**
+
+1 ) Python first search in child class and then goes to parent class. <br>
+2 ) priority is to child class <br>
+3 ) MRO follows 'Depth first left to right approach' <br>
+
+
+
+# Encapsulation
+
+**Topics**
+
+1 ) what is Encapsulation in python <br>
+2 ) need of Encapsulation in python <br>
+3 ) Access Modifiers in python <br>
+4 ) Name mangling concept <br>
+5 ) Making private method <br>
+
+
+**What is Encapsulation in python**
+
+Wrapping up date and methods working on data together in a single unit (i.e class ) is called as encapsulation.
+
+
+**Access Modifier in python**
+
+1 ) Generally, we restrict data access outside the class in Encapsulation <br>
+2 ) Encapsulation can be achieved by declaring the data members and methods of a class as private <br>
+3 ) Three access specifiers: 1 ) Public, 2) Private, 3 ) Protected <br>
+
+
+**Public Member :-** Accessible anyware by using object reference.
+**Private member :-** Accessible within the class. Accessible via method only
+
+
+
+**Private member**
+
+
+for private data use (__ ) <br>
+
+    class Finance:
+        def __init__(self):
+            self.__revenue = 1000 # private data
+            self.number_of_sales = 114
+        
+    f1  = Finance()
+    
+    class HR:
+        def __init__(self):
+            self.number_of_emp = 31
+            print(f1.revenue)
+            
+    h1 = HR()
+    print(f1.__dict__)
+
+
+  by the method we access private data, private member only we can access inside the class <br>
+  
+
+          class Finance:
+            def __init__(self):
+                self.__revenue = 1000 # private data
+                self.__number_of_sales = 114
+            
+            def display(self):
+                print(f" revenue is {self.__revenue} and number of sales {self.__number_of_sales}")
+            
+        f1  = Finance()
+        
+        f1.display()
+
+
+
+# Polymorphism
+
+**Topics :-**
+
+1 ) What is polymorphism in python
+2 ) Examples of Polymorphism
+3 ) Polymorphism in built-in functions
+
+
+**What is polymorphism in python**
+
+1 ) Polymorphism in python is an ability of python object to take many forms. <br>
+2 ) if a variable, object, method performs different behaviour accordking to situation is called as polymorphism.
+
+
+
+# Polymorphism with Inheritance
+
+
+        class Veh:
+            def __init__(self,name,color,price):
+                self.name = name
+                self.color = color
+                self.price = price
+            
+            def get_details(self):
+                print("Name is  :",self.name)
+                print("Color is :",self.color)
+                print("Price is :",self.price)
+                
+            def max_speed(self):
+                print("maximum speed limit is 100")
+                
+            def gear(self):
+                print("Gear change is 6")
+        
+        
+        class Car(Veh):
+            def max_speed(self):
+                print("Maximum speed limit is 140")
+            
+            def gear(self):
+                print("Gear change is 7")
+                
+        v1 = Veh("Truck","red",200)
+        c1 = Car("Car","black",600)
+        
+        v1.max_speed()
+        c1.max_speed()
+
+
+# Over-fiding built in function
+
+
+      class Cart:
+          def __init__(self,basket1,basket2,basket3):
+              self.clothes = basket1
+              self.electronics = basket2
+              self.other = basket3
+          
+          def __len__(self):
+              print("Total number rof items in cart :")
+              
+              return len(self.clothes) + len(self.electronics) + len(self.other)
+      
+      sachin = Cart(["pant","shirt","t-shirt"],['earphone','mobile'],['chair'])
+      
+      print(len(sachin)) # output:- 6
+
+
+# Polymorphism in functions and object (26 )
+      
