@@ -836,3 +836,59 @@ for private data use (__ ) <br>
         ----------------
         Petrol
         Max speed is 180
+
+
+# Operator overloading
+
+1 ) when same operator behaves differently depending on values <br>
+2 ) You can assign a new meaning to operators also and you can extedn functionality of operators <br>
+3 ) You can change default behaviour of operator using over-riding <br>
+
+
+      num1 = 10
+      num2 = 20
+      
+      print(num1 + num2)
+      print(num1.__add__(num2))
+      
+      print(dir(int))
+
+# how to achive operator overloading
+
+        class Book:
+            def __init__(self,title,pages):
+                self.title = title
+                self.pages = pages
+            
+            def __add__(self,other): #(b1,b2)
+                total = self.pages + other.pages
+                return total
+                
+        b1 = Book("One indian girl",300)
+        b2 = Book("Making india awesome",200)
+        b3 = Book("Half girlfriend", 400)
+        
+        print('Total number of pages :', b3 + b3)
+
+
+# Overloading comparison operator in python
+
+
+        # overload > operator
+
+        class Hotel:
+            def __init__(self,name,fare):
+                self.name = name
+                self.fare = fare
+            
+            def __gt__(self,other):  # (h1,h2)
+                return self.fare > other.fare # h1.fare > h2.fare
+                
+                
+        h1 = Hotel("Taj hotel",200)
+        h2 = Hotel("Panchratna",100)
+        
+        print(h1>h2)
+
+
+# Method overloading ( 31 )
