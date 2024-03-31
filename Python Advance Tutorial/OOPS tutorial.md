@@ -646,3 +646,4 @@ Deriving a new class from an existing class so that new class inherits all membe
       print(s1.name,s1.mark,s1.age)
 
 
+# MRO :- method resoluation order (21)
