@@ -802,4 +802,37 @@ for private data use (__ ) <br>
 
 
 # Polymorphism in functions and object (26 )
-      
+
+        class BMW:
+            def fuel_type(self):
+                print("Diesel")
+            
+            def max_speed(self):
+                print("Max speed is 200")
+                
+        
+        class Ferrari:
+            def fuel_type(self):
+                print("Petrol")
+            
+            def max_speed(self):
+                print("Max speed is 180")
+        
+        def car_details(obj):
+            obj.fuel_type()
+            obj.max_speed()
+        
+        bmw = BMW()
+        ferrari = Ferrari()
+        car_details(bmw)
+        print("----------------")
+        car_details(ferrari)
+        
+        
+        OUTPUT :-
+        
+        Diesel
+        Max speed is 200
+        ----------------
+        Petrol
+        Max speed is 180
