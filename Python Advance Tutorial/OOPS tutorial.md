@@ -471,3 +471,178 @@ Deriving a new class from an existing class so that new class inherits all membe
 
 
 
+
+        """ Jar son class kad constructor asel tar father class cha constructor call nahi honar ani jar son class kad construcotr asel tar father class cha constructor call hoil"""
+
+        class Father:
+             def __init__(self):
+                 print("Father constructor called")
+                 self.vehicle = "scooter"
+        
+        
+        class Son(Father):
+            def __init__(self):
+                 print("Son constructor called")
+                 self.vehicle = "BMW"
+        
+        s = Son()
+        print(s.__dict__)
+
+
+# super() function
+
+1 ) Using super() function, we can access parent class properties <br>
+2 ) this function return a temporary object which contains reference to parent class. <br>
+3 ) It makes inheritance more manageable and extensible.
+
+
+        class Computer:
+            def __init__(self):
+                self.ram = "8 GB"
+                self.storage = "512 GB"
+                print("Computer class constructor call")
+        
+        class Mobile(Computer):
+            def __init__(self):
+                super().__init__() # we can accessing parent class attribute using constructor
+                self.model = "I-Phone X"
+                print("Mobile class constructor call")
+        
+        apple = Mobile()
+        print(apple.__dict__) # Output :- {'ram': '8 GB', 'storage': '512 GB', 'model': 'I-Phone X'}
+
+
+**Parameterise constructor**
+
+      class Computer:
+          def __init__(self, ram,storage):
+              self.ram = ram
+              self.storage = storage
+              print("Computer class constructor call")
+          
+      
+      class Mobile(Computer):
+          def __init__(self,ram,storage):
+              super().__init__(ram,storage) # we can accessing parent class attribute
+              self.model = "I-Phone X"
+              print("Mobile class constructor call")
+      
+      apple = Mobile("8 GB","512, GB")
+      print(apple.__dict__) # Output :- {'ram': '8 GB', 'storage': '512 GB', 'model': 'I-Phone X'}
+
+
+  **call method also**
+
+        class Computer:
+          def __init__(self, ram,storage):
+              self.ram = ram
+              self.storage = storage
+              print("Computer class constructor call")
+              
+          def display(self):
+              print("Hello")
+          
+      
+      class Mobile(Computer):
+          def __init__(self,ram,storage):
+              super().display() # we calling method
+              self.model = "I-Phone X"
+              print("Mobile class constructor call")
+      
+      apple = Mobile("8 GB","512, GB")
+      print(apple.__dict__) # Output :- {'ram': '8 GB', 'storage': '512 GB', 'model': 'I-Phone X'}
+      
+      OUTPUT :-
+      
+      Hello
+      Mobile class constructor call
+      {'model': 'I-Phone X'}
+
+
+
+# Types of inheritance
+
+1 ) Single Inheritance <br>
+2 ) Multi-level inheritance <br>
+3 ) Hierachical inheritance <br>
+4 ) Multiple inheritance <br>
+5 ) Hybrid inheritance <br>
+6 ) Cyclic Inheritance <br>
+
+
+**Single Inheritance :-**
+
+1 ) One parent and one is child class <br>
+2 ) Chils class can access parent class attribute and method but parent class cannot access child class atributes and method
+
+
+**Multi-level Inheritance**
+
+1 ) Parent class and child class further inherited into new class forming multple levels <br>
+
+      #constructor in multi-level inheritance
+      
+      """
+      samja jar manager class madhe constructor nasel tar to employee class cha constructor call karel ani jar Employee class madhe pan constructor nasel tar to Human being class chya constructor call karel
+      """
+      
+      class Human_being(object):
+          def __init__(self):
+              print("Human being construcotr is called")
+              self.name = input("Enter your name :")
+      
+      class Employee(Human_being):
+          def __init__(self):
+              print("Employee constructor called")
+              self.salary = float(input("Enter your salary :"))
+      
+      class Managers(Employee):
+          def __init__(self):
+              print("Managers construcotr is called")
+              self.bonus = float(input("Enter your bonus :"))
+      
+      m1 = Managers()
+
+
+**Variable in multi-level inheritance**
+
+
+
+    class Human_being(object):
+        salary = 100
+    
+    class Employee(Human_being):
+        salary = 200
+    
+    class Managers(Employee):
+        salary = 300
+    
+    m1 = Managers()
+    
+    print(m1.salary)
+
+
+# Hierachical inheritance
+
+1 ) One parent and multiple child classes
+
+
+      class Person:
+          def __init__(self,name,age):
+              self.name = name
+              self.age = age
+              
+      
+      class Employee(Person):
+          def __init__(self,salary):
+              self.salary = salary
+      
+      class Student(Person):
+          def __init__(self,name,age,mark):
+              super().__init__(name,age)
+              self.mark = mark
+      
+      s1 = Student("Sachin",21,59)
+      print(s1.name,s1.mark,s1.age)
+
+
