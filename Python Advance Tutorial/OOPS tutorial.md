@@ -691,6 +691,44 @@ Wrapping up date and methods working on data together in a single unit (i.e clas
 **Public Member :-** Accessible anyware by using object reference.
 **Private member :-** Accessible within the class. Accessible via method only
 
+Example
+
+
+
+          import random
+          
+          class BankAccount:
+              def __init__(self,initial_balance = 0):
+                  self.__account_number = "".join(str(random.randint(0,9)) for _ in range(8))
+                  self.__balance = initial_balance
+              
+              def deposit(self,amount):
+                  if amount > 0 :
+                      self.__balance += amount
+                      print(f"Deposited {amount}. New balance is {self.__balance}")
+                  else:
+                      print("Invalid amount")
+              
+              def withdraw(self,amount):
+                  if amount > 0:
+                      if self.__balance >= amount:
+                          self.__balance -= amount
+                          print(f"Withdrew {amount} New balance is {self.__balance}")
+                      else:
+                          print("Insufficient founds")
+                      
+                  else:
+                      print("Invalid withdrwal amount")
+              
+              def display_details(self):
+                  print(f"Account Number :",self.__account_number)
+                  print(f"Balance :",self.__balance)
+          
+          account = BankAccount(1000) # starting balance 100
+          account.display_details()
+          print()
+          account.deposit(10000)
+          account.withdraw(5000)
 
 
 **Private member**
