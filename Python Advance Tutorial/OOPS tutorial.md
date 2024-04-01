@@ -930,3 +930,191 @@ for private data use (__ ) <br>
 
 
 # Method overloading ( 31 )
+
+In python there not a method overloading concept but we can achive this
+
+when a class contain two or more methods with same name but different behaviour is called as method overloading
+
+suppose jar aplyakad 3 method ahet add name che (add(n1,n2) , add(n1,n2,n3), add(n1,n2,n3,n4) ) jya veles mi add method la call kela jas **add(2,3)** <br>
+tar to only **add(n1,n2)** lach call karil
+
+
+**How to achive method overloading**
+
+To overload class methods, we need to write method's logic so that different code executes inside the method according to parameters provided.
+
+
+         class Calci:
+            def add(self,num1 = None,num2 = None, num3 = None):
+                if num1 != None and num2 != None and num3 != None:
+                    print("Addition is :", num1 + num2 + num3)
+                elif num1 != None and num2 != None:
+                    print("Addition is :", num1 + num2)
+                else:
+                    print("Incorrect Parameters Provided")
+        
+        c1 = Calci()
+        c1.add(2,3)
+        c1.add(2,3,5)
+
+
+# Nested class or inner class
+
+means class inside class
+
+
+
+      class Outer:
+          def __init_(self):
+              print("Outer class constructor called")
+          def display(self):
+              print("This is display method")
+          
+          
+          class Inner:
+              def __init__(self):
+                  print("Inner constructor called")
+              
+              def show(self):
+                  print("This is show method")
+      
+      obj = Outer()
+      in1 = obj.Inner() # Inner constructor called
+      in1.show() # This is show method
+      obj.display() # This is display method
+
+
+# Destructor in python
+
+1 ) A special method which destryoys objects and releases resources tied to objects <br>
+2 ) Destructor is called automatically when object is destroyed <br>
+3 ) Releasing objects tied to destroyed objects
+
+
+**Two conditions when destructor is called**
+
+1 ) Reference counting reaches to 0
+2 ) when variable goes out of scope
+
+Note : In python, the special method  **__del__()** is used to define a destructor
+
+      class Employee:
+          def __init__(self,name,salary):
+              self.name = name
+              self.salary = salary
+          
+          def display(self):
+              print(f"Name is {self.name}\nsalary is :{self.salary}")
+          
+          # defining destructor
+          def __del__(self):
+              print("Destructor is call")
+      
+      e1 = Employee("sachin",50000)
+      e1.display()
+
+
+**Disadvantages of destructor**
+
+**1 ) Circular Referencing**
+  when two objects refer to each other
+  
+
+
+# storing objects in list
+
+**Example :-**
+
+1 ) Create a Movie class <br>
+2 ) create multiple movie objects <br>
+3 ) add these objects to list <br>
+4 ) try to get objects one by one from list and print data <br>
+
+
+
+
+      class Movie:
+          def __init__(self , title,mins,hero):
+              self.title = title
+              self.runtime = mins
+              self.hero = hero
+      
+          def printer(self):
+              print(f"Title is :{self.title}\nruntime is :{self.runtime}\nhero is :{self.hero}")
+      list_of_movies = []
+      while True:
+          title = input("Enter the title of movie :")
+          mins = input("Enter the runtime of movie :")
+          hero = input("Enter the hero of movie :")
+          
+          obj = Movie(title,mins,hero)
+          list_of_movies.append(obj)
+          print("Movie added into the list")
+          ans = input("Do you want to add another movie(y/n")
+          if ans != "y":
+              break
+      print("All movies information :")
+      for obj in list_of_movies:
+          print(obj.printer())
+
+
+# class Decorator in python
+
+1 ) Function Decorators <br>
+2 ) Class Decorators <br>
+
+
+
+        class Decorator:
+            def __init__(self,func):
+                self.function = func
+                
+            
+            def __call__(self,a,b):
+                result = self.function(a,b)
+                return result **2
+                # Original func
+                # square
+                
+        @Decorator
+        def add(a,b):
+            return a + b
+        
+        print(add(1,2)) # add.__call__(a,b)
+
+
+another example
+
+      class Decorator:
+          def __init__(self,func):
+              
+              self.function = func
+          
+          def __call__(self, *args):
+              try:
+                  if any([isinstance(i,str) for i in args]): #[False,True,False]
+                      raise TypeError("Cannot pass string as arguments")
+                  else:
+                      return self.function(*args)
+              except Exception as obj:
+                  print(obj)
+                  
+      @Decorator
+      def add(*args):
+          sum1 = 0
+          for num in args:
+              sum1 = sum1 + num
+          return sum1
+      print(add(10,20,30))
+      print(add(10,"20",30))
+      
+      
+      # OUTPUT :-
+      """
+      60
+      Cannot pass string as arguments
+      None
+      """
+
+
+# @property Decorator in python (40 )
