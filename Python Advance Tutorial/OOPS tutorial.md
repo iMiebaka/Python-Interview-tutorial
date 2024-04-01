@@ -1117,4 +1117,11 @@ another example
       """
 
 
-# @property Decorator in python (40 )
+# What is Abstraction
+
+1 ) The process by which data and functions are defined in such a way that only essential details can be seen and <br>
+unnecessary implementations are hidden is called Data Abstraction <br>
+2 ) Hiding complex implementation deatils and showing only signatures to users
+
+
+
