@@ -358,16 +358,94 @@ A lambda function in Python is a small, anonymous function defined using the lam
                 print(output)
 
 57)   What are magic methods in Python and what are they used for
+
+**Initialization and Cleanup:**
+
+__init__(self, ...): Constructor method, initializes new instances of a class.<br>
+__del__(self): Destructor method, cleans up resources when an object is no longer needed.
+
+
+**String Representation:**
+__str__(self): Returns a string representation of an object when str() function is called. <br>
+__repr__(self): Returns a string representation that ideally can be used to recreate the object when repr() function is called.
+
+**Comparison Operations**
+
+__eq__(self, other): Defines behavior for the equality operator (==).
+__ne__(self, other): Defines behavior for the inequality operator (!=).
+__lt__(self, other): Defines behavior for the less-than operator (<).
+__le__(self, other): Defines behavior for the less-than or equal to operator (<=).
+__gt__(self, other): Defines behavior for the greater-than operator (>).
+__ge__(self, other): Defines behavior for the greater-than or equal to operator (>=).
+
+                class Vector:
+                    def __init__(self, x, y):
+                        self.x = x
+                        self.y = y
+                
+                    def __add__(self, other):
+                        # Define addition behavior for Vector objects
+                        return Vector(self.x + other.x, self.y + other.y)
+                
+                    def __str__(self):
+                        return f"({self.x}, {self.y})"
+                
+                # Create two Vector objects
+                v1 = Vector(2, 3)
+                v2 = Vector(4, 5)
+                
+                # Use the addition operator on Vector objects
+                result = v1 + v2
+                
+                # Print the result
+                print("Result of addition:", result)  # Output: (6, 8)
+
+
+
+
+
 58)   What is the difference between Pip and Pep8?
 59)   middleware classes in django
 60)   Which one is faster to access dictionary or list and why
 61)   Does Django suppors NoSQL databases
 62)   What is pickling and unpickling
-63)   what is overloading
+# 63)   what is overloading
+
+ overloading refers to the ability to define multiple methods with the same name but different numbers or types of parameters within a single class. Unlike some other languages like C++ and Java, Python does not support function or method overloading based solely on parameter types. Instead, it implements a single-dispatch mechanism for method overloading based on the type of the first parameter, known as the "dispatching argument."
+
+ 
+
+
 64)   what is GIL in the Python?
-65)   What is the 'yield' keyword in python?
+# 65)   What is the 'yield' keyword in python?
+
+When a function contains the yield keyword, it becomes a generator function. When the generator function is called, it returns a generator object, which is an iterator. Each time the yield statement is encountered within the generator function, the function's state is saved, and the value after the yield keyword is returned to the caller. The function's execution is then paused
+
+                def my_generator():
+                    yield 1
+                    yield 2
+                    yield 3
+                
+                # Create a generator object
+                gen = my_generator()
+                
+                # Iterate over the generator object using a loop
+                for value in gen:
+                    print(value)
+
+
 66)   Difference in list and array.
-67)   What is ** in Python
+# 67)   What is ** in Python
+
+** operator is used for exponentiation, also known as raising a number to a power. It is used to calculate the power of one number raised to the exponent of another number.
+
+                # Calculate 2 raised to the power of 3
+                result = 2 ** 3
+                print(result)  # Output: 8
+
+
+
+
 68)   What happens when we run any program in Python?
 69)   How CSRF works
 70)   Give any example of Middlewares in Django
@@ -380,31 +458,172 @@ A lambda function in Python is a small, anonymous function defined using the lam
 77)   What do you like about python's interpreter?
 78)   What are the synchronization methods in python?
 79)   Custom garbage collection in python
-80)   How encapsulation is implemented in Python
-81)   Which tools does django provide to support backend scaling
-82)   Write a function to return a list of all subsequences of a string in sorted order, excluding the empty string.
-83)   Python bitwise operator problem
-84)   Try catch block
-85)   What is regex? Name and explain some libraries you have used in python
-86)   Write a program to print whether it is a prime number or not.
-87)   check if a string is correct "{{([(())})}}" string is correct if each quotation mark is closed by its corresponding quotation mark.
-88)   prefetch_related
-89)   Python generators what and why we need it. And a example code
-90)   multithreading use in python reason
-91)   What's the difference between overloading and overriding?
-92)   What are iterators, how do you implement/override them in python.
-93)   What is lambda function ?
-94)   Use of __name__ == "__main__"
-95)   Find errors in a function declaration regarding *args and **kargs in Python
-96)   Why would you want to write a custom middleware in Django?
-97)   Write a function that returns the smallest positive number that is evenly divisible by all numbers from 1 to n
-98)   can you override parent class constructor ?
-99)   What is Line written to in settings file of Django to connect database ?
-100)   what is inheritence. what is polymorphism
-101)   What is difference between repr and str
-102)   What are python context managers?
-103)   inheritance‍‌‍‍‍‌‌‌‌‌‌‌‍‌‌‌‍‍‍‌ and composition? Give examples. What is "with" used for? How is it implemented?
-104)   What are "comprehensions" in Python and what kinds are there?
+# 80)   How encapsulation is implemented in Python
+
+In Python, there's no strict enforcement of private members. However, the convention is to prefix the name of an attribute or method with a single underscore (_) to indicate that it is intended to be private and should not be accessed from outside the class. While this convention is not enforced by the language, it serves as a signal to other developers that the member is intended for internal use only.
+
+                class MyClass:
+                    def __init__(self):
+                        self._private_attr = 10
+                
+                    def _private_method(self):
+                        print("This is a private method.")
+                
+                obj = MyClass()
+                print(obj._private_attr)  # Accessing private attribute (convention)
+                obj._private_method()     # Calling private method (convention)
+
+
+
+82)   Which tools does django provide to support backend scaling
+83)   Write a function to return a list of all subsequences of a string in sorted order, excluding the empty string.
+84)   Python bitwise operator problem
+85)   Try catch block
+86)   What is regex? Name and explain some libraries you have used in python
+87)   Write a program to print whether it is a prime number or not.
+88)   check if a string is correct "{{([(())})}}" string is correct if each quotation mark is closed by its corresponding quotation mark.
+89)   prefetch_related
+# 90)   Python generators what and why we need it. And a example code
+
+Python generators are functions that enable you to create iterators in a more efficient and concise way compared to traditional iterator classes. Generators allow you to iterate over a sequence of values without needing to create and store the entire sequence in memory at once. Instead, they generate values on the fly as they are needed, which can significantly reduce memory consumption and improve performance, especially when dealing with large or infinite sequences.
+
+
+                def fibonacci_generator():
+                    """Generate Fibonacci sequence indefinitely."""
+                    a, b = 0, 1
+                    while True:
+                        yield a
+                        a, b = b, a + b
+                
+                # Create a generator object
+                fib_gen = fibonacci_generator()
+                
+                # Iterate over the first 10 Fibonacci numbers
+                for _ in range(10):
+                    print(next(fib_gen))  # Output: 0 1 1 2 3 5 8 13 21 34
+
+
+
+
+
+# 91)   multithreading use in python reason
+ 
+ Multithreading in Python is used to achieve parallelism, allowing multiple threads to execute concurrently within the same process
+
+**Improved Performance:** Multithreading can improve the performance of certain types of applications by leveraging <br> multiple CPU cores or by overlapping I/O-bound tasks with CPU-bound tasks. This can lead to faster execution times and better resource utilization.
+
+**Responsive Applications:** Multithreading can improve the responsiveness of applications by allowing them to perform time-consuming tasks in <br> the background without blocking the main thread. This prevents the user interface from freezing or becoming unresponsive while waiting for tasks to complete
+
+ **Asynchronous Programming:** Multithreading is often used in asynchronous programming paradigms, such as event-driven programming or <br> reactive programming. It enables the application to handle multiple asynchronous events or tasks concurrently without blocking the main thread.
+
+                import threading
+                import time
+                
+                def print_numbers():
+                    """Function to print numbers from 1 to 5."""
+                    for i in range(1, 6):
+                        print(i)
+                        time.sleep(1)  # Simulate some time-consuming task
+                
+                def print_letters():
+                    """Function to print letters from 'a' to 'e'."""
+                    for letter in 'abcde':
+                        print(letter)
+                        time.sleep(1)  # Simulate some time-consuming task
+                
+                # Create two threads to execute the print_numbers and print_letters functions concurrently
+                thread1 = threading.Thread(target=print_numbers)
+                thread2 = threading.Thread(target=print_letters)
+                
+                # Start the threads
+                thread1.start()
+                thread2.start()
+                
+                # Wait for both threads to finish execution
+                thread1.join()
+                thread2.join()
+                
+                print("Both threads have finished execution.")
+
+
+
+92)   What's the difference between overloading and overriding?
+
+
+**Overloading**
+
+Overloading in Python refers to the ability to define multiple functions or methods with the same name but <br> different numbers or types of parameters within the same class or module.
+
+**Purpose:** Overloading allows you to provide multiple implementations of a function or method, each tailored to accept <br> different parameter types or numbers. It provides flexibility and convenience when working with different data types or argument lists
+
+**Characteristics:**
+
+Python does not support method overloading based on the number or types of parameters alone, as it does in some other languages like Java. Instead, you can achieve overloading by using default parameter values or variable-length argument lists (e.g., *args and **kwargs).
+Overloading is determined dynamically at runtime based on the actual arguments passed to the function or method.
+
+
+                class Calculator:
+                    def add(self, a, b):
+                        return a + b
+                    
+                    def add(self, a, b, c):
+                        return a + b + c
+
+------------------------------------------
+**Overriding**
+
+Overriding in Python refers to the ability to provide a new implementation of a method in a subclass that is already defined in its superclass
+
+**Purpose:** Overriding allows a subclass to customize the behavior of inherited methods from its superclass. <br> It enables polymorphism, where the same method name can behave differently depending on the object's actual type at runtime.
+
+        
+        class Animal:
+            def make_sound(self):
+                print("Animal makes a sound")
+        
+        class Dog(Animal):
+            def make_sound(self):
+                print("Dog barks")
+
+
+
+93)   What are iterators, how do you implement/override them in python.
+
+the iter() function is used to create an iterator from an iterable object. It returns an iterator object that allows <br> you to iterate over the elements of the iterable using the next() function or a loop
+
+object: The iterable object for which you want to create an iterator.
+sentinel (optional): An optional sentinel value that, when provided, indicates the end of the iteration. If the iterator encounters the sentinel value, it will stop iterating
+
+                # Create an iterable object (list)
+                my_list = [1, 2, 3, 4, 5]
+                
+                # Create an iterator from the iterable using iter()
+                my_iterator = iter(my_list)
+                
+                # Iterate over the elements of the iterator using next() function
+                print(next(my_iterator))  # Output: 1
+                print(next(my_iterator))  # Output: 2
+                print(next(my_iterator))  # Output: 3
+                
+                # Iterate over the remaining elements of the iterator using a loop
+                for item in my_iterator:
+                    print(item)
+
+
+94)   What is lambda function ?
+95)   Use of __name__ == "__main__"
+
+96)   Find errors in a function declaration regarding *args and **kargs in Python
+
+97)   Why would you want to write a custom middleware in Django?
+98)   Write a function that returns the smallest positive number that is evenly divisible by all numbers from 1 to n
+99)   can you override parent class constructor ?
+100)   What is Line written to in settings file of Django to connect database ?
+101)   what is inheritence. what is polymorphism
+102)   What is difference between repr and str
+103)   What are python context managers?
+104)   inheritance‍‌‍‍‍‌‌‌‌‌‌‌‍‌‌‌‍‍‍‌ and composition? Give examples. What is "with" used for? How is it implemented?
+105)   What are "comprehensions" in Python and what kinds are there?
 
 
 <a href="https://www.glassdoor.co.in/Interview/python-interview-questions-SRCH_KO0,6_IP69.htm" > More question </a>
