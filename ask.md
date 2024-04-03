@@ -1,200 +1,107 @@
 
-# 1 ) List vs Tupple <br>
-**Mutability:**
-
-**List: <br>**
-Lists are mutable, meaning their elements can be changed or modified after the list is created. You can add, remove, or modify elements in a list.
-**Tuple:** <br>
-Tuples are immutable, which means once they are created, their elements cannot be changed or modified. You cannot add, remove, or alter elements in a tuple.
-Syntax:
-
-List: Lists are defined using square brackets []. For example: my_list = [1, 2, 3]. <br>
-Tuple: Tuples are defined using parentheses (). For example: my_tuple = (1, 2, 3).<br>
-**Performance:**
-
-List: Due to their mutability, lists might have slightly higher memory overhead and slower performance compared to tuples.
-Tuple: Tuples are generally more memory-efficient and may provide faster iteration because of their immutability.
-
-
-# 2 ) diffrent between class and function <br>
-
-**Function:** <br> A function is a block of code that performs a specific task or set of tasks. It encapsulates a sequence of instructions and can be called with specific arguments to produce a result. <br>
-
-**Class:** <br> A class, on the other hand, is a blueprint for creating objects. It defines a data structure and methods that operate on that data. Objects created from a class are instances of that class. <br>
-
-**Function:** <br> Functions are typically used for modularizing code, making it reusable, and promoting a clear and organized structure in a program. <br>
-
-**Class:** <br> Classes are used for creating and managing objects. They provide a way to model real-world entities and their behaviors in a program. <br>
-
-**Function:** <br> Functions do not store data by themselves. They may take input parameters and return output, but they don't have internal states. <br>
-
-**Class:** <br> Classes can have attributes (data members) that store information about the object's state. Methods in a class can operate on this data. <br>
-
-
-**Function:** <br> Functions don't support inheritance. They are standalone units of code. <br>
-**Class:** <br> Classes support inheritance, allowing one class to inherit properties and methods from another. This promotes code reuse and hierarchy in object-oriented programming. <br>
-
-
-
-# 3 ) what is list and linked list <br>
-4 ) scope resulation in python acceblity ( global variable and local variable ) <br>
-5 ) what is abstraction and encapsulation ( example ) <br>
-# 6 ) what is inheritance ( explain in django ) <br>
-
-CommonFields serves as an abstract base class with common fields (name and description). MyModel1 and MyModel2 inherit from CommonFields, sharing those fields without creating an additional database table for CommonFields.
-
-            from django.db import models
-            
-            class CommonFields(models.Model):
-                name = models.CharField(max_length=255)
-                description = models.TextField()
-            
-                class Meta:
-                    abstract = True
-            
-            class MyModel1(CommonFields):
-                additional_field_1 = models.IntegerField()
-            
-            class MyModel2(CommonFields):
-                additional_field_2 = models.BooleanField()
-
-
-7 ) what is MVT model  <br>
-# 8 ) Process of requst and response how it is process <br>
-
-Client Sends a Request --->> DNS Resolution (if necessary) --->> HTTP Request --->> Server Receives the Request --->> 
-
-9 ) what are middleware in djagno <br>
-10 ) what is abstract base calss and mixing class <br>
-11 ) Django signles <br>
-# 12 ) Django cache strategies  <br>
-
-Cache means jya veles user kadun request yeti kiwa API hit hoti tar pratek veles data ha database madhun anat nahi jar as kela tar persormance down hoil tar ya thikani apan
-cache use karto mhanje user kadun request ali database madhe data gheun yeto ani ti cache memory madhe store karto ha data ram madhe pan store karu shakto kiwa local memory madhe
-pan store karu shakto ani jeva akhada user same data sathi request hit karel teva just cache memory madhun data send karto ani jar db madhe new data add zala tar just cache memory
-madhla data update hoto
-
-                        from django.core.cache import cache
-                        from django.shortcuts import render
-                        from django.http import HttpResponse
-                        
-                        def my_view(request):
-                            # Check if the data is already in the cache
-                            cached_data = cache.get('my_cached_data')
-                        
-                            if cached_data is not None:
-                                # If data is in the cache, use it
-                                return HttpResponse(f"Cached Data: {cached_data}")
-                        
-                            else:
-                                # If data is not in the cache, fetch it from the original source
-                                original_data = "Data fetched from the original source"
-                        
-                                # Store the fetched data in the cache for future use (with a timeout of 300 seconds in this example)
-                                cache.set('my_cached_data', original_data, timeout=300)
-                        
-                                return HttpResponse(f"Original Data: {original_data}")
-
-
-# 13 ) diffrence between class based view and function view in djagno <br>
-
-**Function-Based Views (FBVs)** <br>
-FBVs are often simpler and more straightforward, especially for simpler views or views that involve less logic. <br>
-The flow of the code is more explicit and linear, making it easier to follow for smaller views.<br>
-FBVs often use decorators (e.g., @login_required, @require_http_methods, etc.) to add functionality to views. <br>
-
-            from django.shortcuts import render
-            
-            def my_view(request):
-                # View logic
-                return render(request, 'template.html')
+1) Difference between Authorization and authentication? And how to implement in application? <br>
+2) Generator in python? And how to implement in application? <br>
+3) Abstract classes in python? <br>
+4) what is annotations? <br>
+5) what is model manager? And how to create custom model manager?  <br>
+6) Django revert migration <br>
+7) what is decorator, generator <br>
+8) questions on project <br>
+9) what is list & tuple? real time example of list & tuple
+10) string reverse program
+11) How to find the palindrome among first N numbers? Code it
+12) Which are the collections used in python?
+13) Question was to draw a star based pattern according to fibonacci series(1,1,2,3,5) eg. n=5 ***** ***** *** *** ** ** * * *
+14) Write Program to get the most frequency occurring in file?
+15) Given a list and a number find two numbers in the list that sums up to the number given?
+16) Write Program to print a tree in level order traversal?
+17) Write a function that accept the file, count and return the exact occurrence of a word based on count?
+18) List a=[ 1,2,3 none, none] list b=[4,5,3] Output=[1,4,2,5,3,3] ?
+19) What are decorators in python?
+20)  How to define private variables in python?
+21)  Inheritence, interface abstraction etc
+22)  What is lambda function in python.
+23)  input = aabbbccc output = a2b3c3
+24)  write a function for return a reverse text of the passed parameter text
+25)  Given a string ‘S’, find the length of the Longest Palindromic Subsequence in it
+26)  What are lists and the difference between set and lists?
+27)  What are different class variables?
+28)  Find the Nth fibonacci number.
+29)  Python Django Basics and Project Architecture
+30)  what is index and what is it used for?
+31)  Write fibonacci sequence functions using generator and recursion.
+32)  What is a constructor in Python?
+33)  when you save python program it creates .pyc file what is it ? what it contains?
+34)  find even number betweens 1 to 100 and not divisible by 8 after sum of even number
+35)  What are the different types of errors in python? When it will occur and How to handle?
+36)  How will you check and ensure the datatype in python?
+37)  Difference between List and Tuples
+38)  removing character in a given string
+39)  What are use of Django Rest Framework? Why don't we just use Django to create Rest APIs?
+40)  How you will perform an Asynchronous Activity
+41)  How web browser understands Location of server
+42)  What are type of security tokens we use to access third party APIs.
+43)  Describe Garbage collector in python
+44)  Deep vs Shallow Copy
+45)  Memory Management in Python
+46)   "==" vs "is"
+47)   What are signals in Django?
+48)   What are buckets and objects in Amazon S3?
+49)   What is lamda equation there in python
+50)   Remove the duplicate elements from the list ?
+51)   How do you process huge file with not enough memory available
+52)   Remove the duplicate elements from the list ?
+53)   What are magic methods in Python and what are they used for
+54)   What is the difference between Pip and Pep8?
+55)   middleware classes in django
+56)   Which one is faster to access dictionary or list and why
+57)   Does Django suppors NoSQL databases
+58)   What is pickling and unpickling
+59)   what is overloading
+60)   what is GIL in the Python?
+61)   What is the 'yield' keyword in python?
+62)   Difference in list and array.
+63)   What is ** in Python
+64)   What happens when we run any program in Python?
+65)   How CSRF works
+66)   Give any example of Middlewares in Django
+67)   Inheritance in Python (Diamond problem)
+68)   Explain MVC/MVT in Django
+69)   List comprehension in Python
+70)   Write a decorator in Python to print a function name and arguments passed to it.
+71)   Recursion & call by reference related questions
+72)   Find the length of the largest word in a given string
+73)   What do you like about python's interpreter?
+74)   What are the synchronization methods in python?
+75)   Custom garbage collection in python
+76)   How encapsulation is implemented in Python
+77)   Which tools does django provide to support backend scaling
+78)   Write a function to return a list of all subsequences of a string in sorted order, excluding the empty string.
+79)   Python bitwise operator problem
+80)   Try catch block
+81)   What is regex? Name and explain some libraries you have used in python
+82)   Write a program to print whether it is a prime number or not.
+83)   check if a string is correct "{{([(())})}}" string is correct if each quotation mark is closed by its corresponding quotation mark.
+84)   prefetch_related
+85)   Python generators what and why we need it. And a example code
+86)   multithreading use in python reason
+87)   What's the difference between overloading and overriding?
+88)   What are iterators, how do you implement/override them in python.
+89)   What is lambda function ?
+90)   Use of __name__ == "__main__"
+91)   Find errors in a function declaration regarding *args and **kargs in Python
+92)   Why would you want to write a custom middleware in Django?
+93)   Write a function that returns the smallest positive number that is evenly divisible by all numbers from 1 to n
+94)   can you override parent class constructor ?
+95)   What is Line written to in settings file of Django to connect database ?
+96)   what is inheritence. what is polymorphism
+97)   What is difference between repr and str
+98)   What are python context managers?
+99)   inheritance‍‌‍‍‍‌‌‌‌‌‌‌‍‌‌‌‍‍‍‌ and composition? Give examples. What is "with" used for? How is it implemented?
+100)   What are "comprehensions" in Python and what kinds are there?
 
 
-**Class-Based Views (CBVs)** <br>
-
-CBVs promote code reuse by allowing the use of mixins and inheritance. Different parts of a view can be implemented in separate methods or classes.<br>
-Views are organized as classes, which can lead to a more organized and modular code structure, especially for larger and more complex views.<br>
-CBVs allow the use of mixins and inheritance to extend or modify behavior, making it easier to create variations of views.<br>
-CBVs allow for better separation of concerns, with different methods or attributes handling different aspects of the view (e.g., get(), post(), etc.).
-
-            from django.views import View
-            from django.shortcuts import render
-            
-            class MyView(View):
-                def get(self, request):
-                    # View logic
-                    return render(request, 'template.html')
+<a href="https://www.glassdoor.co.in/Interview/python-interview-questions-SRCH_KO0,6_IP69.htm" > More question </a>
 
 
 
-
-14 ) what is function base view and how you can define those <br>
-15 ) how data is mapping in djagno <br>
-16 ) what is djagno migrations <br>
-17 ) diffrence between django rest framework and regular django views <br>
-18 ) what is your appoch DRF or regular views <br>
-19 ) what is pagination <br>
-20 ) Database model example each relation <br>
-21 ) role of serializer in DRF <br>
-22 ) diffrence between var and varchar in SQL <br>
-23 ) what is primary key  <br>
-24 ) indexing in mysql <br>
-25 ) what is asset property in DB transaction<br>
-# 26) select related and prefetch related in DJNGO
-
-            from djagno.db import models
-            
-            class Author(models.Models):
-            	name = models.CharField(max_length = 30)
-            
-            
-            class Course(models.Model):
-            	name = models.CharField(max_length=30)
-            	author = models.ForeignKey(Author,on_delete=models.CASCADE,related_name)
-
-
-jeva apan **Course.objects.all()** hi query karto tya veles backend madhe khalchi sql query execute hote
-
-            SELECT "app_course"."id","app_course"."name","app_course"."author_id" FROM "app_course" LIMIT 1; args=()
-      
-
- jeva apan **Course.object.all()[0].author** hi query execute karto tar backend la khalchay donhi query execute hotat
-
-             SELECT "app_course"."id","app_course"."name","app_course"."author_id" FROM "app_course" LIMIT 1; args=();
-             SELECT "app_author"."id","app_author"."name" FROM "app_author" WHERE "app_author"."id" = 1 LIMIT = 1; args=(1)
-
-ani jeva apan select related use karto teva to **inner join** karto **Course.objects.select_related()**
-
-            SELECT "app_course"."id","app_course"."name","app_course"."app_author"."id","app_author"."name"
-            FROM "app_course" INNER JOIN "app_author" ON ("app_course"."author_id" = "app_author"."id") LIMIT 21; args=()
-
-**Use** : jya veles fakt mala Course che name pahije asta teva **Course.objects.all()** use karaycha ani jeva mala foreign key cha data pan pahije teva **select_related** use karaych
-
-
-**Prefetch_related** ---------------------
-
-
-            from django.db import models
-            
-            class Author(models.Model):
-                name = models.CharField(max_length=100)
-            
-            class Book(models.Model):
-                title = models.CharField(max_length=200)
-                authors = models.ManyToManyField(Author)
-
-jary apan prefetch related query use keli  **books = Book.objects.prefetch_related('authors').all()** tar backend la left join query run hoti
-
-            SELECT
-                "yourapp_author"."id",
-                "yourapp_author"."name",
-                "yourapp_book_authors"."book_id",
-                "yourapp_book_authors"."author_id"
-            FROM
-                "yourapp_author"
-            LEFT JOIN
-                "yourapp_book_authors" ON ("yourapp_author"."id" = "yourapp_book_authors"."author_id")
-            WHERE
-                "yourapp_book_authors"."book_id" IN (<list_of_book_ids>);
-
-**USE** Jya veles many to many field asti tya veles **prefetch_related** use karaych
