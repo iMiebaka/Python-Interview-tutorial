@@ -155,96 +155,256 @@ Usage: Tuples are used to store collections of items where the order and content
                     output = i  + output
                 print(output)
 
-11) How to find the palindrome among first N numbers? Code it
-12) Which are the collections used in python?
-13) Question was to draw a star based pattern according to fibonacci series(1,1,2,3,5) eg. n=5 ***** ***** *** *** ** ** * * *
-14) Write Program to get the most frequency occurring in file?
-15) Given a list and a number find two numbers in the list that sums up to the number given?
-16) Write Program to print a tree in level order traversal?
-17) Write a function that accept the file, count and return the exact occurrence of a word based on count?
-18) List a=[ 1,2,3 none, none] list b=[4,5,3] Output=[1,4,2,5,3,3] ?
-19) What are decorators in python?
-20)  How to define private variables in python?
-21)  Inheritence, interface abstraction etc
-22)  What is lambda function in python.
-23)  input = aabbbccc output = a2b3c3
-24)  write a function for return a reverse text of the passed parameter text
-25)  Given a string ‘S’, find the length of the Longest Palindromic Subsequence in it
-26)  What are lists and the difference between set and lists?
-27)  What are different class variables?
-28)  Find the Nth fibonacci number.
-29)  Python Django Basics and Project Architecture
-30)  what is index and what is it used for?
-31)  Write fibonacci sequence functions using generator and recursion.
-32)  What is a constructor in Python?
-33)  when you save python program it creates .pyc file what is it ? what it contains?
-34)  find even number betweens 1 to 100 and not divisible by 8 after sum of even number
-35)  What are the different types of errors in python? When it will occur and How to handle?
-36)  How will you check and ensure the datatype in python?
-37)  Difference between List and Tuples
-38)  removing character in a given string
-39)  What are use of Django Rest Framework? Why don't we just use Django to create Rest APIs?
-40)  How you will perform an Asynchronous Activity
-41)  How web browser understands Location of server
-42)  What are type of security tokens we use to access third party APIs.
-43)  Describe Garbage collector in python
-44)  Deep vs Shallow Copy
-45)  Memory Management in Python
-46)   "==" vs "is"
-47)   What are signals in Django?
-48)   What are buckets and objects in Amazon S3?
-49)   What is lamda equation there in python
-50)   Remove the duplicate elements from the list ?
-51)   How do you process huge file with not enough memory available
-52)   Remove the duplicate elements from the list ?
-53)   What are magic methods in Python and what are they used for
-54)   What is the difference between Pip and Pep8?
-55)   middleware classes in django
-56)   Which one is faster to access dictionary or list and why
-57)   Does Django suppors NoSQL databases
-58)   What is pickling and unpickling
-59)   what is overloading
-60)   what is GIL in the Python?
-61)   What is the 'yield' keyword in python?
-62)   Difference in list and array.
-63)   What is ** in Python
-64)   What happens when we run any program in Python?
-65)   How CSRF works
-66)   Give any example of Middlewares in Django
-67)   Inheritance in Python (Diamond problem)
-68)   Explain MVC/MVT in Django
-69)   List comprehension in Python
-70)   Write a decorator in Python to print a function name and arguments passed to it.
-71)   Recursion & call by reference related questions
-72)   Find the length of the largest word in a given string
-73)   What do you like about python's interpreter?
-74)   What are the synchronization methods in python?
-75)   Custom garbage collection in python
-76)   How encapsulation is implemented in Python
-77)   Which tools does django provide to support backend scaling
-78)   Write a function to return a list of all subsequences of a string in sorted order, excluding the empty string.
-79)   Python bitwise operator problem
-80)   Try catch block
-81)   What is regex? Name and explain some libraries you have used in python
-82)   Write a program to print whether it is a prime number or not.
-83)   check if a string is correct "{{([(())})}}" string is correct if each quotation mark is closed by its corresponding quotation mark.
-84)   prefetch_related
-85)   Python generators what and why we need it. And a example code
-86)   multithreading use in python reason
-87)   What's the difference between overloading and overriding?
-88)   What are iterators, how do you implement/override them in python.
-89)   What is lambda function ?
-90)   Use of __name__ == "__main__"
-91)   Find errors in a function declaration regarding *args and **kargs in Python
-92)   Why would you want to write a custom middleware in Django?
-93)   Write a function that returns the smallest positive number that is evenly divisible by all numbers from 1 to n
-94)   can you override parent class constructor ?
-95)   What is Line written to in settings file of Django to connect database ?
-96)   what is inheritence. what is polymorphism
-97)   What is difference between repr and str
-98)   What are python context managers?
-99)   inheritance‍‌‍‍‍‌‌‌‌‌‌‌‍‌‌‌‍‍‍‌ and composition? Give examples. What is "with" used for? How is it implemented?
-100)   What are "comprehensions" in Python and what kinds are there?
+# 11) How to find the palindrome among first N numbers? Code it
+
+                def is_palindrome(num):
+                    # Convert the number to a string and check if it's equal to its reverse
+                    return str(num) == str(num)[::-1]
+                
+                def find_palindromes(N):
+                    palindromes = []
+                    for i in range(1, N + 1):
+                        if is_palindrome(i):
+                            palindromes.append(i)
+                    return palindromes
+                
+                # Example usage:
+                N = 100
+                palindromes = find_palindromes(N)
+                print("Palindromes among the first", N, "numbers:", palindromes)
+                
+                OUTPUT : Palindromes among the first 100 numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33, 44, 55, 66, 77, 88, 99]
+
+
+# 12) Which are the collections used in python?
+
+    1) List
+    2) Tuple
+    3) Sts
+    4) Dictionaries
+    5) String
+       
+
+# 14) Question was to draw a star based pattern according to fibonacci series(1,1,2,3,5) eg. n=5 ***** ***** *** *** ** ** * * *
+
+                n = 5
+                
+                a = 0
+                b = 1
+                
+                for i in range(n):
+                    print("* "*a)
+                    c = a + b
+                    a = b
+                    b = c
+
+# 15) Write Program to get the most frequency occurring in file?
+
+                with open("test.txt","r") as f:
+                    file = f.read().lower()
+                
+                file = file.split(" ")
+                
+                output = {}
+                for res in file:
+                    output[res] = file.count(res)
+                
+                print(output)
+
+# 16) Given a list and a number find two numbers in the list that sums up to the number given?
+                numbers = [2, 7, 11, 15, 3, 6]
+                target = 9
+                
+                output = []
+                for res in numbers:
+                    for i in numbers:
+                        if res + i == target:
+                            output.append(res)
+                print(output)
+
+
+17) Write Program to print a tree in level order traversal?
+
+18) Write a function that accept the file, count and return the exact occurrence of a word based on count?
+19) List a=[ 1,2,3 none, none] list b=[4,5,3] Output=[1,4,2,5,3,3] ?
+
+20) What are decorators in python?
+
+# 21)  How to define private variables in python?
+
+                class MyClass:
+                    def __init__(self):
+                        self._private_variable = 42
+                
+                    def _private_method(self):
+                        print("This is a private method.")
+                
+                    def public_method(self):
+                        print("This is a public method.")
+                        self._private_method()
+                
+                # Example usage
+                obj = MyClass()
+                print(obj._private_variable)  # Accessing "private" variable (not truly private)
+                obj.public_method()  # Accessing public method, which in turn calls private method
+
+22)  Inheritence,
+23)  interface abstraction etc
+24)  
+# 25)  What is lambda function in python.
+A lambda function in Python is a small, anonymous function defined using the lambda keyword. It allows you to create functions <br> on-the-fly without having to formally define a function using the def keyword. Lambda functions are typically used when you need a simple, one-line function for a short period of time
+
+                lst = [1,2,3,4,5,6,7,8,9,10]
+                data = lambda i: [i for i in i if i %2==0]
+                print(data(lst))
+
+
+# 26)  input = aabbbccc output = a2b3c3
+
+                string = "aabbbccc"
+                output = ""
+                for res in string:
+                    if res not in output:
+                        output = output + res + str(string.count(res))
+                print(output)
+
+27)  write a function for return a reverse text of the passed parameter text
+
+
+
+28)  Given a string ‘S’, find the length of the Longest Palindromic Subsequence in it
+29)  What are lists and the difference between set and lists?
+# 30)  What are different class variables?
+
+                class MyClass:
+                    static_variable = 10
+                
+                print(MyClass.static_variable)  # Accessing static variable
+
+31)  Find the Nth fibonacci number.
+32)  Python Django Basics and Project Architecture
+
+33)  what is index and what is it used for?
+34)  Write fibonacci sequence functions using generator and recursion.
+35)  What is a constructor in Python?
+36)  when you save python program it creates .pyc file what is it ? what it contains?
+37)  find even number betweens 1 to 100 and not divisible by 8 after sum of even number
+
+# 38)  What are the different types of errors in python? When it will occur and How to handle?
+    **Type of diffrent error**
+
+     1) Syntax Errors : ex: print("Hello world"  # Missing closing parenthesis
+     2) Runtime Errors (Exceptions)
+
+                        x = 10
+                        y = 0
+                        result = x / y  # Division by zero
+     3) Logial error
+
+
+40)  How will you check and ensure the datatype in python?
+41)  Difference between List and Tuples
+42)  removing character in a given string
+43)  What are use of Django Rest Framework? Why don't we just use Django to create Rest APIs?
+
+44)  How you will perform an Asynchronous Activity
+
+45)  How web browser understands Location of server
+46)  What are type of security tokens we use to access third party APIs.
+47)  Describe Garbage collector in python
+48)  Deep vs Shallow Copy
+49)  Memory Management in Python
+50)   "==" vs "is"
+51)   What are signals in Django?
+52)   What are buckets and objects in Amazon S3?
+53)   What is lamda equation there in python
+54)   Remove the duplicate elements from the list ?
+
+# 55)   How do you process huge file with not enough memory available
+
+**Read code line by line**
+
+        with open("test.txt","r") as f:
+            for i in f:
+                print(i)
+                
+**Chnked reading**
+
+        with open("test.txt","r") as f:
+            chunk_size = 1024
+        
+            data = f.read(chunk_size)
+        print(data)
+
+**Generator functioin**
+
+                def large_file(filename):
+                    with open(filename,'r') as file:
+                        for line in file:
+                            yield line
+                
+                for line in large_file("test.txt"):
+                    print(line)
+
+
+56)   Remove the duplicate elements from the list ?
+
+                lst = [1,2,2,3,3,4,5,6,7,8,8]
+                
+                output = []
+                
+                data = [output.append(i) for i in lst if i not in output]
+                
+                print(output)
+
+57)   What are magic methods in Python and what are they used for
+58)   What is the difference between Pip and Pep8?
+59)   middleware classes in django
+60)   Which one is faster to access dictionary or list and why
+61)   Does Django suppors NoSQL databases
+62)   What is pickling and unpickling
+63)   what is overloading
+64)   what is GIL in the Python?
+65)   What is the 'yield' keyword in python?
+66)   Difference in list and array.
+67)   What is ** in Python
+68)   What happens when we run any program in Python?
+69)   How CSRF works
+70)   Give any example of Middlewares in Django
+71)   Inheritance in Python (Diamond problem)
+72)   Explain MVC/MVT in Django
+73)   List comprehension in Python
+74)   Write a decorator in Python to print a function name and arguments passed to it.
+75)   Recursion & call by reference related questions
+76)   Find the length of the largest word in a given string
+77)   What do you like about python's interpreter?
+78)   What are the synchronization methods in python?
+79)   Custom garbage collection in python
+80)   How encapsulation is implemented in Python
+81)   Which tools does django provide to support backend scaling
+82)   Write a function to return a list of all subsequences of a string in sorted order, excluding the empty string.
+83)   Python bitwise operator problem
+84)   Try catch block
+85)   What is regex? Name and explain some libraries you have used in python
+86)   Write a program to print whether it is a prime number or not.
+87)   check if a string is correct "{{([(())})}}" string is correct if each quotation mark is closed by its corresponding quotation mark.
+88)   prefetch_related
+89)   Python generators what and why we need it. And a example code
+90)   multithreading use in python reason
+91)   What's the difference between overloading and overriding?
+92)   What are iterators, how do you implement/override them in python.
+93)   What is lambda function ?
+94)   Use of __name__ == "__main__"
+95)   Find errors in a function declaration regarding *args and **kargs in Python
+96)   Why would you want to write a custom middleware in Django?
+97)   Write a function that returns the smallest positive number that is evenly divisible by all numbers from 1 to n
+98)   can you override parent class constructor ?
+99)   What is Line written to in settings file of Django to connect database ?
+100)   what is inheritence. what is polymorphism
+101)   What is difference between repr and str
+102)   What are python context managers?
+103)   inheritance‍‌‍‍‍‌‌‌‌‌‌‌‍‌‌‌‍‍‍‌ and composition? Give examples. What is "with" used for? How is it implemented?
+104)   What are "comprehensions" in Python and what kinds are there?
 
 
 <a href="https://www.glassdoor.co.in/Interview/python-interview-questions-SRCH_KO0,6_IP69.htm" > More question </a>
