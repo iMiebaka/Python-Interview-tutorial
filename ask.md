@@ -1,8 +1,116 @@
 
 1) Difference between Authorization and authentication? And how to implement in application? <br>
-2) Generator in python? And how to implement in application? <br>
-3) Abstract classes in python? <br>
-4) what is annotations? <br>
+# 2) Generator in python? And how to implement in application? <br>
+
+generator is a special type of iterator that generates values on-the-fly, rather than storing them in memory all at once. Generators are defined using functions and the yield keyword, allowing you to iterate over a sequence of values without needing to generate the entire sequence upfront. This makes generators memory-efficient and particularly useful when dealing with large datasets or infinite sequences
+
+        def my_generator():
+            yield 1
+            yield 2
+            yield 3
+        
+        # Using the generator
+        gen = my_generator()
+        print(next(gen))  # Output: 1
+        print(next(gen))  # Output: 2
+        print(next(gen))  # Output: 3
+
+Another example
+
+        def read_lines(filename):
+            with open(filename, 'r') as file:
+                for line in file:
+                    yield line.strip()
+        
+        # Process each line in a large file
+        for line in read_lines('large_file.txt'):
+            # Do something with the line
+            print(line)
+
+# what is yield keyword
+
+yield keyword is used in generator functions to pause execution and yield a value to the caller. When a generator function is called, it returns an iterator called a generator. The yield statement is what makes a function a generator function.
+
+
+# 3) Abstract classes in python? <br>
+
+An abstract class in Python is like a blueprint for other classes. It's a class that you define to have methods and properties that must be implemented by its subclasses. However, you cannot create an instance of an abstract class directly. Instead, it serves as a template for other classes to follow
+
+Abstract cass is a class that contans one or more abstract method is called abstract class
+
+Note :- An object of an abstract class cannot be created <br>
+ 2 ) Python provide abc modue to work with abstact class <br>
+ 3 ) we use **@abstractmethod** decorator to define abstract method <br>
+
+ **Marathi** apan abstraction teva use karto jeva action common asta ani implementation diffrent asta
+
+ 
+          from abc import ABC, abstractmethod
+          
+          class Car(ABC):
+          
+              def show(self):
+                  print("Every car has 4 wheels")
+              
+              @abstractmethod
+              def speed(self):
+                  print()
+          
+          class Maruti(Car):
+              def speed(self):
+                  print("Speed is 100KM/H")
+              
+          class Suzuki(Car):
+              def speed(self):
+                  print("Speed is 7KM/H")
+          
+          obj = Maruti()
+          obj.show()
+          obj.speed()
+          
+          obj1 = Suzuki()
+          obj1.show()
+          obj1.speed()
+
+Imagine you're designing a game and you have different types of characters like warriors, mages, and archers. You might want to create a base class called Character that defines common behaviors like moving, attacking, and taking damage. However, you don't want anyone to create a generic Character object because each character type should have its own implementation for these behaviors. That's where an abstract class comes in handy.
+
+So, you define Character as an abstract class with methods like move(), attack(), and take_damage(), but you don't provide implementations for these methods in the Character class itself. Instead, you leave them as abstract methods. Then, subclasses like Warrior, Mage, and Archer inherit from the Character class and provide their own implementations for these methods.
+
+# Agregation in django
+
+Aggregate function work on singel colum , ex sum of total student mark
+it can find ,average,sum,min,max ya sathi apan aggregate madhe karto
+
+**Sum of numeric field across multiple row**
+
+        from django.db.models import Sum
+        
+        # Example: Calculate the total sales amount
+        total_sales = Sales.objects.aggregate(total_amount=Sum('amount'))
+
+**Avg: Calculates the average (mean) value of a numeric field.**
+
+        from django.db.models import Avg
+        
+        # Example: Calculate the average price of products
+        avg_price = Product.objects.aggregate(avg_price=Avg('price'))
+
+
+
+# 4) what is annotations? <br>
+
+Annotate function work on multiple colum 
+
+**Total number of pages**
+
+      from django.db.models import F
+      
+      # Example: Annotate each book with the total number of pages
+      books = Book.objects.annotate(total_pages=F('pages') + F('extra_pages'))
+
+
+
+
 5) what is model manager? And how to create custom model manager?  <br>
 6) Django revert migration <br>
 7) what is decorator, generator <br>
