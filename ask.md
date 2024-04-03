@@ -111,12 +111,50 @@ Annotate function work on multiple colum
 
 
 
-5) what is model manager? And how to create custom model manager?  <br>
-6) Django revert migration <br>
-7) what is decorator, generator <br>
-8) questions on project <br>
+# 5) what is model manager? And how to create custom model manager?  <br>
+
+
+# 6) Django revert migration <br>
+
+        1 ) python manage.py migrate app_name migration_file_name
+
+# generator <br>
+
+generator is a special type of iterator that allows you to iterate over a sequence of values without the need to store them all in memory at once <br>
+Generators are implemented using functions or generator expressions and provide an efficient way to generate and process large sequences of data lazily.<br>
+Generators are useful when working with large datasets or when you need to generate values dynamically. They are memory-efficient because they produce values one at a time, <br> on-the-fly, rather than creating the entire sequence of values upfront.
+
+
 9) what is list & tuple? real time example of list & tuple
-10) string reverse program
+
+**List**
+
+Mutable: Lists are mutable, meaning that you can modify, add, or remove elements after the list is created.
+Syntax: Lists are defined using square brackets [ ].
+Usage: Lists are typically used to store collections of items where the order and content of the items may change over time.
+
+**Shopping List**: A list of items you need to buy from the grocery store. You may add or remove items from the list as you shop.
+**To-Do List:** A list of tasks you need to complete. You can mark tasks as completed or add new tasks to the list.
+
+
+**Tuple**
+
+Immutable: Tuples are immutable, meaning that once they are created, their elements cannot be modified, added, or removed.
+Syntax: Tuples are defined using parentheses ( ).
+Usage: Tuples are used to store collections of items where the order and content of the items are fixed and cannot change.
+
+**Coordinates:** A tuple representing the coordinates of a point on a graph (x, y). Once the coordinates are set, they should not change.
+**RGB Color:** A tuple representing the red, green, and blue values of a color (r, g, b). The color components are fixed and cannot be modified individually.
+
+
+# 10) string reverse program
+
+                name = "sachin"
+                output = ""
+                for i in name:
+                    output = i  + output
+                print(output)
+
 11) How to find the palindrome among first N numbers? Code it
 12) Which are the collections used in python?
 13) Question was to draw a star based pattern according to fibonacci series(1,1,2,3,5) eg. n=5 ***** ***** *** *** ** ** * * *
