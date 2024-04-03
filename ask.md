@@ -547,7 +547,7 @@ Python generators are functions that enable you to create iterators in a more ef
 
 
 
-92)   What's the difference between overloading and overriding?
+# 92)   What's the difference between overloading and overriding?
 
 
 **Overloading**
@@ -587,7 +587,7 @@ Overriding in Python refers to the ability to provide a new implementation of a 
 
 
 
-93)   What are iterators, how do you implement/override them in python.
+# 93)   What are iterators, how do you implement/override them in python.
 
 the iter() function is used to create an iterator from an iterable object. It returns an iterator object that allows <br> you to iterate over the elements of the iterable using the next() function or a loop
 
