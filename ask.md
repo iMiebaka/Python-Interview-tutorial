@@ -612,18 +612,41 @@ sentinel (optional): An optional sentinel value that, when provided, indicates t
 
 94)   What is lambda function ?
 95)   Use of __name__ == "__main__"
+96)   what common built python function comanly used in oops
 
-96)   Find errors in a function declaration regarding *args and **kargs in Python
 
-97)   Why would you want to write a custom middleware in Django?
-98)   Write a function that returns the smallest positive number that is evenly divisible by all numbers from 1 to n
-99)   can you override parent class constructor ?
-100)   What is Line written to in settings file of Django to connect database ?
-101)   what is inheritence. what is polymorphism
-102)   What is difference between repr and str
-103)   What are python context managers?
-104)   inheritance‍‌‍‍‍‌‌‌‌‌‌‌‍‌‌‌‍‍‍‌ and composition? Give examples. What is "with" used for? How is it implemented?
-105)   What are "comprehensions" in Python and what kinds are there?
+**isinstance()**: Checks if an object is an instance of a particular class or type
+
+                obj = MyClass()
+                isinstance(obj, MyClass)  # True
+
+**issubclass():** Checks if a class is a subclass of another class.
+
+                issubclass(Subclass, Baseclass)  # True
+
+
+**getattr():**  Gets the value of an attribute of an object.
+
+                value = getattr(obj, 'attribute_name')
+
+**staticmethod()** 
+
+                class MyClass:
+                    @staticmethod
+                    def my_method():
+                        print("This is a static method")
+
+97)   Find errors in a function declaration regarding *args and **kargs in Python
+
+98)   Why would you want to write a custom middleware in Django?
+99)   Write a function that returns the smallest positive number that is evenly divisible by all numbers from 1 to n
+100)   can you override parent class constructor ?
+101)   What is Line written to in settings file of Django to connect database ?
+102)   what is inheritence. what is polymorphism
+103)   What is difference between repr and str
+104)   What are python context managers?
+105)   inheritance‍‌‍‍‍‌‌‌‌‌‌‌‍‌‌‌‍‍‍‌ and composition? Give examples. What is "with" used for? How is it implemented?
+106)   What are "comprehensions" in Python and what kinds are there?
 
 
 <a href="https://www.glassdoor.co.in/Interview/python-interview-questions-SRCH_KO0,6_IP69.htm" > More question </a>
