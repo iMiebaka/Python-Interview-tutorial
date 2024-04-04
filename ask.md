@@ -125,7 +125,7 @@ Generators are implemented using functions or generator expressions and provide 
 Generators are useful when working with large datasets or when you need to generate values dynamically. They are memory-efficient because they produce values one at a time, <br> on-the-fly, rather than creating the entire sequence of values upfront.
 
 
-9) what is list & tuple? real time example of list & tuple
+# 9) what is list & tuple? real time example of list & tuple
 
 **List**
 
