@@ -277,3 +277,72 @@ filter by day
 
 
 
+# SQL join
+
+1) JOIN means to combine something
+2) A JOIN clause is used to combine data from two or more tables, based on a related column between them
+3) Let's understand the join
+
+**Types of JOINS**
+
+1) INNER JOIN
+2) LEFT JOIN
+3) RIGHT JOIN
+4) FULL JOIN
+
+**Inner JOIN**
+
+Returns records that having matching values in both tables
+
+<img src="https://lh4.googleusercontent.com/ZaF77tpvsDLgQgWHqOdbzJVPDJ2EAmp4OSSmbk0sSFe4TcsS3jtxY7EmyfMQ3ta6WIs7bg_ZvKsUZOHkXETHRltRXC5YNi4brzpchn4HBzq4dThms2jAyU9E2KohfEL7j0fOevT5PeMdOdKEJj24C1Y" >
+
+
+        SELECT * 
+        FROM customers AS c
+        INNER JOIN payment AS p
+        ON c.customer_id = p.customer_id
+
+get specific field
+
+
+        SELECT c.first_name, p.amount, p.mode 
+        FROM customers AS c
+        INNER JOIN payment AS p
+        ON c.customer_id = p.customer_id
+
+**Left JOIN**
+
+Retrun all records from the left table, and matched records from the right table
+
+<img src="https://lh6.googleusercontent.com/I7BWNmU-rtwMozqKzbWBRgnk2sIv1a1FGElwOheS4ybu8o8erqvNR8Z57CsHndxMpdKlUq8jqaDqyUt7pR775-lSupnm_Cqe5nyncxH3eh0MTf3IA2cWz_8rnMWyDXFIrf-z_MM18zMVs_rQuiIigOw" >
+
+       SELECT c.first_name, p.amount, p.mode 
+       FROM customers AS c
+       LEFT JOIN payment AS p
+       ON c.customer_id = p.customer_id
+
+**Right JOIN**
+
+Return all records from the right table, and the matched records from the left table
+
+<img src="https://lh4.googleusercontent.com/klmC4Kg_LYE9Ic7TO7Yw8IBJMHAx9GBeBm2RU2w3lUM_-TtHUfqYOXgDzoQMCGFLmBVhSeaauM9gUhQUwbt9IZvW7zy1TwLGGONoq8Kn0rPeZmR4txw2LfBctj2TNCPAYUrxe3IgWudpI5FOZ8EWrX-yMa-aVR12tNLX9e_4ggagP1lYGwxA1w-B">
+
+
+       SELECT c.first_name, p.amount, p.mode 
+       FROM customers AS c
+       RIGHT JOIN payment AS p
+       ON c.customer_id = p.customer_id
+
+
+ **Full JOIN**
+
+ Return all records when there is a match in either left or right table
+
+ <img src="https://learn.microsoft.com/en-us/power-query/media/merge-queries-full-outer/full-outer-join-operation.png" >
+
+         SELECT c.first_name, p.amount, p.mode 
+        FROM customers AS c
+        FULL OUTER JOIN payment AS p
+        ON c.customer_id = p.customer_id
+
+
