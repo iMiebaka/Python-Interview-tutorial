@@ -222,5 +222,58 @@ The WHERE clause places conditions on the selected columns, whereas the having c
 
 
 
+# TimeStamp and Extract Function | Date Time Function
 
+The TIMESTAM data type is used for values that contain both date and time parts
+
+1) TIME : contains only time, format HH:MI:SS
+2) DATE : contains on date, format YYYY-MM-DD
+3) YEAR : contains on year, format YYYY or YY
+4) TIMESTAMP : contains date and time, format YYYY-MM-DD HH:MI:SS
+5) TIMESTAMPTZ : contains date, time and timezone
+
+
+
+**TIMESTAMP functions/Operators**
+
+1) SHOW TIMEZONE
+2) SELECT NOW()
+3) SELECT TIMEOFDAY()
+4) SELECT CURRENT_TIME
+5) CURRENT_DATE
+
+          SHOW TIMEZONE
+          SELECT NOW()
+          SELECT TIMEOFDAY()
+          SELECT CURRENT_TIME()
+          SELECT CURRENT_DATE
   
+
+**Extract Function**
+
+The EXTRACT() function extracts a part from a given date value. 
+
+Syntax: SELECT EXTRACT(MONTH FROM date_field) FROM Table
+
+1) YEAR
+2) QUARTER
+3) MONTH
+4) WEEK
+5) DAY
+6) HOUR
+7) MINUTE
+8) DOW - day of week
+9) DOY - Day of year
+
+             SELECT strftime('%m', payment_date) AS payment_month, payment_date 
+            FROM Payment;
+
+
+filter by day
+
+
+           SELECT strftime('%d', payment_date) AS payment_month, payment_date FROM Payment;
+
+
+
+
