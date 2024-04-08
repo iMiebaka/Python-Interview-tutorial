@@ -202,6 +202,25 @@ and Aggreagte function are often used with group by & select statement
  
 # Group by and having clause in SQL
 
+The GROUP BY statement group rows that have the same values into summary rows.
+
+It is often used with aggregate functions (COUNT(), MAX(), MIN(), MIN(), SUM(), AVG()) to group the result-set by one or more columns
+
+
+       SELECT item, SUM(amount) AS Total from Orders GROUP BY item
+
+
+By Order
+
+       SELECT item, SUM(amount) AS Total from Orders GROUP BY item order by amount ASC
+
+**Having clause**
+
+The Havign clause is used to apply a filter on the result of GROUP BY based on the specified condition
+
+The WHERE clause places conditions on the selected columns, whereas the having clause places conditions on groups created by the GROUP BY clause
+
+
 
 
   
