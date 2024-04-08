@@ -106,4 +106,102 @@
 
   # SELECT & WHERE CLAUSE
 
+  The SELECT statement is used to select dta from a database.
+
+          SELECT * FROM Customer;
+
+
+  To select all the fields available in the table
+
+
+          SELECT Age,City FROM Customer;
+
+  To select distinct/Unique fields available in the table
+  
+         SELECT DISTINCT City from customer
+
+
+**Where clause**
+
+the where clause is used to filter records <br>
+it is used to extract only those records that fulfill a specified condition
+
+         select * from Customers where country="USA"
+
+
+ **Operators in python**
+
+ The SQL reserved words and characters are called operators, which are used with a where clause in a SQL Query
+
+ 1) Arithmetic operators : arithmetic operations on numeric values (ex Addition (+), Multiplication(*), Division(/), Modules(%)
+ 2) Comparison operator: Compare two different data of SQL table (ex Equal(=), Not Equal(!=), Greater than(>)
+ 3) Logical Operators: Perform the Boolean operations(ex ALL, IN, BETWEEN, LIKE, AND, OR, NOT, ANY
+ 4) Bitwise Operators: Perform the bit operations on the (ex Bitwise AND (& ), bitwise OR(|)
+
+
+ 1) select * from Customers where country="USA" and Age=22
+ 2) select * from Customers  order by first_name ASC limit 2;
+
+
+# String functions in SQL
+
+Function in SQL are the database objects that contains a set of SQL statements to perform actions, and then return the result
+
+Type of function
+
+1) System defined function : these are built-in function (ex rand(), round(), upper(), lower(), count(), sum(), max()
+2) User-defined function: Once you define a function can call in the same way as the built-in functions
+
+**Most used string function**
+
+String functions are used to perform an operation on input string and return an output string
+
+1) UPPER() : convert the value of a filed to uppercase
+2) LOWER() : converts the value of a field to lowercase
+3) LENGTH() : returns the length of the value in a text field
+4) SUBSTRING() : extracts a substring from a string
+5) NOW() : returns the current system date and time
+6) FORMAT() : used to set the format of a field
+7) CONCAT() : adds two or more strings together
+8) REPLACE() : replace all occurrences of a substring within a string with a new substate
+9) TRIM() : removes leading and trailing spaces ( or other specified characters) from a
+
+
+          1) select UPPER(first_name) from Customers
+          2) select LOWER(first_name) from Customers
+          3) select LENGTH(first_name), first_name from Customers
+          4) select SUBSTRING(first_name,1,3), first_name from Customers  #  it will slice name (sac)
+          5) SELECT CONCAT(first_name, ' ', last_name) AS full_name FROM customers;
+          6) SELECT replace(first_name, "John","sachin") FROM customers;
+
+
+# Aggregate function in SQL
+
+Aggregate function perform a calculation on multiple values and returns a single values.
+
+Aad aggregate function are often used with Group BY & Select
+
+and Aggreagte function are often used with group by & select statement
+
+        1) COUNT() : returns number of values
+        2) SUM() : return sum of all values
+        3) AVG() : return average value
+        4) MAX() : return maximum value
+        5) MIN() : return minimum value
+        6) ROUND() : Round a number to a specified number of decimal places
+        
+
+        1) SELECT COUNT(*) FROM Customers;
+        2) SELECT SUM(age) FROM Customers;
+        3) SELECT AVG(age) FROM Customers;
+        4) SELECT MAX(age) FROM Customers;
+        5) SELECT MIN(age) FROM Customers;
+        6) SELECT ROUND(age) FROM Customers;
+        7) SELECT ROUND(AVG(age), 2) FROM Customers;
+
+ 
+# Group by and having clause in SQL
+
+
+
   
