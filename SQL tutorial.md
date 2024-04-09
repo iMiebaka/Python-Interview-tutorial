@@ -346,3 +346,45 @@ Return all records from the right table, and the matched records from the left t
         ON c.customer_id = p.customer_id
 
 
+
+**Self JOIN**
+
+1) A self join is a regular join in which a table is joined to itself
+2) SELF JOIN are powerful for comparing values in a column of row with the same table
+
+   <img src="https://cdn.educba.com/academy/wp-content/uploads/2020/03/student-id.jpg" />
+
+
+
+
+           SELECT Employee.empid, Employee.empname, Manager.manager_name
+        FROM Employee
+        INNER JOIN Manager ON Employee.manager_id = Manager.manager_id;
+
+
+
+**UNION**
+
+The SQL UNION clause/operator is used to combine/concatenate the result of two or more SELECT statements without returning any duplicate row and keep unique record
+
+To use this UNION clause, each SELECT statement must have
+
+1) The same number of columns selected and expressions
+2) The same data type and
+3) Have them in the same order
+
+
+         SELECT empid, empname, manager_id FROM Employee
+         UNION
+         SELECT customer_id, customer_name, NULL FROM Customer;
+
+
+**Union All**
+
+In UNION ALL everything is same as UNION, it combines/Concatenate two or more table but keeps all records, including duplicates
+
+         SELECT empid, empname, manager_id FROM Employee
+         UNION ALL
+         SELECT customer_id, customer_name, NULL FROM Customer;
+
+
