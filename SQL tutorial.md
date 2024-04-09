@@ -426,3 +426,9 @@ Q) find user whose amount is more than 100 and customer id is same compare with 
            );
 
  
+# windows Function
+
+Window functions applies aggregate, ranking and analytics function over a perticular window ( set of rows)
+
+and over clause is used with window functions to define that window
+
