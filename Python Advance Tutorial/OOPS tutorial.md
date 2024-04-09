@@ -1119,9 +1119,17 @@ another example
 
 # What is Abstraction
 
-1 ) The process by which data and functions are defined in such a way that only essential details can be seen and <br>
-unnecessary implementations are hidden is called Data Abstraction <br>
-2 ) Hiding complex implementation deatils and showing only signatures to users
+Abstraction is used to hide the internal functionality of the function the users
+
+ex : TV remote, smartphone
+
+**Why abstraction is important**
+
+An abstraction is used to hide the irrelevent data/class in order to reduce the complexity.
+
+**How to achive abstraction inside python**
+
+A class that consist of one or more abstract method is called abstract class
 
 
 
