@@ -388,3 +388,41 @@ In UNION ALL everything is same as UNION, it combines/Concatenate two or more ta
          SELECT customer_id, customer_name, NULL FROM Customer;
 
 
+# Sub Query
+
+A Subquery or inner query or a Nested query allows us to create complex query on the output of another query
+
+Sub query syntax involves two SELECT statement
+
+**Q :** Find the details of customers, whose payment amount is more than the average of total amount paid by all customers
+
+Divide above question into two part
+
+1) Find the average amount
+2) Filter the customers whose amount  > average amount
+
+
+
+         select * from payment where amount > (select AVG(amount) from payment)
+
+
+Second
+
+         select customer_id, amount, mode from payment
+         
+         where customer_id IN (select customer_id from customers)
+
+
+Q) find user whose amount is more than 100 and customer id is same compare with customer table and payment table
+
+
+           SELECT first_name, last_name 
+           FROM customers AS c 
+           WHERE EXISTS (
+               SELECT customer_id, amount 
+               FROM payment p 
+               WHERE p.customer_id = c.customer_id 
+               AND amount > 100
+           );
+
+ 
