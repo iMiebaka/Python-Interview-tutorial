@@ -476,3 +476,24 @@ if there is no else part and no  conditions are true it returns NULL
            END AS ProductStatus
            FROM payment
 
+# Common Table expression
+
+A common table expression, or CTE, is a temporary named result set created from a simple SELECT  statement that can be used in a subsequent SELECT statement <br>
+we can define CTEs by adding a WITH clause directly before SELECT, INSERT, UPDATE, DELETE,  or MERGE statement <br>
+The WITH clause can inclide one or more CTEs separated by commas
+
+
+
+           WITH my_cte AS ( 
+             
+             select *, AVG(amount) OVER(ORDER BY p.customer_id) AS "Average_Price",
+             COUNT(address_id) OVER(ORDER BY c.customer_id) AS "Count"
+             FROM payment as p
+             INNER JOIN customers AS c
+             ON p.customer_id = c.customer_id
+             
+             )
+             SELECT first_name, last_name ,amount
+             FROM my_cte
+
+
