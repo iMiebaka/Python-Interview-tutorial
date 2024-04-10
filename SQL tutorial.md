@@ -432,3 +432,47 @@ Window functions applies aggregate, ranking and analytics function over a pertic
 
 and over clause is used with window functions to define that window
 
+
+**Window function terms**
+
+1) Window function :- applies aggregate, ranking and analytic functions over a particular window; for example sum, avg, or row_number
+2) Expression :- is the name of the column that we want the window function operated on. This may not be necessary depending on what window function is used
+3) Over :- is just to signify that this is a window function
+4) Partition by :- divides the rows into partitions so we can specify wich rows to use to compute the window function
+5) Order by :- is used so that we can order th rows within each partition this is opetional and does not have to be specified
+6) ROWS :- can be used if we want to further limit the rows within our partition. This is optional and usually not used
+
+
+
+
+# case expression
+
+The case expression goes through conditions and returns a value when the first condition is met ( like if-then-else statement). if no condition are true, it return
+the value in the else clause <br>
+if there is no else part and no  conditions are true it returns NULL
+
+**Case statement**
+
+          SELECT customer_id, amount,
+          
+          CASE
+          	WHEN amount > 100 THEN 	"EXPENSIVE PRODUCT"
+              WHEN amount = 100 THEN "Moderate product"
+              ELSE "Inexpensive product"
+          
+          END AS ProductStatus
+          FROM payment
+
+
+**CASE expression**
+
+           SELECT customer_id, amount,
+           
+           CASE amount
+           	WHEN 200 THEN "Prime Customer"
+               WHEN 100 THEN "Plus Customer"
+               ELSE "Regular customer"
+           
+           END AS ProductStatus
+           FROM payment
+
