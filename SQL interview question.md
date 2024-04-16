@@ -86,3 +86,83 @@ it ensures referential integrity between 2 table
 3) **DCL** :- Data control language
 4) **TCL** :- Transaction control Language
 
+# what is DDL Command
+
+Data defination language used to define the database schema
+
+1) Create
+2) .Alter
+3) .Drop
+4) .Truncate
+
+# what is DML command
+
+SQL commands that deals with the manupulation of data present in the database
+
+1) insert
+2) update
+3) delete
+4) select
+
+# what is DCL command
+
+command which deals with the rights, permissions and other controls of the database system
+
+1) Grant
+2) .Revoke
+
+# what is TCL command
+
+commands deal with the transaction within the database
+
+1) Commit
+2) Rollback
+
+# diffrence between delete, drop and truncate
+
+<br>
+
+# Are NULL values same as that of zero or a blank space
+
+A NULL value is not at all same as that of zero or a blank space <br>
+NULL value represent a vlue which is unavailable or a garbage value
+
+# what is the difference between NVL and NVL2
+
+**NVL(expr1, expr2)** :- converts a null value to an actual value <br>
+**NVL2(expr1, expr2, expr3)** :- if the first expression is not null, then the NVL2 function returns the second expression. if the first expression is null, <br> then the third expression is returned
+
+# Difference between UNION and UNION ALL
+
+**UNION** :- only keeps unique records <br>
+**UNION ALL** :- keeps all records, including duplicates
+
+# what is an Alias
+
+Alias is a temporary name assigned to the table coulmn for the purpose of a perticular SQL query 
+
+      SELECT A.empname AS "Employee" B.empname AS "Manager" FROM employee A, employee B 
+      WHERE A.empid = B.empid
+
+# what is join 
+
+<br>
+
+# what is self join 
+
+A SELF JOIN is a case of regular join where a table is joined to itself based on same relation between its own column(s). Self-join uses the INNER JOIN or LEFT JOIN <br>
+clause and a table alias is used to assign diffrent names to the table within the query
+
+      SELECT A.emp_id AS "Emp_ID", A.emp_name AS "Employee",
+      B.emp_id AS "Sup_ID", B.emp_name AS "Manager"
+      FROM employee A, employee B
+      WHERE A.emp_sup = B.emp_id;
+
+# what are the different operators available in SQL
+
+1) Arithmetic Operators
+2) Logical Operators
+3) Comparison Operators
+
+
+# difference between CHAR and VARCHAR2 datatype in sql
