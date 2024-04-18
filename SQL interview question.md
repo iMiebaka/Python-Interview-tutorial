@@ -165,4 +165,104 @@ clause and a table alias is used to assign diffrent names to the table within th
 3) Comparison Operators
 
 
-# difference between CHAR and VARCHAR2 datatype in sql
+# what is stored procedures
+
+website madhe multiple pages ahe ani tya pages var same report generate kartoy tya condition apan ak code lihu shakto ani tyala multiple page var call karu shakto  <br>
+ya madhe appan ak store procedures banavto ani tyala call karto
+
+
+# what is aggregate function
+
+Aggregate function performs a calculation on multiple alues and returns a single value.
+
+and aggregate function are often used with GROUP BY & SELECT statemnet
+
+1) COUNT() : return number of values
+2) SUM() : returns sum of all values
+3) AVG() : returns average value
+4) MAX() : returns maximum value
+5) MIN() : returns minimum value
+6) ROUND() : round a number to a specified number of decimal place
+
+# What is an ALIAS command
+
+SQL is used to give a temprary name of table or column
+
+
+**Column Alias**
+
+            select item, amount as prod, amount as price from Orders
+
+
+# What are Union commands
+
+**Union** : Union combines the result of two or more quires into one table
+
+he aka row madhe join karel
+
+            select age from customers
+            UNION
+            select amount from orders
+
+# How to copy tables in SQL
+
+            create table sachin as select * from Contractors;
+
+# What is the difference between BETWEEN and IN operators in SQL
+
+**Between**
+
+The BETWEEN operator is used to fetch rows based on a range of values. 
+
+            select * from customers where age between 22 and 25
+
+
+**IN**
+
+The IN operator is used to check for values contained in specific sets
+
+      select * from customers where age in (31,25,22)
+
+# what is clause in sql
+
+clause is a specific part of a SQL statement that provides additional instructions or conditions to the query
+
+1) select
+2) from
+3) where
+4) order by
+5) JOIN Clause
+
+# what is with clause
+
+WITH clause, also known as Common Table Expressions (CTEs), is a powerful feature in SQL that allows you to define temporary result sets (subqueries) <br> that can be referenced within the main query.
+
+            WITH employee_sales AS (
+                SELECT employee_id, SUM(sales_amount) AS total_sales
+                FROM sales
+                GROUP BY employee_id
+            )
+            SELECT * FROM employee_sales;
+
+# What is a Cursor
+
+Oracle creates a memory area, know as the context area, for processing an sql statement, which contains all the information needed for <br> processing the statement for example, the number of rows processed 
+a cursor is a pointer to this context area. PL/SQL controls the context area through a cursor. a cursor holds the row returned by a SQL statement. <br> the set of rows the cursor holds is referred to as  active set
+
+
+# Write down various types of relationships in SQL
+
+1) One-to-One Relationship.
+2) One to Many Relationships.
+3) Many to One Relationship
+4) Self-Referencing Relationship
+
+
+# What is a trigger
+
+The trigger is a statement that a system executes automatically when there is any modification to the database. In a trigger, we first specify when the trigger is to be
+executed and then the action to be performed when the trigger executes. Triggers are used to specify certain integrity constraints and referential constraints that cannot
+be specified using the constraint mechanism of SQL.
+
+
+
