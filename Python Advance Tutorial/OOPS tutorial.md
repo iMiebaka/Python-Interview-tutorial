@@ -1132,4 +1132,37 @@ An abstraction is used to hide the irrelevent data/class in order to reduce the 
 A class that consist of one or more abstract method is called abstract class
 
 
+we cannot create abstract class object
+
+
+abstract class ha just blueprint asto other class sathi
+
+        from abc import ABC, abstractmethod
+        
+        class Bank(ABC):
+        
+            def database(self):
+                print("database connection")
+            
+            @abstractmethod
+            def security(self):
+                print('security')
+        
+        class Mobile(Bank):
+        
+            def display(self):
+                print("home page")
+        
+            
+            def security(self):
+                print("Mobile seccurity")
+        
+        
+        obj   = Mobile()
+        
+        obj.display()
+
+**what is abstract method**
+
+a method that is declared, but contains no implementation.
 
