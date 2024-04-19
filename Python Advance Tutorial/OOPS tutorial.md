@@ -1166,3 +1166,25 @@ abstract class ha just blueprint asto other class sathi
 
 a method that is declared, but contains no implementation.
 
+
+
+# polymorphisam
+
+polymorphisam means same method name but diffrent work suppose aplya kad **len** function ahe he kay karta list chi length pan calculate karta ani string chi pan
+
+ya madhe 2 concept yetat method overloading and method overriding
+
+
+**method overloading**
+
+      class Demo:
+          def __init__(self,name = ""):
+              self.name = name
+          
+          def info(self):
+              print("Hello " + self.name)
+      
+      obj = Demo("sachin")
+      obj.info()
+
+
