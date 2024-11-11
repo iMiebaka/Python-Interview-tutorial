@@ -83,7 +83,7 @@ python convert the source code into language code and it is again translated int
 An interpreted language is any programming language that isn't already in machine code prior to runtime
 python is full under byte code interprted the .py code source code is first compled to byte code as pyc
 
-# what is diffrence between function and mehtod 
+# what is diffrence between function and method 
 F ) function can call by it's name 
 M ) method can't call by it's name
 F ) 
